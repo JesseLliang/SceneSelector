@@ -1,0 +1,899 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V9.10.1.2146 for 8051               18/Jan/2018  14:04:35
+// Copyright 2004-2014 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for 8051
+//
+//    Core               =  plain
+//    Code model         =  banked
+//    Data model         =  large
+//    Calling convention =  xdata reentrant
+//    Constant location  =  data_rom
+//    Dptr setup         =  1,16
+//                          
+//    Source file        =  
+//        C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\Source\zcl_sceneselector_data.c
+//    Command line       =  
+//        -f "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f
+//        "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+//        -DDEFAULT_CHANLIST=0x07FFF800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+//        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+//        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+//        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+//        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+//        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+//        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+//        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+//        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+//        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+//        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+//        -DPOLL_RATE=120000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+//        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=60000)
+//        -f "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+//        "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\Source\zcl_sceneselector_data.c"
+//        -D SCENE_SELECTOR_TOUCHKEY -D xSCENE_SELECTOR -D ISR_KEYINTERRUPT -D
+//        OSC32K_CRYSTAL_INSTALLED=FALSE -D xxHAL_PA_LNA -D SECURE=1 -D
+//        TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D POWER_SAVING -D
+//        NWK_AUTO_POLL -D xHOLD_AUTO_START -D xZTOOL_P1 -D MT_TASK -D
+//        MT_APP_FUNC -D MT_SYS_FUNC -D MT_ZDO_FUNC -D xLCD_SUPPORTED=DEBUG -D
+//        MULTICAST_ENABLED=FALSE -D ZCL_READ -D ZCL_WRITE -D ZCL_REPORT -D
+//        xZCL_EZMODE -D ZCL_BASIC -D ZCL_IDENTIFY -D ZCL_GROUPS -D ZCL_SCENES
+//        -D ZCL_ON_OFF -D ZCL_LEVEL_CTRL -D ZCL_DIAGNOSTIC -D
+//        FEATURE_SYSTEM_STATS -lC "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack
+//        Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\List\"
+//        -lA "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\List\"
+//        --diag_suppress Pe001,Pa010 -o
+//        "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\"
+//        -e --debug --core=plain --dptr=16,1 --data_model=large
+//        --code_model=banked --calling_convention=xdata_reentrant
+//        --place_constants=data_rom --nr_virtual_regs 16 -I
+//        "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\AddSceneSelector\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\AddCommon\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\Source\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Source\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\ZMain\TI2530DB\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\hal\include\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\include\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mt\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\osal\include\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\af\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        -Ohz --require_prototypes
+//    List file          =  
+//        C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\List\zcl_sceneselector_data.s51
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME zcl_sceneselector_data
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN __INIT_XDATA_I
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC zclSceneSelector_Attrs
+        PUBLIC zclSceneSelector_DateCode
+        PUBLIC zclSceneSelector_DeviceEnable
+        PUBLIC zclSceneSelector_HWRevision
+        PUBLIC zclSceneSelector_IdentifyTime
+        PUBLIC zclSceneSelector_InClusterList
+        PUBLIC zclSceneSelector_LocationDescription
+        PUBLIC zclSceneSelector_ManufacturerName
+        PUBLIC zclSceneSelector_ModelId
+        PUBLIC zclSceneSelector_OnOff
+        PUBLIC zclSceneSelector_OutClusterList
+        PUBLIC zclSceneSelector_PhysicalEnvironment
+        PUBLIC zclSceneSelector_PowerSource
+        PUBLIC zclSceneSelector_SimpleDesc1
+        PUBLIC zclSceneSelector_SimpleDesc2
+        PUBLIC zclSceneSelector_SimpleDesc3
+        PUBLIC zclSceneSelector_SimpleDesc4
+        PUBLIC zclSceneSelector_ZCLVersion
+        EXTERN zclSceneSelector_OnOffSwitchActions
+        EXTERN zclSceneSelector_OnOffSwitchType
+
+// C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\Source\zcl_sceneselector_data.c
+//    1 /**************************************************************************************************
+//    2   Filename:       zcl_samplesw_data.c
+//    3   Revised:        $Date: 2014-07-30 12:57:37 -0700 (Wed, 30 Jul 2014) $
+//    4   Revision:       $Revision: 39591 $
+//    5 
+//    6 
+//    7   Description:    Zigbee Cluster Library - sample device application.
+//    8 
+//    9 
+//   10   Copyright 2006-2014 Texas Instruments Incorporated. All rights reserved.
+//   11 
+//   12   IMPORTANT: Your use of this Software is limited to those specific rights
+//   13   granted under the terms of a software license agreement between the user
+//   14   who downloaded the software, his/her employer (which must be your employer)
+//   15   and Texas Instruments Incorporated (the "License").  You may not use this
+//   16   Software unless you agree to abide by the terms of the License. The License
+//   17   limits your use, and you acknowledge, that the Software may not be modified,
+//   18   copied or distributed unless embedded on a Texas Instruments microcontroller
+//   19   or used solely and exclusively in conjunction with a Texas Instruments radio
+//   20   frequency transceiver, which is integrated into your product.  Other than for
+//   21   the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   22   works of, modify, distribute, perform, display or sell this Software and/or
+//   23   its documentation for any purpose.
+//   24 
+//   25   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   26   PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+//   27   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+//   28   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   29   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   30   NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   31   LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   32   INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   33   OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   34   OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   35   (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   36 
+//   37   Should you have any questions regarding your right to use this Software,
+//   38   contact Texas Instruments Incorporated at www.TI.com.
+//   39 **************************************************************************************************/
+//   40 
+//   41 /*********************************************************************
+//   42  * INCLUDES
+//   43  */
+//   44 #include "ZComDef.h"
+//   45 #include "OSAL.h"
+//   46 #include "AF.h"
+//   47 #include "ZDConfig.h"
+//   48 
+//   49 #include "zcl.h"
+//   50 #include "zcl_general.h"
+//   51 #include "zcl_ha.h"
+//   52 #include "zcl_poll_control.h"
+//   53 #include "zcl_electrical_measurement.h"
+//   54 #include "zcl_diagnostic.h"
+//   55 #include "zcl_meter_identification.h"
+//   56 #include "zcl_appliance_identification.h"
+//   57 #include "zcl_appliance_events_alerts.h"
+//   58 #include "zcl_power_profile.h"
+//   59 #include "zcl_appliance_control.h"
+//   60 #include "zcl_appliance_statistics.h"
+//   61 #include "zcl_hvac.h"
+//   62 #include "zcl_ezmode.h"
+//   63 
+//   64 #include "zcl_sceneselector.h"
+//   65 
+//   66 /*********************************************************************
+//   67  * CONSTANTS
+//   68  */
+//   69 
+//   70 #define SCENESELECTOR_DEVICE_VERSION     0
+//   71 #define SCENESELECTOR_FLAGS              0
+//   72 
+//   73 #define SCENESELECTOR_HWVERSION          0
+//   74 #define SCENESELECTOR_ZCLVERSION         0
+//   75 
+//   76 /*********************************************************************
+//   77  * TYPEDEFS
+//   78  */
+//   79 
+//   80 /*********************************************************************
+//   81  * MACROS
+//   82  */
+//   83 
+//   84 /*********************************************************************
+//   85  * GLOBAL VARIABLES
+//   86  */
+//   87 
+//   88 // Basic Cluster
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   89 const uint8 zclSceneSelector_HWRevision = SCENESELECTOR_HWVERSION;
+zclSceneSelector_HWRevision:
+        DB 0
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   90 const uint8 zclSceneSelector_ZCLVersion = SCENESELECTOR_ZCLVERSION;
+zclSceneSelector_ZCLVersion:
+        DB 0
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   91 const uint8 zclSceneSelector_ManufacturerName[] = { 16, 'L','i','f','u','d',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ' };
+zclSceneSelector_ManufacturerName:
+        DB 16
+        DB 76
+        DB 105
+        DB 102
+        DB 117
+        DB 100
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   92 const uint8 zclSceneSelector_ModelId[] = { 16, 'L','F','D','_','S','c','e','n','e','S','e','l','e','c','t',' ' };
+zclSceneSelector_ModelId:
+        DB 16
+        DB 76
+        DB 70
+        DB 68
+        DB 95
+        DB 83
+        DB 99
+        DB 101
+        DB 110
+        DB 101
+        DB 83
+        DB 101
+        DB 108
+        DB 101
+        DB 99
+        DB 116
+        DB 32
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   93 const uint8 zclSceneSelector_DateCode[] = { 16, '2','0','1','7','1','0','2','7',' ',' ',' ',' ',' ',' ',' ',' ' };
+zclSceneSelector_DateCode:
+        DB 16
+        DB 50
+        DB 48
+        DB 49
+        DB 55
+        DB 49
+        DB 48
+        DB 50
+        DB 55
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//   94 const uint8 zclSceneSelector_PowerSource = POWER_SOURCE_MAINS_1_PHASE;
+zclSceneSelector_PowerSource:
+        DB 1
+//   95 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   96 uint8 zclSceneSelector_LocationDescription[17] = { 16, ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ' };
+zclSceneSelector_LocationDescription:
+        DATA8
+        DS 17
+        REQUIRE `?<Initializer for zclSceneSelector_LocationDes`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   97 uint8 zclSceneSelector_PhysicalEnvironment = 0;
+zclSceneSelector_PhysicalEnvironment:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   98 uint8 zclSceneSelector_DeviceEnable = DEVICE_ENABLED;
+zclSceneSelector_DeviceEnable:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for zclSceneSelector_DeviceEnabl`
+        REQUIRE __INIT_XDATA_I
+//   99 
+//  100 // Identify Cluster
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA16
+//  101 uint16 zclSceneSelector_IdentifyTime = 0;
+zclSceneSelector_IdentifyTime:
+        DS 2
+        REQUIRE __INIT_XDATA_Z
+//  102 
+//  103 // On/Off Cluster
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  104 uint8  zclSceneSelector_OnOff = LIGHT_OFF;
+zclSceneSelector_OnOff:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//  105 
+//  106 /*********************************************************************
+//  107  * ATTRIBUTE DEFINITIONS - Uses REAL cluster IDs
+//  108  */
+
+        RSEG CODE_C:CODE:REORDER:NOROOT(0)
+        DATA8
+//  109 CONST zclAttrRec_t zclSceneSelector_Attrs[SCENESELECTOR_MAX_ATTRIBUTES] =
+zclSceneSelector_Attrs:
+        DATA16
+        DW 0
+        DW 3
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW zclSceneSelector_HWRevision
+        DW 0
+        DW 0
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW zclSceneSelector_ZCLVersion
+        DW 0
+        DW 4
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW zclSceneSelector_ManufacturerName
+        DW 0
+        DW 5
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW zclSceneSelector_ModelId
+        DW 0
+        DW 6
+        DATA8
+        DB 66
+        DB 1
+        DATA16
+        DW zclSceneSelector_DateCode
+        DW 0
+        DW 7
+        DATA8
+        DB 32
+        DB 1
+        DATA16
+        DW zclSceneSelector_PowerSource
+        DW 0
+        DW 16
+        DATA8
+        DB 66
+        DB 3
+        DATA16
+        DW zclSceneSelector_LocationDescription
+        DW 0
+        DW 17
+        DATA8
+        DB 32
+        DB 3
+        DATA16
+        DW zclSceneSelector_PhysicalEnvironment
+        DW 0
+        DW 18
+        DATA8
+        DB 32
+        DB 3
+        DATA16
+        DW zclSceneSelector_DeviceEnable
+        DW 3
+        DW 0
+        DATA8
+        DB 33
+        DB 3
+        DATA16
+        DW zclSceneSelector_IdentifyTime
+        DW 6
+        DW 0
+        DATA8
+        DB 16
+        DB 1
+        DATA16
+        DW zclSceneSelector_OnOff
+        DW 7
+        DW 0
+        DATA8
+        DB 48
+        DB 1
+        DATA16
+        DW zclSceneSelector_OnOffSwitchType
+        DW 7
+        DW 16
+        DATA8
+        DB 48
+        DB 3
+        DATA16
+        DW zclSceneSelector_OnOffSwitchActions
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+//  110 {
+//  111   // *** General Basic Cluster Attributes ***
+//  112   {
+//  113     ZCL_CLUSTER_ID_GEN_BASIC,             // Cluster IDs - defined in the foundation (ie. zcl.h)
+//  114     {  // Attribute record
+//  115       ATTRID_BASIC_HW_VERSION,            // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+//  116       ZCL_DATATYPE_UINT8,                 // Data Type - found in zcl.h
+//  117       ACCESS_CONTROL_READ,                // Variable access control - found in zcl.h
+//  118       (void *)&zclSceneSelector_HWRevision  // Pointer to attribute variable
+//  119     }
+//  120   },
+//  121   {
+//  122     ZCL_CLUSTER_ID_GEN_BASIC,
+//  123     { // Attribute record
+//  124       ATTRID_BASIC_ZCL_VERSION,
+//  125       ZCL_DATATYPE_UINT8,
+//  126       ACCESS_CONTROL_READ,
+//  127       (void *)&zclSceneSelector_ZCLVersion
+//  128     }
+//  129   },
+//  130   {
+//  131     ZCL_CLUSTER_ID_GEN_BASIC,
+//  132     { // Attribute record
+//  133       ATTRID_BASIC_MANUFACTURER_NAME,
+//  134       ZCL_DATATYPE_CHAR_STR,
+//  135       ACCESS_CONTROL_READ,
+//  136       (void *)zclSceneSelector_ManufacturerName
+//  137     }
+//  138   },
+//  139   {
+//  140     ZCL_CLUSTER_ID_GEN_BASIC,
+//  141     { // Attribute record
+//  142       ATTRID_BASIC_MODEL_ID,
+//  143       ZCL_DATATYPE_CHAR_STR,
+//  144       ACCESS_CONTROL_READ,
+//  145       (void *)zclSceneSelector_ModelId
+//  146     }
+//  147   },
+//  148   {
+//  149     ZCL_CLUSTER_ID_GEN_BASIC,
+//  150     { // Attribute record
+//  151       ATTRID_BASIC_DATE_CODE,
+//  152       ZCL_DATATYPE_CHAR_STR,
+//  153       ACCESS_CONTROL_READ,
+//  154       (void *)zclSceneSelector_DateCode
+//  155     }
+//  156   },
+//  157   {
+//  158     ZCL_CLUSTER_ID_GEN_BASIC,
+//  159     { // Attribute record
+//  160       ATTRID_BASIC_POWER_SOURCE,
+//  161       ZCL_DATATYPE_UINT8,
+//  162       ACCESS_CONTROL_READ,
+//  163       (void *)&zclSceneSelector_PowerSource
+//  164     }
+//  165   },
+//  166   {
+//  167     ZCL_CLUSTER_ID_GEN_BASIC,
+//  168     { // Attribute record
+//  169       ATTRID_BASIC_LOCATION_DESC,
+//  170       ZCL_DATATYPE_CHAR_STR,
+//  171       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  172       (void *)zclSceneSelector_LocationDescription
+//  173     }
+//  174   },
+//  175   {
+//  176     ZCL_CLUSTER_ID_GEN_BASIC,
+//  177     { // Attribute record
+//  178       ATTRID_BASIC_PHYSICAL_ENV,
+//  179       ZCL_DATATYPE_UINT8,
+//  180       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  181       (void *)&zclSceneSelector_PhysicalEnvironment
+//  182     }
+//  183   },
+//  184   {
+//  185     ZCL_CLUSTER_ID_GEN_BASIC,
+//  186     { // Attribute record
+//  187       ATTRID_BASIC_DEVICE_ENABLED,
+//  188       ZCL_DATATYPE_UINT8,
+//  189       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  190       (void *)&zclSceneSelector_DeviceEnable
+//  191     }
+//  192   },
+//  193 
+//  194   // *** Identify Cluster Attribute ***
+//  195   {
+//  196     ZCL_CLUSTER_ID_GEN_IDENTIFY,
+//  197     { // Attribute record
+//  198       ATTRID_IDENTIFY_TIME,
+//  199       ZCL_DATATYPE_UINT16,
+//  200       (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+//  201       (void *)&zclSceneSelector_IdentifyTime
+//  202     }
+//  203   },
+//  204 
+//  205   // *** On / Off Cluster Attributes ***
+//  206   {
+//  207     ZCL_CLUSTER_ID_GEN_ON_OFF,
+//  208     { // Attribute record
+//  209       ATTRID_ON_OFF,
+//  210       ZCL_DATATYPE_BOOLEAN,
+//  211       ACCESS_CONTROL_READ,
+//  212       (void *)&zclSceneSelector_OnOff
+//  213     }
+//  214   },
+//  215 
+//  216   // *** On / Off Switch Configuration Cluster *** //
+//  217   {
+//  218     ZCL_CLUSTER_ID_GEN_ON_OFF_SWITCH_CONFIG,
+//  219     { // Attribute record
+//  220       ATTRID_ON_OFF_SWITCH_TYPE,
+//  221       ZCL_DATATYPE_ENUM8,
+//  222       ACCESS_CONTROL_READ,
+//  223       (void *)&zclSceneSelector_OnOffSwitchType
+//  224     }
+//  225   },
+//  226   {
+//  227     ZCL_CLUSTER_ID_GEN_ON_OFF_SWITCH_CONFIG,
+//  228     { // Attribute record
+//  229       ATTRID_ON_OFF_SWITCH_ACTIONS,
+//  230       ZCL_DATATYPE_ENUM8,
+//  231       ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE,
+//  232       (void *)&zclSceneSelector_OnOffSwitchActions
+//  233     }
+//  234   },
+//  235 };
+//  236 
+//  237 /*********************************************************************
+//  238  * SIMPLE DESCRIPTOR
+//  239  */
+//  240 // This is the Cluster ID List and should be filled with Application
+//  241 // specific cluster IDs.
+//  242 /*#define ZCLDIMMERSWITCH_MAX_INCLUSTERS       2
+//  243 const cId_t zclDimmerSwitch_InClusterList[ZCLDIMMERSWITCH_MAX_INCLUSTERS] =
+//  244 {
+//  245   ZCL_CLUSTER_ID_GEN_BASIC,
+//  246   ZCL_CLUSTER_ID_GEN_IDENTIFY
+//  247 };
+//  248 
+//  249 const cId_t zclDimmerSwitch_OutClusterList[] =
+//  250 {
+//  251   ZCL_CLUSTER_ID_GEN_ON_OFF,
+//  252   ZCL_CLUSTER_ID_GEN_IDENTIFY,
+//  253 #ifdef ZCL_LEVEL_CTRL
+//  254   ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  255 #endif
+//  256   0
+//  257 };
+//  258 
+//  259 #define ZCLDIMMERSWITCH_MAX_OUTCLUSTERS    ( ( sizeof( zclDimmerSwitch_OutClusterList ) / sizeof( zclDimmerSwitch_OutClusterList[0] ) ) - 1 )
+//  260 */
+//  261 //####################################################################
+//  262 //####################################################################	
+//  263 #define ZCLSCENESELECTOR_MAX_INCLUSTERS       4
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//  264 const cId_t zclSceneSelector_InClusterList[ZCLSCENESELECTOR_MAX_INCLUSTERS] =
+zclSceneSelector_InClusterList:
+        DATA16
+        DW 0
+        DW 3
+        DW 4
+        DW 5
+//  265 {
+//  266   ZCL_CLUSTER_ID_GEN_BASIC,
+//  267   ZCL_CLUSTER_ID_GEN_IDENTIFY,
+//  268   ZCL_CLUSTER_ID_GEN_GROUPS,
+//  269   ZCL_CLUSTER_ID_GEN_SCENES
+//  270 };
+//  271 
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//  272 const cId_t zclSceneSelector_OutClusterList[] =
+zclSceneSelector_OutClusterList:
+        DATA16
+        DW 0
+        DW 4
+        DW 5
+        DW 6
+        DW 3
+        DW 8
+        DW 0
+//  273 {
+//  274   ZCL_CLUSTER_ID_GEN_BASIC,
+//  275   ZCL_CLUSTER_ID_GEN_GROUPS,
+//  276   ZCL_CLUSTER_ID_GEN_SCENES,
+//  277   ZCL_CLUSTER_ID_GEN_ON_OFF,
+//  278   ZCL_CLUSTER_ID_GEN_IDENTIFY,
+//  279 #ifdef ZCL_LEVEL_CTRL
+//  280   ZCL_CLUSTER_ID_GEN_LEVEL_CONTROL,
+//  281 #endif
+//  282   0
+//  283 };
+//  284 
+//  285 #define ZCLSCENESELECTOR_MAX_OUTCLUSTERS    ( ( sizeof( zclSceneSelector_OutClusterList ) / sizeof( zclSceneSelector_OutClusterList[0] ) ) - 1 )
+//  286 //####################################################################
+//  287 //####################################################################	
+//  288 
+//  289 
+//  290 /*SimpleDescriptionFormat_t zclSceneSelector_SimpleDesc =
+//  291 {
+//  292   SCENESELECTOR_ENDPOINT,                  //  int Endpoint;
+//  293   ZCL_HA_PROFILE_ID,                  //  uint16 AppProfId[2];
+//  294   ZCL_HA_DEVICEID_ON_OFF_SWITCH,      //  uint16 AppDeviceId[2];
+//  295   SCENESELECTOR_DEVICE_VERSION,            //  int   AppDevVer:4;
+//  296   SCENESELECTOR_FLAGS,                     //  int   AppFlags:4;
+//  297   ZCLSCENESELECTOR_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+//  298   (cId_t *)zclSceneSelector_InClusterList, //  byte *pAppInClusterList;
+//  299   ZCLSCENESELECTOR_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
+//  300   (cId_t *)zclSceneSelector_OutClusterList //  byte *pAppInClusterList;
+//  301 };*/
+//  302 //####################################################################
+//  303 //####################################################################	
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  304 SimpleDescriptionFormat_t zclSceneSelector_SimpleDesc1 =
+zclSceneSelector_SimpleDesc1:
+        DATA8
+        DS 12
+        REQUIRE `?<Initializer for zclSceneSelector_SimpleDesc1`
+        REQUIRE __INIT_XDATA_I
+//  305 {
+//  306   SCENESELECTOR_ENDPOINT1,                  //  int Endpoint;
+//  307   ZCL_HA_PROFILE_ID,                  //  uint16 AppProfId[2];
+//  308   ZCL_HA_DEVICEID_SCENE_SELECTOR,      //  uint16 AppDeviceId[2];
+//  309   SCENESELECTOR_DEVICE_VERSION,            //  int   AppDevVer:4;
+//  310   SCENESELECTOR_FLAGS,                     //  int   AppFlags:4;
+//  311   ZCLSCENESELECTOR_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+//  312   (cId_t *)zclSceneSelector_InClusterList, //  byte *pAppInClusterList;
+//  313   ZCLSCENESELECTOR_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
+//  314   (cId_t *)zclSceneSelector_OutClusterList //  byte *pAppInClusterList;
+//  315 };
+//  316 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  317 SimpleDescriptionFormat_t zclSceneSelector_SimpleDesc2 =
+zclSceneSelector_SimpleDesc2:
+        DATA8
+        DS 12
+        REQUIRE `?<Initializer for zclSceneSelector_SimpleDesc2`
+        REQUIRE __INIT_XDATA_I
+//  318 {
+//  319   SCENESELECTOR_ENDPOINT2,                  //  int Endpoint;
+//  320   ZCL_HA_PROFILE_ID,                  //  uint16 AppProfId[2];
+//  321   ZCL_HA_DEVICEID_SCENE_SELECTOR,      //  uint16 AppDeviceId[2];
+//  322   SCENESELECTOR_DEVICE_VERSION,            //  int   AppDevVer:4;
+//  323   SCENESELECTOR_FLAGS,                     //  int   AppFlags:4;
+//  324   ZCLSCENESELECTOR_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+//  325   (cId_t *)zclSceneSelector_InClusterList, //  byte *pAppInClusterList;
+//  326   ZCLSCENESELECTOR_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
+//  327   (cId_t *)zclSceneSelector_OutClusterList //  byte *pAppInClusterList;
+//  328 };
+//  329 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  330 SimpleDescriptionFormat_t zclSceneSelector_SimpleDesc3 =
+zclSceneSelector_SimpleDesc3:
+        DATA8
+        DS 12
+        REQUIRE `?<Initializer for zclSceneSelector_SimpleDesc3`
+        REQUIRE __INIT_XDATA_I
+//  331 {
+//  332   SCENESELECTOR_ENDPOINT3,                  //  int Endpoint;
+//  333   ZCL_HA_PROFILE_ID,                  //  uint16 AppProfId[2];
+//  334   ZCL_HA_DEVICEID_SCENE_SELECTOR,      //  uint16 AppDeviceId[2];
+//  335   SCENESELECTOR_DEVICE_VERSION,            //  int   AppDevVer:4;
+//  336   SCENESELECTOR_FLAGS,                     //  int   AppFlags:4;
+//  337   ZCLSCENESELECTOR_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+//  338   (cId_t *)zclSceneSelector_InClusterList, //  byte *pAppInClusterList;
+//  339   ZCLSCENESELECTOR_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
+//  340   (cId_t *)zclSceneSelector_OutClusterList //  byte *pAppInClusterList;
+//  341 };
+//  342 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  343 SimpleDescriptionFormat_t zclSceneSelector_SimpleDesc4 =
+zclSceneSelector_SimpleDesc4:
+        DATA8
+        DS 12
+        REQUIRE `?<Initializer for zclSceneSelector_SimpleDesc4`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSceneSelector_LocationDes`:
+        DATA8
+        DB 16
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+        DB 32
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSceneSelector_DeviceEnabl`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSceneSelector_SimpleDesc1`:
+        DATA8
+        DB 1
+        DATA16
+        DW 260
+        DW 4
+        DATA8
+        DB 0
+        DB 4
+        DATA16
+        DW zclSceneSelector_InClusterList
+        DATA8
+        DB 6
+        DATA16
+        DW zclSceneSelector_OutClusterList
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSceneSelector_SimpleDesc2`:
+        DATA8
+        DB 2
+        DATA16
+        DW 260
+        DW 4
+        DATA8
+        DB 0
+        DB 4
+        DATA16
+        DW zclSceneSelector_InClusterList
+        DATA8
+        DB 6
+        DATA16
+        DW zclSceneSelector_OutClusterList
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSceneSelector_SimpleDesc3`:
+        DATA8
+        DB 3
+        DATA16
+        DW 260
+        DW 4
+        DATA8
+        DB 0
+        DB 4
+        DATA16
+        DW zclSceneSelector_InClusterList
+        DATA8
+        DB 6
+        DATA16
+        DW zclSceneSelector_OutClusterList
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSceneSelector_SimpleDesc4`:
+        DATA8
+        DB 4
+        DATA16
+        DW 260
+        DW 4
+        DATA8
+        DB 0
+        DB 4
+        DATA16
+        DW zclSceneSelector_InClusterList
+        DATA8
+        DB 6
+        DATA16
+        DW zclSceneSelector_OutClusterList
+
+        END
+//  344 {
+//  345   SCENESELECTOR_ENDPOINT4,                  //  int Endpoint;
+//  346   ZCL_HA_PROFILE_ID,                  //  uint16 AppProfId[2];
+//  347   ZCL_HA_DEVICEID_SCENE_SELECTOR,      //  uint16 AppDeviceId[2];
+//  348   SCENESELECTOR_DEVICE_VERSION,            //  int   AppDevVer:4;
+//  349   SCENESELECTOR_FLAGS,                     //  int   AppFlags:4;
+//  350   ZCLSCENESELECTOR_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+//  351   (cId_t *)zclSceneSelector_InClusterList, //  byte *pAppInClusterList;
+//  352   ZCLSCENESELECTOR_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
+//  353   (cId_t *)zclSceneSelector_OutClusterList //  byte *pAppInClusterList;
+//  354 };
+//  355 
+//  356 //####################################################################
+//  357 //####################################################################
+//  358 
+//  359 /*********************************************************************
+//  360  * GLOBAL FUNCTIONS
+//  361  */
+//  362 
+//  363 /*********************************************************************
+//  364  * LOCAL FUNCTIONS
+//  365  */
+//  366 
+//  367 /****************************************************************************
+//  368 ****************************************************************************/
+//  369 
+// 
+// 120 bytes in segment CODE_C
+//  66 bytes in segment XDATA_I
+//  66 bytes in segment XDATA_ID
+//  76 bytes in segment XDATA_ROM_C
+//   4 bytes in segment XDATA_Z
+// 
+// 186 bytes of CODE  memory
+//  76 bytes of CONST memory
+//  70 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,2276 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V9.10.1.2146 for 8051                19/Jan/2018  10:12:22
+# Copyright 2004-2014 IAR Systems AB.
+# Standalone license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\Add\AddCommon\add_common.c
+#    Command line       =  
+#        -f "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f
+#        "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x07FFF800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+#        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+#        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+#        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+#        -DPOLL_RATE=120000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+#        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=60000) -f
+#        "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+#        "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\Add\AddCommon\add_common.c"
+#        -D SCENE_SELECTOR_TOUCHKEY -D xSCENE_SELECTOR -D ISR_KEYINTERRUPT -D
+#        OSC32K_CRYSTAL_INSTALLED=FALSE -D xxHAL_PA_LNA -D SECURE=1 -D
+#        TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D POWER_SAVING -D
+#        NWK_AUTO_POLL -D xHOLD_AUTO_START -D xZTOOL_P1 -D MT_TASK -D
+#        MT_APP_FUNC -D MT_SYS_FUNC -D MT_ZDO_FUNC -D xLCD_SUPPORTED=DEBUG -D
+#        MULTICAST_ENABLED=FALSE -D ZCL_READ -D ZCL_WRITE -D ZCL_REPORT -D
+#        xZCL_EZMODE -D ZCL_BASIC -D ZCL_IDENTIFY -D ZCL_GROUPS -D ZCL_SCENES
+#        -D ZCL_ON_OFF -D ZCL_LEVEL_CTRL -D ZCL_DIAGNOSTIC -D
+#        FEATURE_SYSTEM_STATS -lC "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack
+#        Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\List\"
+#        -lA "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\List\"
+#        --diag_suppress Pe001,Pa010 -o
+#        "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\"
+#        -e --debug --core=plain --dptr=16,1 --data_model=large
+#        --code_model=banked --calling_convention=xdata_reentrant
+#        --place_constants=data_rom --nr_virtual_regs 16 -I
+#        "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\AddSceneSelector\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\AddCommon\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\Source\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Source\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mt\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        -Ohz --require_prototypes
+#    List file          =  
+#        C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\List\add_common.lst
+#    Object file        =  
+#        C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+#        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\add_common.r51
+#
+###############################################################################
+
+C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\Add\AddCommon\add_common.c
+      1          /*********************************************************************
+      2           * INCLUDES
+      3           */
+      4          #include "add_common.h"
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8a
+   \   unsigned char volatile __sfr P1IFG
+   \                     P1IFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8c
+   \   unsigned char volatile __sfr PICTL
+   \                     PICTL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8d
+   \   unsigned char volatile __sfr P1IEN
+   \                     P1IEN:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8f
+   \   unsigned char volatile __sfr P0INP
+   \                     P0INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x9a
+   \   unsigned char volatile __sfr IEN2
+   \                     IEN2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IEN0
+   \                     _A_IEN0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xa9
+   \   unsigned char volatile __sfr IP0
+   \                     IP0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb9
+   \   unsigned char volatile __sfr IP1
+   \                     IP1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xe8
+   \   union <unnamed> volatile __sfr _A_IRCON2
+   \                     _A_IRCON2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf2
+   \   unsigned char volatile __sfr APCFG
+   \                     APCFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf3
+   \   unsigned char volatile __sfr P0SEL
+   \                     P0SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf4
+   \   unsigned char volatile __sfr P1SEL
+   \                     P1SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf6
+   \   unsigned char volatile __sfr P1INP
+   \                     P1INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr P2INP
+   \                     P2INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xff
+   \   unsigned char volatile __sfr P2DIR
+   \                     P2DIR:
+   \   000000                DS 1
+      5          
+      6          /*********************************************************************
+      7           * LOCAL VARIABLES
+      8           */
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+      9          byte *acPointer_TaskID;
+   \                     acPointer_TaskID:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     10          devStates_t *acPointer_NwkState;
+   \                     acPointer_NwkState:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     11          bool acNwkState_stopFlash = TRUE;
+   \                     acNwkState_stopFlash:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for acNwkState_stopFlash>`
+   \   000001                REQUIRE __INIT_XDATA_I
+     12          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     13          volatile bool acSleepFlag = FALSE;
+   \                     acSleepFlag:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     14          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     15          uint8 acDelayPowerOn = AC_DELAY_POWER_ON;
+   \                     acDelayPowerOn:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for acDelayPowerOn>`
+   \   000001                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     16          uint8 acDelayJoinNetwork = AC_DELAY_JOIN_NETWORK;
+   \                     acDelayJoinNetwork:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for acDelayJoinNetwork>`
+   \   000001                REQUIRE __INIT_XDATA_I
+     17          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     18          const uint16 acDeviceKeyTimingUnit = 100; // 100ms
+   \                     acDeviceKeyTimingUnit:
+   \   000000   6400         DW 100
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     19          uint8 acDeviceKeyTimingCounter = 0; 
+   \                     acDeviceKeyTimingCounter:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     20          byte acDeviceSetupKeyStatus = AC_KEY_NORMAL;
+   \                     acDeviceSetupKeyStatus:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     21          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     22          volatile uint8 acDoubleClickCounter_whenKeyUp = 0;
+   \                     acDoubleClickCounter_whenKeyUp:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     23          volatile uint8 acDoubleClickCounter_whenKeyDown = 0;
+   \                     acDoubleClickCounter_whenKeyDown:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     24          volatile bool acDoubleClickCheckFlag = FALSE;
+   \                     acDoubleClickCheckFlag:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     25          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     26          volatile byte acInterruptTriggerEdgePort0 = AC_INTERRUPT_TRIGGER_EDGE_FALL;
+   \                     acInterruptTriggerEdgePort0:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     27          volatile byte acInterruptTriggerEdgePort1 = AC_INTERRUPT_TRIGGER_EDGE_FALL;
+   \                     acInterruptTriggerEdgePort1:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     28          volatile byte acInterruptTriggerEdgePort2 = AC_INTERRUPT_TRIGGER_EDGE_FALL;
+   \                     acInterruptTriggerEdgePort2:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     29          
+     30          /*********************************************************************
+     31           * LOCAL FUNCTIONS
+     32           */
+     33          void addCommon_init(void);
+     34          static void addCommon_initHal(void);
+     35          static void addCommon_initAl(void);
+     36          static void addCommon_initNvItemID(void);
+     37          static void addCommon_initNvData(void);
+     38          uint16 addCommon_eventLoop( uint8 task_id, uint16 events );
+     39          void addCommon_polling(void);
+     40          void addCommon_handleOneTime(void);
+     41          void addCommon_isrPort0(void);
+     42          void addCommon_isrPort1(void);
+     43          void addCommon_isrPort2(void);
+     44          
+     45          void addCommon_delayMS(uint16 delayMS);
+     46          void addCommon_ledFlash(uint8 flashCount, uint16 flashDelay);
+     47          bool addCommon_atNormalWorkState(bool judgeNetworkState);
+     48          void addCommon_networkState_led(devStates_t nwkState);
+     49          static void addCommon_handleKeyEvent(void);
+     50          uint8 addCommon_handleKeyDown(void);
+     51          uint8 addCommon_handleKeyUp(void);
+     52          static void NLME_SetRejoinPollRate(uint32 newRate);
+     53          void addCommon_sleep(void);
+     54          void addCommon_wakeup(void);
+     55          void addCommon_factoryReset(void);
+     56          
+     57          /*********************************************************************
+     58           * @fn      addCommon_init
+     59           *
+     60           * @brief   Initial.
+     61           *
+     62           * @param   none
+     63           *
+     64           * @return  none
+     65           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     66          void addCommon_init(void)
+   \                     addCommon_init:
+     67          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     68          	addCommon_initHal();	
+   \   000004                ; Setup parameters for call to function addCommon_initHal
+   \   000004   12....       LCALL   ??addCommon_initHal?relay; Banked call to: addCommon_initHal
+     69          	addCommon_delayMS(500);
+   \   000007                ; Setup parameters for call to function addCommon_delayMS
+   \   000007   7AF4         MOV     R2,#-0xc
+   \   000009   7B01         MOV     R3,#0x1
+   \   00000B   12....       LCALL   ??addCommon_delayMS?relay; Banked call to: addCommon_delayMS
+     70          	addCommon_initAl();
+     71          }
+   \   00000E   02....       LJMP    ??Subroutine4_0 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine4_0:
+   \   000000   D083         POP     DPH
+   \   000002   D082         POP     DPL
+   \   000004   02....       LJMP    ?BRET
+     72          
+     73          /*********************************************************************
+     74           * @fn      addCommon_initHal
+     75           *
+     76           * @brief   Common initial hardware abstract layer.
+     77           *
+     78           * @param   none
+     79           *
+     80           * @return  none
+     81           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     82          static void addCommon_initHal(void)
+   \                     addCommon_initHal:
+     83          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     84          	APCFG = 0x00;
+   \   000004   75F200       MOV     0xf2,#0x0
+     85          	P0SEL = 0x00;
+   \   000007   75F300       MOV     0xf3,#0x0
+     86          	P0INP = 0x00;
+   \   00000A   758F00       MOV     0x8f,#0x0
+     87          	P0DIR = 0x00;
+   \   00000D   75FD00       MOV     0xfd,#0x0
+     88          	P1SEL = 0x00;
+   \   000010   75F400       MOV     0xf4,#0x0
+     89          	P1INP = 0x00;
+   \   000013   75F600       MOV     0xf6,#0x0
+     90          	P1DIR = 0x00;
+   \   000016   75FE00       MOV     0xfe,#0x0
+     91          	P2INP = 0x00;
+   \   000019   75F700       MOV     0xf7,#0x0
+     92          	P2DIR &= ~0x1f;
+   \   00001C   53FFE0       ANL     0xff,#0xe0
+     93          	
+     94          	APCFG &= ~0x40; // P0_6 indicates the device network state
+   \   00001F   53F2BF       ANL     0xf2,#0xbf
+     95          	P0SEL &= ~0x40; 
+   \   000022   53F3BF       ANL     0xf3,#0xbf
+     96          	P0DIR |= 0x40;
+   \   000025   43FD40       ORL     0xfd,#0x40
+     97          	P0INP |= 0x40;
+   \   000028   438F40       ORL     0x8f,#0x40
+     98          	
+     99          	AC_DEVICE_LED_NETWORK_STATE = 0;
+   \   00002B   C286         CLR     0x80.6
+    100          	
+    101          	P1SEL &= ~0x04; // Setup key on port P1_2
+   \   00002D   53F4FB       ANL     0xf4,#0xfb
+    102          	P1DIR &= ~0x04;
+   \   000030   53FEFB       ANL     0xfe,#0xfb
+    103          	P2INP &= ~0x40; // port1 all pull up
+   \   000033   53F7BF       ANL     0xf7,#0xbf
+    104          	P1INP &= ~0x04;
+   \   000036   53F6FB       ANL     0xf6,#0xfb
+    105          
+    106          	EA = 0;
+   \   000039   C2AF         CLR     0xa8.7
+    107          	
+    108          	MicroWait(50000);
+   \   00003B                ; Setup parameters for call to function Onboard_wait
+   \   00003B   7A50         MOV     R2,#0x50
+   \   00003D   7BC3         MOV     R3,#-0x3d
+   \   00003F   12....       LCALL   ??Onboard_wait?relay ; Banked call to: Onboard_wait
+    109          	MicroWait(50000);
+   \   000042                ; Setup parameters for call to function Onboard_wait
+   \   000042   7A50         MOV     R2,#0x50
+   \   000044   7BC3         MOV     R3,#-0x3d
+   \   000046   12....       LCALL   ??Onboard_wait?relay ; Banked call to: Onboard_wait
+    110          
+    111          	P1IEN |= 0x04; // P1_2 interrupt enable
+   \   000049   438D04       ORL     0x8d,#0x4
+    112          	PICTL |= 0x02; // fall edge
+   \   00004C   438C02       ORL     0x8c,#0x2
+    113          	P1IFG &= ~0x04; // clear interrupt flag
+   \   00004F   538AFB       ANL     0x8a,#0xfb
+    114          	IEN2 |= 0x10; // port1 interrupt enable
+   \   000052   439A10       ORL     0x9a,#0x10
+    115          	
+    116          	IP0 |= (1 << 4); // set port1 interrupt highest priority
+   \   000055   43A910       ORL     0xa9,#0x10
+    117          	IP1 |= (1 << 4);
+   \   000058   43B910       ORL     0xb9,#0x10
+    118          	
+    119          	EA = 1;
+   \   00005B   D2AF         SETB    0xa8.7
+    120          }
+   \   00005D   02....       LJMP    ??Subroutine4_0 & 0xFFFF
+   \   000060                REQUIRE APCFG
+   \   000060                REQUIRE P0SEL
+   \   000060                REQUIRE P0INP
+   \   000060                REQUIRE P0DIR
+   \   000060                REQUIRE P1SEL
+   \   000060                REQUIRE P1INP
+   \   000060                REQUIRE P1DIR
+   \   000060                REQUIRE P2INP
+   \   000060                REQUIRE P2DIR
+   \   000060                REQUIRE _A_P0
+   \   000060                REQUIRE _A_IEN0
+   \   000060                REQUIRE P1IEN
+   \   000060                REQUIRE PICTL
+   \   000060                REQUIRE P1IFG
+   \   000060                REQUIRE IEN2
+   \   000060                REQUIRE IP0
+   \   000060                REQUIRE IP1
+    121          
+    122          /*********************************************************************
+    123           * @fn      addCommon_initAl
+    124           *
+    125           * @brief   Common init.
+    126           *
+    127           * @param   none
+    128           *
+    129           * @return  none
+    130           */
+    131          static void addCommon_initAl(void)
+    132          {
+    133          	addCommon_initNvItemID();
+    134          	addCommon_initNvData();
+    135          }
+    136          
+    137          /*********************************************************************
+    138           * @fn      addCommon_initNvItemID
+    139           *
+    140           * @brief   Initial common non-volatile flash item ID.
+    141           *
+    142           * @param   none
+    143           *
+    144           * @return  none
+    145           */
+    146          static void addCommon_initNvItemID(void)
+    147          {
+    148          	// no operation
+    149          }
+    150          
+    151          /*********************************************************************
+    152           * @fn      addCommon_initNvData
+    153           *
+    154           * @brief   Common initial non-volatile flash data.
+    155           *
+    156           * @param   none
+    157           *
+    158           * @return  none
+    159           */
+    160          static void addCommon_initNvData(void)
+    161          {
+    162          	// no operation
+    163          }
+    164          
+    165          /*********************************************************************
+    166           * @fn      addCommon_eventLoop
+    167           *
+    168           * @brief   Common Event Loop Processor for zclGeneral.
+    169           *
+    170           * @param   uint8 task_id, uint16 events
+    171           *
+    172           * @return  none
+    173           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    174          uint16 addCommon_eventLoop( uint8 task_id, uint16 events )
+   \                     addCommon_eventLoop:
+    175          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+    176          	if (events & AC_EVENT_DEVICE_LED_NETWORK_STATE)
+   \   000009   5404         ANL     A,#0x4
+   \   00000B   6022         JZ      ??addCommon_eventLoop_0
+    177          	{
+    178          		//AC_DEVICE_LED_NETWORK_STATE += 1;//LED灯反转，常亮或常灭
+    179          		addCommon_ledFlash(1, 100);//闪灯
+   \   00000D                ; Setup parameters for call to function addCommon_ledFlash
+   \   00000D   7A64         MOV     R2,#0x64
+   \   00000F   7B00         MOV     R3,#0x0
+   \   000011   7901         MOV     R1,#0x1
+   \   000013   12....       LCALL   ??addCommon_ledFlash?relay; Banked call to: addCommon_ledFlash
+    180          		osal_start_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_LED_NETWORK_STATE, AC_DELAY_LED_NETWORK_STATE);
+   \   000016                ; Setup parameters for call to function osal_start_timerEx
+   \   000016   90....       MOV     DPTR,#__Constant_5dc
+   \   000019   12....       LCALL   ?PUSH_XSTACK8_X_FOUR
+   \   00001C   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_12:
+   \   00001F   12....       LCALL   ??osal_start_timerEx?relay; Banked call to: osal_start_timerEx
+   \   000022   7404         MOV     A,#0x4
+   \   000024   12....       LCALL   ?DEALLOC_XSTACK8
+    181          		return ( events ^ AC_EVENT_DEVICE_LED_NETWORK_STATE);
+   \   000027   EE           MOV     A,R6
+   \   000028   FA           MOV     R2,A
+   \   000029   EF           MOV     A,R7
+   \   00002A   6404         XRL     A,#0x4
+   \   00002C   02....       LJMP    ??addCommon_eventLoop_1 & 0xFFFF
+    182          	}
+    183          	
+    184          	if (events & AC_EVENT_DEVICE_KEY_TIMING)
+   \                     ??addCommon_eventLoop_0:
+   \   00002F   EF           MOV     A,R7
+   \   000030   5408         ANL     A,#0x8
+   \   000032   607E         JZ      ??addCommon_eventLoop_2
+    185          	{
+    186          		addCommon_handleKeyEvent();
+   \   000034   90....       MOV     DPTR,#acDeviceKeyTimingCounter
+   \   000037   E0           MOVX    A,@DPTR
+   \   000038   C3           CLR     C
+   \   000039   9496         SUBB    A,#-0x6a
+   \   00003B   5063         JNC     ??addCommon_eventLoop_3
+   \   00003D   E0           MOVX    A,@DPTR
+   \   00003E   04           INC     A
+   \   00003F   F0           MOVX    @DPTR,A
+   \   000040   6401         XRL     A,#0x1
+   \   000042   700B         JNZ     ??addCommon_eventLoop_4
+   \   000044                ; Setup parameters for call to function addCommon_ledFlash
+   \   000044   7A64         MOV     R2,#0x64
+   \   000046   7B00         MOV     R3,#0x0
+   \   000048   7901         MOV     R1,#0x1
+   \   00004A   12....       LCALL   ??addCommon_ledFlash?relay; Banked call to: addCommon_ledFlash
+   \   00004D   8030         SJMP    ??addCommon_eventLoop_5
+   \                     ??addCommon_eventLoop_4:
+   \   00004F   E0           MOVX    A,@DPTR
+   \   000050   6406         XRL     A,#0x6
+   \   000052   602B         JZ      ??addCommon_eventLoop_5
+   \   000054   E0           MOVX    A,@DPTR
+   \   000055   640A         XRL     A,#0xa
+   \   000057   7005         JNZ     ??addCommon_eventLoop_6
+   \   000059                ; Setup parameters for call to function addSceneSelector_sendLevelControlMove
+   \   000059   12....       LCALL   ??addSceneSelector_sendLevelControlMove?relay; Banked call to: addSceneSelector_sendLevelControlMove
+   \   00005C   8021         SJMP    ??addCommon_eventLoop_5
+   \                     ??addCommon_eventLoop_6:
+   \   00005E   E0           MOVX    A,@DPTR
+   \   00005F   6432         XRL     A,#0x32
+   \   000061   7008         JNZ     ??addCommon_eventLoop_7
+   \   000063                ; Setup parameters for call to function addCommon_ledFlash
+   \   000063   7AC8         MOV     R2,#-0x38
+   \   000065   7B00         MOV     R3,#0x0
+   \   000067   7903         MOV     R1,#0x3
+   \   000069   800B         SJMP    ??addCommon_eventLoop_8
+   \                     ??addCommon_eventLoop_7:
+   \   00006B   E0           MOVX    A,@DPTR
+   \   00006C   6464         XRL     A,#0x64
+   \   00006E   700F         JNZ     ??addCommon_eventLoop_5
+   \   000070                ; Setup parameters for call to function addCommon_ledFlash
+   \   000070   7AC8         MOV     R2,#-0x38
+   \   000072   7B00         MOV     R3,#0x0
+   \   000074   7905         MOV     R1,#0x5
+   \                     ??addCommon_eventLoop_8:
+   \   000076   12....       LCALL   ??addCommon_ledFlash?relay; Banked call to: addCommon_ledFlash
+   \   000079                ; Setup parameters for call to function addSceneSelector_factoryResetCheck
+   \   000079   12....       LCALL   ??addSceneSelector_factoryResetCheck?relay; Banked call to: addSceneSelector_factoryResetCheck
+   \   00007C                ; Setup parameters for call to function addSceneSelector_wakeupCheck
+   \   00007C   12....       LCALL   ??addSceneSelector_wakeupCheck?relay; Banked call to: addSceneSelector_wakeupCheck
+   \                     ??addCommon_eventLoop_5:
+   \   00007F                ; Setup parameters for call to function osal_stop_timerEx
+   \   00007F   7A00         MOV     R2,#0x0
+   \   000081   7B08         MOV     R3,#0x8
+   \   000083   12....       LCALL   ??Subroutine5_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_0:
+   \   000086   12....       LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+   \   000089                ; Setup parameters for call to function osal_start_timerEx
+   \   000089   90....       MOV     DPTR,#__Constant_64
+   \   00008C   12....       LCALL   ?PUSH_XSTACK8_X_FOUR
+   \   00008F   7A00         MOV     R2,#0x0
+   \   000091   7B08         MOV     R3,#0x8
+   \   000093   12....       LCALL   ??Subroutine5_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_1:
+   \   000096   12....       LCALL   ??osal_start_timerEx?relay; Banked call to: osal_start_timerEx
+   \   000099   7404         MOV     A,#0x4
+   \   00009B   12....       LCALL   ?DEALLOC_XSTACK8
+   \   00009E   800A         SJMP    ??addCommon_eventLoop_9
+   \                     ??addCommon_eventLoop_3:
+   \   0000A0                ; Setup parameters for call to function osal_stop_timerEx
+   \   0000A0   7A00         MOV     R2,#0x0
+   \   0000A2   7B08         MOV     R3,#0x8
+   \   0000A4   12....       LCALL   ??Subroutine5_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
+   \   0000A7   12....       LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+    187          		return ( events ^ AC_EVENT_DEVICE_KEY_TIMING );
+   \                     ??addCommon_eventLoop_9:
+   \   0000AA   EE           MOV     A,R6
+   \   0000AB   FA           MOV     R2,A
+   \   0000AC   EF           MOV     A,R7
+   \   0000AD   6408         XRL     A,#0x8
+   \                     ??addCommon_eventLoop_1:
+   \   0000AF   FB           MOV     R3,A
+   \   0000B0   8004         SJMP    ??addCommon_eventLoop_10
+    188          	}
+    189          
+    190          	return 0;
+   \                     ??addCommon_eventLoop_2:
+   \   0000B2   7A00         MOV     R2,#0x0
+   \   0000B4   7B00         MOV     R3,#0x0
+   \                     ??addCommon_eventLoop_10:
+   \   0000B6                REQUIRE ?Subroutine1
+   \   0000B6                ; // Fall through to label ?Subroutine1
+    191          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   7F01         MOV     R7,#0x1
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   7A00         MOV     R2,#0x0
+   \   000002   7B04         MOV     R3,#0x4
+   \   000004                REQUIRE ??Subroutine5_0
+   \   000004                ; // Fall through to label ??Subroutine5_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine5_0:
+   \   000000   90....       MOV     DPTR,#acPointer_TaskID
+   \   000003   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_19:
+   \   000006   F9           MOV     R1,A
+   \   000007   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   E0           MOVX    A,@DPTR
+   \   000001   F8           MOV     R0,A
+   \   000002   A3           INC     DPTR
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F583         MOV     DPH,A
+   \   000006   8882         MOV     DPL,R0
+   \   000008   E0           MOVX    A,@DPTR
+   \   000009   22           RET
+    192          
+    193          /*********************************************************************
+    194           * @fn      addCommon_polling
+    195           *
+    196           * @brief   Common polling.
+    197           *
+    198           * @param   none
+    199           *
+    200           * @return  none
+    201           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    202          void addCommon_polling(void)
+   \                     addCommon_polling:
+    203          {	
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    204          	if (acDelayPowerOn > 0)
+   \   000004   90....       MOV     DPTR,#acDelayPowerOn
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   6002         JZ      ??addCommon_polling_0
+    205          	{
+    206          		acDelayPowerOn--;
+   \   00000A   14           DEC     A
+   \   00000B   F0           MOVX    @DPTR,A
+    207          	} else 
+    208          	{
+    209          		// no operation
+    210          	}
+    211          	
+    212          	if (acDelayJoinNetwork > 0)//两分钟后，置0
+   \                     ??addCommon_polling_0:
+   \   00000C   90....       MOV     DPTR,#acDelayJoinNetwork
+   \   00000F   E0           MOVX    A,@DPTR
+   \   000010   600D         JZ      ??addCommon_polling_1
+    213          	{
+    214          		acDelayJoinNetwork--;
+   \   000012   14           DEC     A
+   \   000013   F0           MOVX    @DPTR,A
+    215          		addCommon_ledFlash(1, 100);
+   \   000014                ; Setup parameters for call to function addCommon_ledFlash
+   \   000014   7A64         MOV     R2,#0x64
+   \   000016   7B00         MOV     R3,#0x0
+   \   000018   7901         MOV     R1,#0x1
+   \   00001A   12....       LCALL   ??addCommon_ledFlash?relay; Banked call to: addCommon_ledFlash
+   \   00001D   8002         SJMP    ??addCommon_polling_2
+    216          	} else 
+    217          	{
+    218          		// no operation		
+    219          		AC_DEVICE_LED_NETWORK_STATE = 0;
+   \                     ??addCommon_polling_1:
+   \   00001F   C286         CLR     0x80.6
+    220          	}
+    221          }
+   \                     ??addCommon_polling_2:
+   \   000021   80..         SJMP    ??Subroutine4_0
+   \   000023                REQUIRE _A_P0
+    222          
+    223          /*********************************************************************
+    224           * @fn      addCommon_handleOneTime
+    225           *
+    226           * @brief   Common handle one time.
+    227           *
+    228           * @param   none
+    229           *
+    230           * @return  none
+    231           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    232          void addCommon_handleOneTime(void)
+   \                     addCommon_handleOneTime:
+    233          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    234          	// setup key	
+    235          	if (acDeviceSetupKeyStatus == AC_KEY_DOWN) // long press
+   \   000004   90....       MOV     DPTR,#acDeviceSetupKeyStatus
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   6401         XRL     A,#0x1
+   \   00000A   6029         JZ      ??addCommon_handleOneTime_0
+    236          	{
+    237          		//addCommon_clearKeyData();
+    238          		acDeviceSetupKeyStatus = AC_KEY_DOWN;
+    239          	} else if (acDeviceSetupKeyStatus == AC_KEY_UP_600MS_TO_1S)
+   \   00000C   E0           MOVX    A,@DPTR
+   \   00000D   6403         XRL     A,#0x3
+   \   00000F   7008         JNZ     ??addCommon_handleOneTime_1
+    240          	{
+    241          		//addCommon_clearKeyData();
+    242          		acDeviceSetupKeyStatus = AC_KEY_NORMAL;
+   \   000011   E4           CLR     A
+   \   000012   F0           MOVX    @DPTR,A
+    243          		if (acDoubleClickCounter_whenKeyUp <= 1) // short press
+   \   000013   90....       MOV     DPTR,#acDoubleClickCounter_whenKeyUp
+   \   000016   E0           MOVX    A,@DPTR
+   \   000017   801C         SJMP    ??addCommon_handleOneTime_0
+    244          		{
+    245          			// no operation
+    246          		} else // double click
+    247          		{
+    248          			// no operation
+    249          		}
+    250          	} else if (acDeviceSetupKeyStatus == AC_KEY_UP_1S_TO_5S)
+   \                     ??addCommon_handleOneTime_1:
+   \   000019   E0           MOVX    A,@DPTR
+   \   00001A   6404         XRL     A,#0x4
+   \   00001C   6015         JZ      ??addCommon_handleOneTime_2
+    251          	{
+    252          		//addCommon_clearKeyData();
+    253          		acDeviceSetupKeyStatus = AC_KEY_NORMAL;
+    254          		// no operation
+    255          	} else if ((acDeviceSetupKeyStatus == AC_KEY_UP_5S_TO_10S) || (acDeviceSetupKeyStatus == AC_KEY_UP_ABOVE_10S))
+   \   00001E   E0           MOVX    A,@DPTR
+   \   00001F   6405         XRL     A,#0x5
+   \   000021   6005         JZ      ??addCommon_handleOneTime_3
+   \   000023   E0           MOVX    A,@DPTR
+   \   000024   6406         XRL     A,#0x6
+   \   000026   700B         JNZ     ??addCommon_handleOneTime_2
+    256          	{
+    257          		//addCommon_clearKeyData();
+    258          		acDeviceSetupKeyStatus = AC_KEY_NORMAL;	
+   \                     ??addCommon_handleOneTime_3:
+   \   000028   E4           CLR     A
+   \   000029   F0           MOVX    @DPTR,A
+    259          		acDoubleClickCounter_whenKeyUp = 0;
+   \   00002A   90....       MOV     DPTR,#acDoubleClickCounter_whenKeyUp
+   \   00002D   F0           MOVX    @DPTR,A
+    260          		addCommon_factoryReset();
+   \   00002E                ; Setup parameters for call to function addCommon_factoryReset
+   \   00002E   12....       LCALL   ??addCommon_factoryReset?relay; Banked call to: addCommon_factoryReset
+   \   000031   8002         SJMP    ??addCommon_handleOneTime_0
+    261          	}
+    262          	
+    263          	else // others
+    264          		
+    265          	{
+    266          		//addCommon_clearKeyData();
+    267          		acDeviceSetupKeyStatus = AC_KEY_NORMAL;
+   \                     ??addCommon_handleOneTime_2:
+   \   000033   E4           CLR     A
+   \   000034   F0           MOVX    @DPTR,A
+    268          	}
+    269          	
+    270          	//acDoubleClickCounter_whenKeyUp = 0;
+    271          }
+   \                     ??addCommon_handleOneTime_0:
+   \   000035   80..         SJMP    ??Subroutine4_0
+    272          
+    273          /*********************************************************************
+    274           * @fn      addCommon_isrPort0
+    275           *
+    276           * @brief   Port0 interrupt service routine.
+    277           *
+    278           * @param   none
+    279           *
+    280           * @return  none
+    281           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    282          void addCommon_isrPort0(void)
+   \                     addCommon_isrPort0:
+    283          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    284          #if defined(HOME_GATEWAY)
+    285          	addHomeGateway_isrPort0();
+    286          #elif defined(DIMMER_SWITCH) || defined(DIMMER_SWITCH_TOUCHKEY)
+    287          	addDimmerSwitch_isrPort0();
+    288          #elif defined(SCENE_SELECTOR) || defined(SCENE_SELECTOR_TOUCHKEY)
+    289          	addSceneSelector_isrPort0();
+   \   000004                ; Setup parameters for call to function addSceneSelector_isrPort0
+   \   000004   12....       LCALL   ??addSceneSelector_isrPort0?relay; Banked call to: addSceneSelector_isrPort0
+    290          #elif defined(DIMMER_LIGHT)
+    291          	addDimmerLight_isrPort0();
+    292          #else
+    293          #endif
+    294          }
+   \   000007   80..         SJMP    ??Subroutine4_0
+    295          
+    296          /*********************************************************************
+    297           * @fn      addCommon_isrPort1
+    298           *
+    299           * @brief   Port1 interrupt service routine.
+    300           *
+    301           * @param   none
+    302           *
+    303           * @return  none
+    304           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    305          void addCommon_isrPort1(void)
+   \                     addCommon_isrPort1:
+    306          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    307          	if (TRUE == addCommon_atNormalWorkState(FALSE))
+   \   000004                ; Setup parameters for call to function addCommon_atNormalWorkState
+   \   000004   7900         MOV     R1,#0x0
+   \   000006   12....       LCALL   ??addCommon_atNormalWorkState?relay; Banked call to: addCommon_atNormalWorkState
+   \   000009   E9           MOV     A,R1
+   \   00000A   6401         XRL     A,#0x1
+   \   00000C   6003         JZ      $+5
+   \   00000E   02....       LJMP    ??addCommon_isrPort1_0 & 0xFFFF
+    308          	{
+    309          		//#pragma vector = P1INT_VECTOR    
+    310          		//__interrupt void P1_ISR(void) 
+    311          		{
+    312          			// P1_2(key setup)
+    313          			if ((P1IFG & 0x04) == 0x04) 
+   \   000011   E58A         MOV     A,0x8a
+   \   000013   A2E2         MOV     C,0xE0 /* A   */.2
+   \   000015   4003         JC      $+5
+   \   000017   02....       LJMP    ??addCommon_isrPort1_1 & 0xFFFF
+    314          			{
+    315          				if ((acInterruptTriggerEdgePort1 == AC_INTERRUPT_TRIGGER_EDGE_FALL) && 
+    316          					(AC_DEVICE_SETUP_KEY == 0))
+   \   00001A   90....       MOV     DPTR,#acInterruptTriggerEdgePort1
+   \   00001D   E0           MOVX    A,@DPTR
+   \   00001E   7031         JNZ     ??addCommon_isrPort1_2
+   \   000020   A292         MOV     C,0x90.2
+   \   000022   402D         JC      ??addCommon_isrPort1_2
+    317          				{
+    318          					MicroWait(10000);
+   \   000024                ; Setup parameters for call to function Onboard_wait
+   \   000024   7A10         MOV     R2,#0x10
+   \   000026   7B27         MOV     R3,#0x27
+   \   000028   12....       LCALL   ??Onboard_wait?relay ; Banked call to: Onboard_wait
+    319          					if ((acInterruptTriggerEdgePort1 == AC_INTERRUPT_TRIGGER_EDGE_FALL) && 
+    320          						(AC_DEVICE_SETUP_KEY == 0))
+   \   00002B   90....       MOV     DPTR,#acInterruptTriggerEdgePort1
+   \   00002E   E0           MOVX    A,@DPTR
+   \   00002F   6003         JZ      $+5
+   \   000031   02....       LJMP    ??addCommon_isrPort1_1 & 0xFFFF
+   \   000034   A292         MOV     C,0x90.2
+   \   000036   407C         JC      ??addCommon_isrPort1_1
+    321          					{
+    322          						acDeviceSetupKeyStatus = addCommon_handleKeyDown();
+   \   000038                ; Setup parameters for call to function addCommon_handleKeyDown
+   \   000038   12....       LCALL   ??addCommon_handleKeyDown?relay; Banked call to: addCommon_handleKeyDown
+   \   00003B   E9           MOV     A,R1
+   \   00003C   90....       MOV     DPTR,#acDeviceSetupKeyStatus
+   \   00003F   F0           MOVX    @DPTR,A
+    323          						P1IFG &= ~0x04; // clear interrupt flag
+   \   000040   538AFB       ANL     0x8a,#0xfb
+    324          						P1IF = 0;
+   \   000043   C2EB         CLR     0xe8.3
+    325          						EA = 0;
+   \   000045   C2AF         CLR     0xa8.7
+    326          						PICTL &= ~0x06;
+   \   000047   538CF9       ANL     0x8c,#0xf9
+    327          						acInterruptTriggerEdgePort1 = AC_INTERRUPT_TRIGGER_EDGE_RISE;
+   \   00004A   90....       MOV     DPTR,#acInterruptTriggerEdgePort1
+   \   00004D   7401         MOV     A,#0x1
+   \   00004F   8059         SJMP    ??addCommon_isrPort1_3
+    328          						EA = 1;
+    329          					}
+    330          				} else if ((acInterruptTriggerEdgePort1 == AC_INTERRUPT_TRIGGER_EDGE_RISE) && 
+    331          					(AC_DEVICE_SETUP_KEY == 1))
+   \                     ??addCommon_isrPort1_2:
+   \   000051   E0           MOVX    A,@DPTR
+   \   000052   6401         XRL     A,#0x1
+   \   000054   705E         JNZ     ??addCommon_isrPort1_1
+   \   000056   A292         MOV     C,0x90.2
+   \   000058   505A         JNC     ??addCommon_isrPort1_1
+    332          				{
+    333          					MicroWait(10000);
+   \   00005A                ; Setup parameters for call to function Onboard_wait
+   \   00005A   7A10         MOV     R2,#0x10
+   \   00005C   7B27         MOV     R3,#0x27
+   \   00005E   12....       LCALL   ??Onboard_wait?relay ; Banked call to: Onboard_wait
+    334          					if ((acInterruptTriggerEdgePort1 == AC_INTERRUPT_TRIGGER_EDGE_RISE) && 
+    335          						(AC_DEVICE_SETUP_KEY == 1))
+   \   000061   90....       MOV     DPTR,#acInterruptTriggerEdgePort1
+   \   000064   E0           MOVX    A,@DPTR
+   \   000065   6401         XRL     A,#0x1
+   \   000067   704B         JNZ     ??addCommon_isrPort1_1
+   \   000069   A292         MOV     C,0x90.2
+   \   00006B   5047         JNC     ??addCommon_isrPort1_1
+    336          					{
+    337          						acDeviceSetupKeyStatus = addCommon_handleKeyUp();
+   \   00006D                ; Setup parameters for call to function addCommon_handleKeyUp
+   \   00006D   12....       LCALL   ??addCommon_handleKeyUp?relay; Banked call to: addCommon_handleKeyUp
+   \   000070   E9           MOV     A,R1
+   \   000071   90....       MOV     DPTR,#acDeviceSetupKeyStatus
+   \   000074   F0           MOVX    @DPTR,A
+    338          						if (acDeviceSetupKeyStatus == AC_KEY_UP_BELOW_600MS)
+   \   000075   6402         XRL     A,#0x2
+   \   000077   7019         JNZ     ??addCommon_isrPort1_4
+    339          						{
+    340          							if (acDoubleClickCheckFlag == TRUE)
+   \   000079   90....       MOV     DPTR,#acDoubleClickCheckFlag
+   \   00007C   E0           MOVX    A,@DPTR
+   \   00007D   6401         XRL     A,#0x1
+   \   00007F   90....       MOV     DPTR,#acDeviceSetupKeyStatus
+   \   000082   700B         JNZ     ??addCommon_isrPort1_5
+    341          							{
+    342          								acDeviceSetupKeyStatus = AC_KEY_UP_600MS_TO_1S;
+   \   000084   7403         MOV     A,#0x3
+   \   000086   F0           MOVX    @DPTR,A
+    343          								acDoubleClickCounter_whenKeyUp++;
+   \   000087   90....       MOV     DPTR,#acDoubleClickCounter_whenKeyUp
+   \   00008A   E0           MOVX    A,@DPTR
+   \   00008B   04           INC     A
+   \   00008C   F0           MOVX    @DPTR,A
+   \   00008D   800D         SJMP    ??addCommon_isrPort1_6
+    344          							} else 
+    345          							{
+    346          								acDeviceSetupKeyStatus = AC_KEY_UP_600MS_TO_1S;
+   \                     ??addCommon_isrPort1_5:
+   \   00008F   7403         MOV     A,#0x3
+   \   000091   F0           MOVX    @DPTR,A
+    347          								osal_set_event(*acPointer_TaskID, AC_EVENT_HANDLE_ONE_TIME);
+   \   000092                ; Setup parameters for call to function osal_set_event
+    348          							}
+    349          						} else 
+    350          						{
+    351          							osal_set_event(*acPointer_TaskID, AC_EVENT_HANDLE_ONE_TIME);
+   \                     ??addCommon_isrPort1_4:
+   \   000092                ; Setup parameters for call to function osal_set_event
+   \   000092   7A00         MOV     R2,#0x0
+   \   000094   7B02         MOV     R3,#0x2
+   \   000096   12....       LCALL   ??Subroutine5_0 & 0xFFFF
+    352          						}
+   \                     ??CrossCallReturnLabel_3:
+   \   000099   12....       LCALL   ??osal_set_event?relay; Banked call to: osal_set_event
+    353          						
+    354          						P1IFG &= ~0x04; // clear interrupt flag
+   \                     ??addCommon_isrPort1_6:
+   \   00009C   538AFB       ANL     0x8a,#0xfb
+    355          						P1IF = 0;
+   \   00009F   C2EB         CLR     0xe8.3
+    356          						EA = 0;
+   \   0000A1   C2AF         CLR     0xa8.7
+    357          						PICTL |= 0x06;
+   \   0000A3   438C06       ORL     0x8c,#0x6
+    358          						acInterruptTriggerEdgePort1 = AC_INTERRUPT_TRIGGER_EDGE_FALL;
+   \   0000A6   90....       MOV     DPTR,#acInterruptTriggerEdgePort1
+   \   0000A9   E4           CLR     A
+   \                     ??addCommon_isrPort1_3:
+   \   0000AA   F0           MOVX    @DPTR,A
+    359          						EA = 1;
+   \   0000AB   D2AF         SETB    0xa8.7
+   \   0000AD   8005         SJMP    ??addCommon_isrPort1_1
+    360          					}
+    361          				}
+    362          			}
+    363          		}
+    364          	} else 
+    365          	{
+    366          		P1IFG &= ~0x04; // clear interrupt flag for P1_2
+   \                     ??addCommon_isrPort1_0:
+   \   0000AF   538AFB       ANL     0x8a,#0xfb
+    367          		P1IF = 0;
+   \   0000B2   C2EB         CLR     0xe8.3
+    368          	}
+    369          
+    370          #if defined(HOME_GATEWAY)
+    371          	addHomeGateway_isrPort1();		
+    372          #elif defined(DIMMER_SWITCH) || defined(DIMMER_SWITCH_TOUCHKEY)
+    373          	addDimmerSwitch_isrPort1();  
+    374          #elif defined(SCENE_SELECTOR) || defined(SCENE_SELECTOR_TOUCHKEY)
+    375          	addSceneSelector_isrPort1();
+   \                     ??addCommon_isrPort1_1:
+   \   0000B4                ; Setup parameters for call to function addSceneSelector_isrPort1
+   \   0000B4   12....       LCALL   ??addSceneSelector_isrPort1?relay; Banked call to: addSceneSelector_isrPort1
+    376          #elif defined(DIMMER_LIGHT)	
+    377          	addDimmerLight_isrPort1();	  
+    378          #else			
+    379          #endif
+    380          }
+   \   0000B7   02....       LJMP    ??Subroutine4_0 & 0xFFFF
+   \   0000BA                REQUIRE P1IFG
+   \   0000BA                REQUIRE _A_P1
+   \   0000BA                REQUIRE _A_IRCON2
+   \   0000BA                REQUIRE _A_IEN0
+   \   0000BA                REQUIRE PICTL
+    381          
+    382          /*********************************************************************
+    383           * @fn      addCommon_isrPort2
+    384           *
+    385           * @brief   Port2 interrupt service routine.
+    386           *
+    387           * @param   none
+    388           *
+    389           * @return  none
+    390           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    391          void addCommon_isrPort2(void)
+   \                     addCommon_isrPort2:
+    392          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    393          #if defined(HOME_GATEWAY)
+    394          	addHomeGateway_isrPort2();
+    395          #elif defined(DIMMER_SWITCH) || defined(DIMMER_SWITCH_TOUCHKEY)
+    396          	addDimmerSwitch_isrPort2();
+    397          #elif defined(SCENE_SELECTOR) || defined(SCENE_SELECTOR_TOUCHKEY)	
+    398          	//if (acDelayPowerOn == 0)
+    399          	{
+    400          		addSceneSelector_isrPort2();
+   \   000004                ; Setup parameters for call to function addSceneSelector_isrPort2
+   \   000004   12....       LCALL   ??addSceneSelector_isrPort2?relay; Banked call to: addSceneSelector_isrPort2
+    401          	}
+    402          #elif defined(DIMMER_LIGHT)	
+    403          	addDimmerLight_isrPort2();
+    404          #else			
+    405          #endif
+    406          }
+   \   000007   02....       LJMP    ??Subroutine4_0 & 0xFFFF
+    407          
+    408          /*********************************************************************
+    409           * @fn      addCommon_delayMS
+    410           *
+    411           * @brief   Delay.
+    412           *
+    413           * @param   delayMS
+    414           *
+    415           * @return  none
+    416           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    417          void addCommon_delayMS(uint16 delayMS) // 65536 = 1024 * 64
+   \                     addCommon_delayMS:
+    418          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+    419          	uint16 lFactor = delayMS >> 6;
+   \   000005   8A..         MOV     ?V0,R2
+   \   000007   8B..         MOV     ?V1,R3
+   \   000009   7406         MOV     A,#0x6
+   \   00000B   78..         MOV     R0,#?V0
+   \   00000D   12....       LCALL   ?US_SHR
+   \   000010   85....       MOV     ?V2,?V0
+   \   000013   85....       MOV     ?V3,?V1
+    420          	uint16 lRemainder = delayMS & 0x3f;
+   \   000016   EA           MOV     A,R2
+   \   000017   543F         ANL     A,#0x3f
+   \   000019   F5..         MOV     ?V0,A
+    421          
+    422          	for (uint16 i = 0; i < lFactor; i++)
+   \   00001B   7E00         MOV     R6,#0x0
+   \   00001D   7F00         MOV     R7,#0x0
+   \   00001F   800C         SJMP    ??addCommon_delayMS_0
+    423          	{
+    424          		MicroWait(64000);
+   \                     ??addCommon_delayMS_1:
+   \   000021                ; Setup parameters for call to function Onboard_wait
+   \   000021   7A00         MOV     R2,#0x0
+   \   000023   7BFA         MOV     R3,#-0x6
+   \   000025   12....       LCALL   ??Onboard_wait?relay ; Banked call to: Onboard_wait
+    425          	}
+   \   000028   0E           INC     R6
+   \   000029   EE           MOV     A,R6
+   \   00002A   7001         JNZ     ??addCommon_delayMS_0
+   \   00002C   0F           INC     R7
+   \                     ??addCommon_delayMS_0:
+   \   00002D   C3           CLR     C
+   \   00002E   EE           MOV     A,R6
+   \   00002F   95..         SUBB    A,?V2
+   \   000031   EF           MOV     A,R7
+   \   000032   95..         SUBB    A,?V3
+   \   000034   40EB         JC      ??addCommon_delayMS_1
+    426          	MicroWait(lRemainder * 1000);
+   \   000036                ; Setup parameters for call to function Onboard_wait
+   \   000036   AA..         MOV     R2,?V0
+   \   000038   EA           MOV     A,R2
+   \   000039   75F0E8       MOV     B,#-0x18
+   \   00003C   A4           MUL     AB
+   \   00003D   CA           XCH     A,R2
+   \   00003E   A8F0         MOV     R0,B
+   \   000040   75F003       MOV     B,#0x3
+   \   000043   A4           MUL     AB
+   \   000044   28           ADD     A,R0
+   \   000045   FB           MOV     R3,A
+   \   000046   12....       LCALL   ??Onboard_wait?relay ; Banked call to: Onboard_wait
+    427          }
+   \   000049   7F04         MOV     R7,#0x4
+   \   00004B   02....       LJMP    ?BANKED_LEAVE_XDATA
+    428          
+    429          /*********************************************************************
+    430           * @fn      addCommon_ledFlash
+    431           *
+    432           * @brief   Led flash.
+    433           *
+    434           * @param   uint8 flashCount, uint16 flashDelay
+    435           *
+    436           * @return  void
+    437           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    438          void addCommon_ledFlash(uint8 flashCount, uint16 flashDelay)
+   \                     addCommon_ledFlash:
+    439          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000   74F5         MOV     A,#-0xb
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 11
+   \   000005                ; Auto size: 0
+   \   000005   89..         MOV     ?V2,R1
+   \   000007   EA           MOV     A,R2
+   \   000008   FE           MOV     R6,A
+   \   000009   EB           MOV     A,R3
+   \   00000A   FF           MOV     R7,A
+    440          	AC_DEVICE_LED_NETWORK_STATE = 0;
+   \   00000B   C286         CLR     0x80.6
+    441          	addCommon_delayMS(flashDelay);
+   \   00000D                ; Setup parameters for call to function addCommon_delayMS
+   \   00000D   12....       LCALL   ??addCommon_delayMS?relay; Banked call to: addCommon_delayMS
+    442          	
+    443          	for (int i = 0; i < flashCount; i++)
+   \   000010   75..00       MOV     ?V0,#0x0
+   \   000013   75..00       MOV     ?V1,#0x0
+   \   000016   801A         SJMP    ??addCommon_ledFlash_0
+    444          	{
+    445          		AC_DEVICE_LED_NETWORK_STATE = 1;
+   \                     ??addCommon_ledFlash_1:
+   \   000018   D286         SETB    0x80.6
+    446          		addCommon_delayMS(flashDelay);
+   \   00001A                ; Setup parameters for call to function addCommon_delayMS
+   \   00001A   EE           MOV     A,R6
+   \   00001B   FA           MOV     R2,A
+   \   00001C   EF           MOV     A,R7
+   \   00001D   FB           MOV     R3,A
+   \   00001E   12....       LCALL   ??addCommon_delayMS?relay; Banked call to: addCommon_delayMS
+    447          		AC_DEVICE_LED_NETWORK_STATE = 0;
+   \   000021   C286         CLR     0x80.6
+    448          		addCommon_delayMS(flashDelay);
+   \   000023                ; Setup parameters for call to function addCommon_delayMS
+   \   000023   EE           MOV     A,R6
+   \   000024   FA           MOV     R2,A
+   \   000025   EF           MOV     A,R7
+   \   000026   FB           MOV     R3,A
+   \   000027   12....       LCALL   ??addCommon_delayMS?relay; Banked call to: addCommon_delayMS
+    449          	}
+   \   00002A   05..         INC     ?V0
+   \   00002C   E5..         MOV     A,?V0
+   \   00002E   7002         JNZ     ??addCommon_ledFlash_0
+   \   000030   05..         INC     ?V1
+   \                     ??addCommon_ledFlash_0:
+   \   000032   A8..         MOV     R0,?V2
+   \   000034   C3           CLR     C
+   \   000035   E5..         MOV     A,?V0
+   \   000037   98           SUBB    A,R0
+   \   000038   E5..         MOV     A,?V1
+   \   00003A   9400         SUBB    A,#0x0
+   \   00003C   A2D2         MOV     C,0xD0 /* PSW */.2
+   \   00003E   65D0         XRL     A,PSW
+   \   000040   33           RLC     A
+   \   000041   40D5         JC      ??addCommon_ledFlash_1
+    450          }
+   \   000043   7F03         MOV     R7,#0x3
+   \   000045   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   000048                REQUIRE _A_P0
+    451          
+    452          /*********************************************************************
+    453           * @fn      addCommon_atNormalWorkState
+    454           *
+    455           * @brief   If get into normal work state.
+    456           *
+    457           * @param   bool judgeNetworkState
+    458           *
+    459           * @return  bool
+    460           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    461          bool addCommon_atNormalWorkState(bool judgeNetworkState)
+   \                     addCommon_atNormalWorkState:
+    462          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+   \   000004   E9           MOV     A,R1
+   \   000005   FA           MOV     R2,A
+    463          	if (acDelayPowerOn == 0)
+   \   000006   90....       MOV     DPTR,#acDelayPowerOn
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   701F         JNZ     ??addCommon_atNormalWorkState_0
+    464          	{
+    465          		if (TRUE == judgeNetworkState)
+   \   00000C   7401         MOV     A,#0x1
+   \   00000E   6A           XRL     A,R2
+   \   00000F   7016         JNZ     ??addCommon_atNormalWorkState_1
+    466          		{
+    467          			if ((*acPointer_NwkState == DEV_END_DEVICE) || // Started as device after authentication
+    468          				(*acPointer_NwkState == DEV_ROUTER) || // Device joined, authenticated and is a router
+    469          				(*acPointer_NwkState == DEV_ZB_COORD)) // Started as Zigbee Coordinator
+   \   000011   90....       MOV     DPTR,#acPointer_NwkState
+   \   000014   12....       LCALL   ?Subroutine3 & 0xFFFF
+    470          			{
+    471          				return TRUE;
+    472          			} else { return FALSE; }
+    473          		} else { return TRUE; }
+   \                     ??CrossCallReturnLabel_18:
+   \   000017   F8           MOV     R0,A
+   \   000018   7406         MOV     A,#0x6
+   \   00001A   68           XRL     A,R0
+   \   00001B   600A         JZ      ??addCommon_atNormalWorkState_1
+   \   00001D   7407         MOV     A,#0x7
+   \   00001F   68           XRL     A,R0
+   \   000020   6005         JZ      ??addCommon_atNormalWorkState_1
+   \   000022   7409         MOV     A,#0x9
+   \   000024   68           XRL     A,R0
+   \   000025   7004         JNZ     ??addCommon_atNormalWorkState_0
+   \                     ??addCommon_atNormalWorkState_1:
+   \   000027   7901         MOV     R1,#0x1
+   \   000029   8002         SJMP    ??addCommon_atNormalWorkState_2
+    474          	} else { return FALSE;	}	
+   \                     ??addCommon_atNormalWorkState_0:
+   \   00002B   7900         MOV     R1,#0x0
+   \                     ??addCommon_atNormalWorkState_2:
+   \   00002D   02....       LJMP    ??Subroutine4_0 & 0xFFFF
+    475          }
+    476          
+    477          /*********************************************************************
+    478           * @fn      addCommon_networkState_led
+    479           *
+    480           * @brief  Network state led.
+    481           *
+    482           * @param   devStates_t nwkState
+    483           *
+    484           * @return  none
+    485           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    486          void addCommon_networkState_led(devStates_t nwkState)
+   \                     addCommon_networkState_led:
+    487          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FE           MOV     R6,A
+    488          	if ((nwkState == DEV_HOLD) || // Initialized - not started automatically
+    489          		(nwkState == DEV_INIT) || // Initialized - not connected to anything
+    490          		(nwkState == DEV_COORD_STARTING)) // Started as Zigbee Coordinator		
+   \   000007   600A         JZ      ??addCommon_networkState_led_0
+   \   000009   7401         MOV     A,#0x1
+   \   00000B   6E           XRL     A,R6
+   \   00000C   6005         JZ      ??addCommon_networkState_led_0
+   \   00000E   7408         MOV     A,#0x8
+   \   000010   6E           XRL     A,R6
+   \   000011   700F         JNZ     ??addCommon_networkState_led_1
+    491          	{
+    492          		osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_LED_NETWORK_STATE);
+   \                     ??addCommon_networkState_led_0:
+   \   000013                ; Setup parameters for call to function osal_stop_timerEx
+   \   000013   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_13:
+   \   000016   12....       LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+    493          		AC_DEVICE_LED_NETWORK_STATE = 1;//用此状态开灯＝＝长亮
+   \   000019   D286         SETB    0x80.6
+    494          		acNwkState_stopFlash = TRUE;
+   \   00001B   90....       MOV     DPTR,#acNwkState_stopFlash
+   \   00001E   7401         MOV     A,#0x1
+   \   000020   804A         SJMP    ??addCommon_networkState_led_2
+    495          	} else if ((nwkState == DEV_NWK_DISC) || // Discovering PAN's to join
+    496          		(nwkState == DEV_NWK_JOINING) || // Joining a PAN
+    497          		(nwkState == DEV_NWK_BACKOFF) || // Device is waiting before trying to rejoin
+    498          		(nwkState == DEV_NWK_SEC_REJOIN_CURR_CHANNEL) || // ReJoining a PAN in secure mode scanning in current channel, only for end devices
+    499          		(nwkState == DEV_NWK_SEC_REJOIN_ALL_CHANNEL) || // ReJoining a PAN in secure mode scanning in all channels, only for end devices
+    500          		(nwkState == DEV_NWK_TC_REJOIN_CURR_CHANNEL) || // ReJoining a PAN in Trust center mode scanning in current channel, only for end devices
+    501          		(nwkState == DEV_NWK_TC_REJOIN_ALL_CHANNEL) || // ReJoining a PAN in Trust center mode scanning in all channels, only for end devices
+    502          		(nwkState == DEV_END_DEVICE_UNAUTH) || // Joined but not yet authenticated by trust center
+    503          		(nwkState == DEV_NWK_KA) || // Device is sending KeepAlive message to its parent
+    504          		(nwkState == DEV_NWK_ORPHAN)) // Device has lost information about its parent
+   \                     ??addCommon_networkState_led_1:
+   \   000022   7402         MOV     A,#0x2
+   \   000024   6E           XRL     A,R6
+   \   000025   602D         JZ      ??addCommon_networkState_led_3
+   \   000027   7403         MOV     A,#0x3
+   \   000029   6E           XRL     A,R6
+   \   00002A   6028         JZ      ??addCommon_networkState_led_3
+   \   00002C   740C         MOV     A,#0xc
+   \   00002E   6E           XRL     A,R6
+   \   00002F   6023         JZ      ??addCommon_networkState_led_3
+   \   000031   7404         MOV     A,#0x4
+   \   000033   6E           XRL     A,R6
+   \   000034   601E         JZ      ??addCommon_networkState_led_3
+   \   000036   740D         MOV     A,#0xd
+   \   000038   6E           XRL     A,R6
+   \   000039   6019         JZ      ??addCommon_networkState_led_3
+   \   00003B   740E         MOV     A,#0xe
+   \   00003D   6E           XRL     A,R6
+   \   00003E   6014         JZ      ??addCommon_networkState_led_3
+   \   000040   740F         MOV     A,#0xf
+   \   000042   6E           XRL     A,R6
+   \   000043   600F         JZ      ??addCommon_networkState_led_3
+   \   000045   7405         MOV     A,#0x5
+   \   000047   6E           XRL     A,R6
+   \   000048   600A         JZ      ??addCommon_networkState_led_3
+   \   00004A   740B         MOV     A,#0xb
+   \   00004C   6E           XRL     A,R6
+   \   00004D   6005         JZ      ??addCommon_networkState_led_3
+   \   00004F   740A         MOV     A,#0xa
+   \   000051   6E           XRL     A,R6
+   \   000052   701B         JNZ     ??addCommon_networkState_led_4
+    505          	{
+    506          		if (acNwkState_stopFlash == TRUE)
+   \                     ??addCommon_networkState_led_3:
+   \   000054   90....       MOV     DPTR,#acNwkState_stopFlash
+   \   000057   E0           MOVX    A,@DPTR
+   \   000058   6401         XRL     A,#0x1
+   \   00005A   7051         JNZ     ??addCommon_networkState_led_5
+    507          		{
+    508          			osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_LED_NETWORK_STATE);
+   \   00005C                ; Setup parameters for call to function osal_stop_timerEx
+   \   00005C   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_14:
+   \   00005F   12....       LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+    509          			osal_set_event(*acPointer_TaskID, AC_EVENT_DEVICE_LED_NETWORK_STATE);//状态灯闪1S开关闪灯
+   \   000062                ; Setup parameters for call to function osal_set_event
+   \   000062   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_15:
+   \   000065   12....       LCALL   ??osal_set_event?relay; Banked call to: osal_set_event
+    510          			acNwkState_stopFlash = FALSE;
+   \   000068   90....       MOV     DPTR,#acNwkState_stopFlash
+   \   00006B   E4           CLR     A
+   \                     ??addCommon_networkState_led_2:
+   \   00006C   F0           MOVX    @DPTR,A
+   \   00006D   803E         SJMP    ??addCommon_networkState_led_5
+    511          		}
+    512          	} else if ((nwkState == DEV_END_DEVICE) || // Started as device after authentication
+    513          		(nwkState == DEV_ROUTER) || // Device joined, authenticated and is a router
+    514          		(nwkState == DEV_ZB_COORD)) // Started as Zigbee Coordinator
+   \                     ??addCommon_networkState_led_4:
+   \   00006F   7406         MOV     A,#0x6
+   \   000071   6E           XRL     A,R6
+   \   000072   600A         JZ      ??addCommon_networkState_led_6
+   \   000074   7407         MOV     A,#0x7
+   \   000076   6E           XRL     A,R6
+   \   000077   6005         JZ      ??addCommon_networkState_led_6
+   \   000079   7409         MOV     A,#0x9
+   \   00007B   6E           XRL     A,R6
+   \   00007C   702F         JNZ     ??addCommon_networkState_led_5
+    515          	{
+    516          		osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_LED_NETWORK_STATE);
+   \                     ??addCommon_networkState_led_6:
+   \   00007E                ; Setup parameters for call to function osal_stop_timerEx
+   \   00007E   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_16:
+   \   000081   12....       LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+    517          		AC_DEVICE_LED_NETWORK_STATE = 0;//用此状态关灯
+   \   000084   C286         CLR     0x80.6
+    518          		acNwkState_stopFlash = TRUE;
+   \   000086   90....       MOV     DPTR,#acNwkState_stopFlash
+   \   000089   7401         MOV     A,#0x1
+   \   00008B   F0           MOVX    @DPTR,A
+    519          		
+    520          #if defined(POWER_SAVING)
+    521          		if (acSleepFlag == FALSE)
+   \   00008C   90....       MOV     DPTR,#acSleepFlag
+   \   00008F   E0           MOVX    A,@DPTR
+   \   000090   701B         JNZ     ??addCommon_networkState_led_5
+    522          		{
+    523          			//addCommon_sleep();
+    524          			acDelayJoinNetwork = AC_DELAY_DEEP_SLEEP_AFTER_JOIN_NETWORK;
+   \   000092   90....       MOV     DPTR,#acDelayJoinNetwork
+   \   000095   740C         MOV     A,#0xc
+   \   000097   F0           MOVX    @DPTR,A
+    525          			osal_start_timerEx(*acPointer_TaskID, AC_EVENT_POLLING, AC_DELAY_POLLING);
+   \   000098                ; Setup parameters for call to function osal_start_timerEx
+   \   000098   90....       MOV     DPTR,#__Constant_1388
+   \   00009B   12....       LCALL   ?PUSH_XSTACK8_X_FOUR
+   \   00009E   7A00         MOV     R2,#0x0
+   \   0000A0   7B01         MOV     R3,#0x1
+   \   0000A2   12....       LCALL   ??Subroutine5_0 & 0xFFFF
+    526          		}
+    527          #else
+    528          #endif
+    529          	}
+   \                     ??CrossCallReturnLabel_4:
+   \   0000A5   12....       LCALL   ??osal_start_timerEx?relay; Banked call to: osal_start_timerEx
+   \   0000A8   7404         MOV     A,#0x4
+   \   0000AA   12....       LCALL   ?DEALLOC_XSTACK8
+    530          }
+   \                     ??addCommon_networkState_led_5:
+   \   0000AD   02....       LJMP    ?Subroutine1 & 0xFFFF
+   \   0000B0                REQUIRE _A_P0
+    531          
+    532          /*********************************************************************
+    533           * @fn      addCommon_handleKeyEvent
+    534           *
+    535           * @brief   Setup key down.
+    536           *
+    537           * @param   void
+    538           *
+    539           * @return  void
+    540           */
+    541          static void addCommon_handleKeyEvent(void)
+    542          {	
+    543          	if (acDeviceKeyTimingCounter < 150) // max 15000ms
+    544          	{
+    545          		acDeviceKeyTimingCounter++;
+    546          		if (acDeviceKeyTimingCounter == 1) // 100ms
+    547          		{
+    548          			addCommon_ledFlash(1, 100);
+    549          		} else if (acDeviceKeyTimingCounter == 6) // 600ms
+    550          		{
+    551          			//addCommon_ledFlash(2, 100);
+    552          		} else if (acDeviceKeyTimingCounter == 10) // 1000ms
+    553          		{
+    554          			//addCommon_ledFlash(2, 100);
+    555          #if defined(DIMMER_SWITCH) || defined(DIMMER_SWITCH_TOUCHKEY)
+    556          			addDimmerSwitch_sendLevelControlMove();
+    557          #elif defined(SCENE_SELECTOR) || defined(SCENE_SELECTOR_TOUCHKEY)
+    558          			addSceneSelector_sendLevelControlMove();
+    559          #else
+    560          #endif
+    561          		} else if (acDeviceKeyTimingCounter == 50) // 5000ms
+    562          		{
+    563          			addCommon_ledFlash(3, 200);
+    564          #if defined(DIMMER_SWITCH) || defined(DIMMER_SWITCH_TOUCHKEY)
+    565          			addDimmerSwitch_factoryResetCheck();
+    566          			addDimmerSwitch_wakeupCheck();
+    567          #elif defined(SCENE_SELECTOR) || defined(SCENE_SELECTOR_TOUCHKEY)
+    568          			addSceneSelector_factoryResetCheck();
+    569          			addSceneSelector_wakeupCheck();
+    570          #else
+    571          #endif
+    572          		} else if (acDeviceKeyTimingCounter == 100) // 10000ms
+    573          		{
+    574          			addCommon_ledFlash(5, 200);
+    575          #if defined(DIMMER_SWITCH) || defined(DIMMER_SWITCH_TOUCHKEY)
+    576          			addDimmerSwitch_factoryResetCheck();
+    577          			addDimmerSwitch_wakeupCheck();
+    578          #elif defined(SCENE_SELECTOR) || defined(SCENE_SELECTOR_TOUCHKEY)
+    579          			addSceneSelector_factoryResetCheck();
+    580          			addSceneSelector_wakeupCheck();
+    581          #else
+    582          #endif
+    583          		}
+    584          		osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_KEY_TIMING);
+    585          		osal_start_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_KEY_TIMING, acDeviceKeyTimingUnit); // 100ms
+    586          	} else 
+    587          	{
+    588          		osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_KEY_TIMING);
+    589          	}
+    590          }
+    591          
+    592          /*********************************************************************
+    593           * @fn      addCommon_handleKeyDown
+    594           *
+    595           * @brief   Key down.
+    596           *
+    597           * @param   void
+    598           *
+    599           * @return  uint8
+    600           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    601          uint8 addCommon_handleKeyDown(void)
+   \                     addCommon_handleKeyDown:
+    602          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    603          	if (acDoubleClickCheckFlag == FALSE)
+   \   000004   90....       MOV     DPTR,#acDoubleClickCheckFlag
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   7026         JNZ     ??addCommon_handleKeyDown_0
+    604          	{
+    605          
+    606          		osal_start_timerEx(*acPointer_TaskID, AC_EVENT_DOUBLE_CLICK_CHECK, AC_DELAY_DOUBLE_CLICK);
+   \   00000A                ; Setup parameters for call to function osal_start_timerEx
+   \   00000A   90....       MOV     DPTR,#__Constant_258
+   \   00000D   12....       LCALL   ?PUSH_XSTACK8_X_FOUR
+   \   000010   7A00         MOV     R2,#0x0
+   \   000012   7B20         MOV     R3,#0x20
+   \   000014   12....       LCALL   ??Subroutine5_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_5:
+   \   000017   12....       LCALL   ??osal_start_timerEx?relay; Banked call to: osal_start_timerEx
+   \   00001A   7404         MOV     A,#0x4
+   \   00001C   12....       LCALL   ?DEALLOC_XSTACK8
+    607          		acDoubleClickCheckFlag = TRUE;
+   \   00001F   90....       MOV     DPTR,#acDoubleClickCheckFlag
+   \   000022   7401         MOV     A,#0x1
+   \   000024   F0           MOVX    @DPTR,A
+    608          		acDoubleClickCounter_whenKeyUp = 0;
+   \   000025   90....       MOV     DPTR,#acDoubleClickCounter_whenKeyUp
+   \   000028   E4           CLR     A
+   \   000029   F0           MOVX    @DPTR,A
+    609          		acDoubleClickCounter_whenKeyDown++;
+   \   00002A   90....       MOV     DPTR,#acDoubleClickCounter_whenKeyDown
+   \   00002D   E0           MOVX    A,@DPTR
+   \   00002E   04           INC     A
+   \   00002F   F0           MOVX    @DPTR,A
+    610          	}
+    611          	
+    612          	osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_KEY_TIMING);
+   \                     ??addCommon_handleKeyDown_0:
+   \   000030                ; Setup parameters for call to function osal_stop_timerEx
+   \   000030   7A00         MOV     R2,#0x0
+   \   000032   7B08         MOV     R3,#0x8
+   \   000034   12....       LCALL   ??Subroutine5_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_6:
+   \   000037   12....       LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+    613          	acDeviceKeyTimingCounter = 0;
+   \   00003A   90....       MOV     DPTR,#acDeviceKeyTimingCounter
+   \   00003D   E4           CLR     A
+   \   00003E   F0           MOVX    @DPTR,A
+    614          	osal_set_event(*acPointer_TaskID, AC_EVENT_DEVICE_KEY_TIMING);
+   \   00003F                ; Setup parameters for call to function osal_set_event
+   \   00003F   FA           MOV     R2,A
+   \   000040   7B08         MOV     R3,#0x8
+   \   000042   12....       LCALL   ??Subroutine5_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_7:
+   \   000045   12....       LCALL   ??osal_set_event?relay; Banked call to: osal_set_event
+    615          	
+    616          	return AC_KEY_DOWN;
+   \   000048   7901         MOV     R1,#0x1
+   \   00004A   02....       LJMP    ??Subroutine4_0 & 0xFFFF
+    617          }
+    618          
+    619          /*********************************************************************
+    620           * @fn      addCommon_handleKeyUp
+    621           *
+    622           * @brief   Key up.
+    623           *
+    624           * @param   void
+    625           *
+    626           * @return  uint8
+    627           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    628          uint8 addCommon_handleKeyUp(void)
+   \                     addCommon_handleKeyUp:
+    629          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    630          	//osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_KEY_TIMING);
+    631          	if ((acDeviceKeyTimingCounter >= 1) && (acDeviceKeyTimingCounter < 6)) // >= 100ms && < 600ms
+   \   000004   90....       MOV     DPTR,#acDeviceKeyTimingCounter
+   \   000007   E0           MOVX    A,@DPTR
+   \   000008   6009         JZ      ??addCommon_handleKeyUp_0
+   \   00000A   C3           CLR     C
+   \   00000B   9406         SUBB    A,#0x6
+   \   00000D   5004         JNC     ??addCommon_handleKeyUp_0
+    632          	{
+    633          		return AC_KEY_UP_BELOW_600MS;
+   \   00000F   7902         MOV     R1,#0x2
+   \   000011   8030         SJMP    ??addCommon_handleKeyUp_1
+    634          	} else if ((acDeviceKeyTimingCounter >= 6) && (acDeviceKeyTimingCounter < 10)) // >= 600ms && < 1000ms
+   \                     ??addCommon_handleKeyUp_0:
+   \   000013   E0           MOVX    A,@DPTR
+   \   000014   24FA         ADD     A,#-0x6
+   \   000016   C3           CLR     C
+   \   000017   9404         SUBB    A,#0x4
+   \   000019   5004         JNC     ??addCommon_handleKeyUp_2
+    635          	{
+    636          		return AC_KEY_UP_600MS_TO_1S;
+   \   00001B   7903         MOV     R1,#0x3
+   \   00001D   8024         SJMP    ??addCommon_handleKeyUp_1
+    637          	} else if ((acDeviceKeyTimingCounter >= 10) && (acDeviceKeyTimingCounter < 50)) // >= 1000ms && < 5000ms
+   \                     ??addCommon_handleKeyUp_2:
+   \   00001F   E0           MOVX    A,@DPTR
+   \   000020   24F6         ADD     A,#-0xa
+   \   000022   C3           CLR     C
+   \   000023   9428         SUBB    A,#0x28
+   \   000025   5004         JNC     ??addCommon_handleKeyUp_3
+    638          	{
+    639          		return AC_KEY_UP_1S_TO_5S;
+   \   000027   7904         MOV     R1,#0x4
+   \   000029   8018         SJMP    ??addCommon_handleKeyUp_1
+    640          	} else if ((acDeviceKeyTimingCounter >= 50) && (acDeviceKeyTimingCounter < 100)) // >= 5000ms && < 10000ms
+   \                     ??addCommon_handleKeyUp_3:
+   \   00002B   E0           MOVX    A,@DPTR
+   \   00002C   24CE         ADD     A,#-0x32
+   \   00002E   C3           CLR     C
+   \   00002F   9432         SUBB    A,#0x32
+   \   000031   5004         JNC     ??addCommon_handleKeyUp_4
+    641          	{
+    642          		return AC_KEY_UP_5S_TO_10S;
+   \   000033   7905         MOV     R1,#0x5
+   \   000035   800C         SJMP    ??addCommon_handleKeyUp_1
+    643          	} else if (acDeviceKeyTimingCounter >= 100) // >= 10000ms
+   \                     ??addCommon_handleKeyUp_4:
+   \   000037   E0           MOVX    A,@DPTR
+   \   000038   C3           CLR     C
+   \   000039   9464         SUBB    A,#0x64
+   \   00003B   4004         JC      ??addCommon_handleKeyUp_5
+    644          	{
+    645          		return AC_KEY_UP_ABOVE_10S;
+   \   00003D   7906         MOV     R1,#0x6
+   \   00003F   8002         SJMP    ??addCommon_handleKeyUp_1
+    646          	} else 
+    647          	{
+    648          		return AC_KEY_NORMAL;
+   \                     ??addCommon_handleKeyUp_5:
+   \   000041   7900         MOV     R1,#0x0
+    649          	}
+   \                     ??addCommon_handleKeyUp_1:
+   \   000043   02....       LJMP    ??Subroutine4_0 & 0xFFFF
+    650          	acDeviceKeyTimingCounter = 0;
+                 	^
+Warning[Pe111]: statement is unreachable
+    651          }
+    652          
+    653          /**************************************************************************************************
+    654           * @fn          NLME_SetRejoinPollRate
+    655           *
+    656           * @brief       
+    657           *
+    658           * input parameters
+    659           *
+    660           * @param       newRate = number of milliseconds to do next poll.
+    661           *                        0 will turn off the polling.
+    662           *                        1 will do a one time poll.
+    663           *
+    664           * output parameters
+    665           *
+    666           * None.
+    667           *
+    668           * @return      None.
+    669           **************************************************************************************************
+    670           */
+    671          static void NLME_SetRejoinPollRate(uint32 newRate)
+                             ^
+Warning[Pe177]: function "NLME_SetRejoinPollRate" was declared but never
+          referenced
+    672          {
+    673            osal_nv_write(ZCD_NV_REJOIN_POLL_RATE, 0, 2, (uint8 *)(&newRate));
+    674          }
+    675          
+    676          /*********************************************************************
+    677           * @fn      addCommon_sleep
+    678           *
+    679           * @brief   Sleep.
+    680           *
+    681           * @param   void
+    682           *
+    683           * @return  void
+    684           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    685          void addCommon_sleep(void)
+   \                     addCommon_sleep:
+    686          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    687          #if defined(POWER_SAVING)
+    688          	acSleepFlag = TRUE;			// wakeUp时候会设置为FALSE
+   \   000004   90....       MOV     DPTR,#acSleepFlag
+   \   000007   7401         MOV     A,#0x1
+   \   000009   F0           MOVX    @DPTR,A
+    689          
+    690          	addCommon_ledFlash(7, 100);
+   \   00000A                ; Setup parameters for call to function addCommon_ledFlash
+   \   00000A   7A64         MOV     R2,#0x64
+   \   00000C   7B00         MOV     R3,#0x0
+   \   00000E   7907         MOV     R1,#0x7
+   \   000010   12....       LCALL   ??addCommon_ledFlash?relay; Banked call to: addCommon_ledFlash
+    691          
+    692          	osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_LED_NETWORK_STATE);
+   \   000013                ; Setup parameters for call to function osal_stop_timerEx
+   \   000013   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_17:
+   \   000016   12....       LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+    693          	AC_DEVICE_LED_NETWORK_STATE = 0;
+   \   000019   C286         CLR     0x80.6
+    694          	osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_POLLING);
+   \   00001B                ; Setup parameters for call to function osal_stop_timerEx
+   \   00001B   7A00         MOV     R2,#0x0
+   \   00001D   7B01         MOV     R3,#0x1
+   \   00001F   12....       LCALL   ??Subroutine5_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_8:
+   \   000022   12....       LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+    695          
+    696          	osal_pwrmgr_device(PWRMGR_BATTERY);
+   \   000025                ; Setup parameters for call to function osal_pwrmgr_device
+   \   000025   7901         MOV     R1,#0x1
+   \   000027   12....       LCALL   ??osal_pwrmgr_device?relay; Banked call to: osal_pwrmgr_device
+    697          	osal_pwrmgr_task_state(*acPointer_TaskID, PWRMGR_CONSERVE);
+   \   00002A                ; Setup parameters for call to function osal_pwrmgr_task_state
+   \   00002A   7A00         MOV     R2,#0x0
+   \   00002C   12....       LCALL   ??Subroutine5_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_9:
+   \   00002F   12....       LCALL   ??osal_pwrmgr_task_state?relay; Banked call to: osal_pwrmgr_task_state
+    698          	
+    699          	NLME_SetPollRate(0);
+   \   000032                ; Setup parameters for call to function NLME_SetPollRate
+   \   000032   90....       MOV     DPTR,#__Constant_0
+   \   000035   12....       LCALL   ?XLOAD_R2345
+   \   000038   12....       LCALL   ??NLME_SetPollRate?relay; Banked call to: NLME_SetPollRate
+    700          	//zgPollRate = 0;
+    701          	NLME_SetQueuedPollRate(0);
+   \   00003B                ; Setup parameters for call to function NLME_SetQueuedPollRate
+   \   00003B   7A00         MOV     R2,#0x0
+   \   00003D   7B00         MOV     R3,#0x0
+   \   00003F   12....       LCALL   ??NLME_SetQueuedPollRate?relay; Banked call to: NLME_SetQueuedPollRate
+    702          	//zgQueuedPollRate = 0;
+    703          	NLME_SetResponseRate(0);
+   \   000042                ; Setup parameters for call to function NLME_SetResponseRate
+   \   000042   7A00         MOV     R2,#0x0
+   \   000044   7B00         MOV     R3,#0x0
+   \   000046   12....       LCALL   ??NLME_SetResponseRate?relay; Banked call to: NLME_SetResponseRate
+    704          	//zgResponsePollRate = 0;
+    705          	//NLME_SetRejoinPollRate(0);
+    706          	//zgRejoinPollRate = 0;
+    707          	
+    708          #else
+    709          #endif
+    710          }
+   \   000049   02....       LJMP    ??Subroutine4_0 & 0xFFFF
+   \   00004C                REQUIRE _A_P0
+    711          
+    712          /*********************************************************************
+    713           * @fn      addCommon_wakeup
+    714           *
+    715           * @brief   Wakeup.
+    716           *
+    717           * @param   void
+    718           *
+    719           * @return  void
+    720           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7404         MOV     A,#0x4
+   \   000002   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000005                REQUIRE ??Subroutine4_0
+   \   000005                ; // Fall through to label ??Subroutine4_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    721          void addCommon_wakeup(void)
+   \                     addCommon_wakeup:
+    722          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    723          #if defined(POWER_SAVING)
+    724          	acSleepFlag = FALSE;
+   \   000004   90....       MOV     DPTR,#acSleepFlag
+   \   000007   E4           CLR     A
+   \   000008   F0           MOVX    @DPTR,A
+    725          
+    726          	osal_pwrmgr_device(PWRMGR_ALWAYS_ON);
+   \   000009                ; Setup parameters for call to function osal_pwrmgr_device
+   \   000009   F9           MOV     R1,A
+   \   00000A   12....       LCALL   ??osal_pwrmgr_device?relay; Banked call to: osal_pwrmgr_device
+    727          	osal_pwrmgr_task_state(*acPointer_TaskID, PWRMGR_HOLD);
+   \   00000D                ; Setup parameters for call to function osal_pwrmgr_task_state
+   \   00000D   7A01         MOV     R2,#0x1
+   \   00000F   12....       LCALL   ??Subroutine5_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_10:
+   \   000012   12....       LCALL   ??osal_pwrmgr_task_state?relay; Banked call to: osal_pwrmgr_task_state
+    728          
+    729          	NLME_SetPollRate(500);
+   \   000015                ; Setup parameters for call to function NLME_SetPollRate
+   \   000015   90....       MOV     DPTR,#__Constant_1f4
+   \   000018   12....       LCALL   ?XLOAD_R2345
+   \   00001B   12....       LCALL   ??NLME_SetPollRate?relay; Banked call to: NLME_SetPollRate
+    730          	//zgPollRate = 1000;
+    731          	NLME_SetQueuedPollRate(100);
+   \   00001E                ; Setup parameters for call to function NLME_SetQueuedPollRate
+   \   00001E   7A64         MOV     R2,#0x64
+   \   000020   7B00         MOV     R3,#0x0
+   \   000022   12....       LCALL   ??NLME_SetQueuedPollRate?relay; Banked call to: NLME_SetQueuedPollRate
+    732          	//zgQueuedPollRate = 100;
+    733          	NLME_SetResponseRate(100);
+   \   000025                ; Setup parameters for call to function NLME_SetResponseRate
+   \   000025   7A64         MOV     R2,#0x64
+   \   000027   7B00         MOV     R3,#0x0
+   \   000029   12....       LCALL   ??NLME_SetResponseRate?relay; Banked call to: NLME_SetResponseRate
+    734          	//zgResponsePollRate = 100;
+    735          	//NLME_SetRejoinPollRate(440);
+    736          	//zgRejoinPollRate = 440;
+    737          	
+    738          	acDelayJoinNetwork = AC_DELAY_JOIN_NETWORK;
+   \   00002C   90....       MOV     DPTR,#acDelayJoinNetwork
+   \   00002F   7418         MOV     A,#0x18
+   \   000031   F0           MOVX    @DPTR,A
+    739          	osal_start_timerEx(*acPointer_TaskID, AC_EVENT_POLLING, AC_DELAY_POLLING);
+   \   000032                ; Setup parameters for call to function osal_start_timerEx
+   \   000032   90....       MOV     DPTR,#__Constant_1388
+   \   000035   12....       LCALL   ?PUSH_XSTACK8_X_FOUR
+   \   000038   7A00         MOV     R2,#0x0
+   \   00003A   7B01         MOV     R3,#0x1
+   \   00003C   12....       LCALL   ??Subroutine5_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_11:
+   \   00003F   12....       LCALL   ??osal_start_timerEx?relay; Banked call to: osal_start_timerEx
+   \   000042   02....       LJMP    ?Subroutine0 & 0xFFFF
+    740          	
+    741          #else
+    742          #endif
+    743          }
+    744          
+    745          /*********************************************************************
+    746           * @fn		addCommon_factoryReset
+    747           *
+    748           * @brief	Callback from the ZCL General Cluster Library
+    749           *			to set all the Basic Cluster attributes to	default values.
+    750           *
+    751           * @param	none
+    752           *
+    753           * @return	none
+    754           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    755          void addCommon_factoryReset(void)
+   \                     addCommon_factoryReset:
+    756          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 4
+   \   000004   74FC         MOV     A,#-0x4
+   \   000006   12....       LCALL   ?ALLOC_XSTACK8
+    757          	uint8 tempProcessCmd[] = {1, 0, 0, 0}; // used for reset command, { length + cmd0 + cmd1 + data }
+   \   000009   90....       MOV     DPTR,#`?<Constant {1, 0, 0, 0}>`
+   \   00000C   AC..         MOV     R4,?XSP + 0
+   \   00000E   AD..         MOV     R5,?XSP + 1
+   \   000010   7404         MOV     A,#0x4
+   \   000012   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
+    758          
+    759          	// Put device back to factory default settings
+    760          	zgWriteStartupOptions(ZG_STARTUP_SET, 3);	// bit set both default configuration and default network
+   \   000015                ; Setup parameters for call to function zgWriteStartupOptions
+   \   000015   7A03         MOV     R2,#0x3
+   \   000017   79FF         MOV     R1,#-0x1
+   \   000019   12....       LCALL   ??zgWriteStartupOptions?relay; Banked call to: zgWriteStartupOptions
+    761          
+    762          	// restart device
+    763          	MT_SysCommandProcessing(tempProcessCmd);
+   \   00001C                ; Setup parameters for call to function MT_SysCommandProcessing
+   \   00001C   AA..         MOV     R2,?XSP + 0
+   \   00001E   AB..         MOV     R3,?XSP + 1
+   \   000020   12....       LCALL   ??MT_SysCommandProcessing?relay; Banked call to: MT_SysCommandProcessing
+    764          }
+   \   000023   02....       LJMP    ?Subroutine0 & 0xFFFF
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for acNwkState_stopFlash>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for acDelayPowerOn>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for acDelayJoinNetwork>`:
+   \   000000   18           DB 24
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_initHal?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_initHal
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_eventLoop?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_eventLoop
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_polling?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_polling
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_handleOneTime?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_handleOneTime
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_isrPort0?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_isrPort0
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_isrPort1?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_isrPort1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_isrPort2?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_isrPort2
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_delayMS?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_delayMS
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_ledFlash?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_ledFlash
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_atNormalWorkState?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_atNormalWorkState
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_networkState_led?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_networkState_led
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_handleKeyDown?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_handleKeyDown
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_handleKeyUp?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_handleKeyUp
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_sleep?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_sleep
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_wakeup?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_wakeup
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??addCommon_factoryReset?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    addCommon_factoryReset
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant {1, 0, 0, 0}>`:
+   \   000000   01           DB 1
+   \   000001   00           DB 0
+   \   000002   00           DB 0
+   \   000003   00           DB 0
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_5dc:
+   \   000000   DC050000     DD 1500
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_64:
+   \   000000   64000000     DD 100
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_1388:
+   \   000000   88130000     DD 5000
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_258:
+   \   000000   58020000     DD 600
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_0:
+   \   000000   00000000     DD 0
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_1f4:
+   \   000000   F4010000     DD 500
+    765          
+
+   Maximum stack usage in bytes:
+
+   ISTACK XSTACK Function
+   ------ ------ --------
+      2      0   addCommon_atNormalWorkState
+      0     23   addCommon_delayMS
+        0     12   -> Onboard_wait
+      0     13   addCommon_eventLoop
+        0      9   -> addCommon_ledFlash
+        0      9   -> addSceneSelector_factoryResetCheck
+        0      9   -> addSceneSelector_sendLevelControlMove
+        0      9   -> addSceneSelector_wakeupCheck
+        0     13   -> osal_start_timerEx
+        0      9   -> osal_stop_timerEx
+      2      4   addCommon_factoryReset
+        2      4   -> MT_SysCommandProcessing
+        2      4   -> zgWriteStartupOptions
+      2      4   addCommon_handleKeyDown
+        2      0   -> osal_set_event
+        2      4   -> osal_start_timerEx
+        2      0   -> osal_stop_timerEx
+      2      0   addCommon_handleKeyUp
+      2      0   addCommon_handleOneTime
+        2      0   -> addCommon_factoryReset
+      2      0   addCommon_init
+        2      0   -> addCommon_delayMS
+        2      0   -> addCommon_initHal
+      2      0   addCommon_initHal
+        2      0   -> Onboard_wait
+      2      0   addCommon_isrPort0
+        2      0   -> addSceneSelector_isrPort0
+      2      0   addCommon_isrPort1
+        2      0   -> Onboard_wait
+        2      0   -> addCommon_atNormalWorkState
+        2      0   -> addCommon_handleKeyDown
+        2      0   -> addCommon_handleKeyUp
+        2      0   -> addSceneSelector_isrPort1
+        2      0   -> osal_set_event
+      2      0   addCommon_isrPort2
+        2      0   -> addSceneSelector_isrPort2
+      0     20   addCommon_ledFlash
+        0     11   -> addCommon_delayMS
+      0     13   addCommon_networkState_led
+        0      9   -> osal_set_event
+        0     13   -> osal_start_timerEx
+        0      9   -> osal_stop_timerEx
+      2      0   addCommon_polling
+        2      0   -> addCommon_ledFlash
+      2      0   addCommon_sleep
+        2      0   -> NLME_SetPollRate
+        2      0   -> NLME_SetQueuedPollRate
+        2      0   -> NLME_SetResponseRate
+        2      0   -> addCommon_ledFlash
+        2      0   -> osal_pwrmgr_device
+        2      0   -> osal_pwrmgr_task_state
+        2      0   -> osal_stop_timerEx
+      2      4   addCommon_wakeup
+        2      0   -> NLME_SetPollRate
+        2      0   -> NLME_SetQueuedPollRate
+        2      0   -> NLME_SetResponseRate
+        2      0   -> osal_pwrmgr_device
+        2      0   -> osal_pwrmgr_task_state
+        2      4   -> osal_start_timerEx
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ?<Constant {1, 0, 0, 0}>
+       1  ?<Initializer for acDelayJoinNetwork>
+       1  ?<Initializer for acDelayPowerOn>
+       1  ?<Initializer for acNwkState_stopFlash>
+       7  ??Subroutine4_0
+       8  ??Subroutine5_0
+       6  ??addCommon_atNormalWorkState?relay
+       6  ??addCommon_delayMS?relay
+       6  ??addCommon_eventLoop?relay
+       6  ??addCommon_factoryReset?relay
+       6  ??addCommon_handleKeyDown?relay
+       6  ??addCommon_handleKeyUp?relay
+       6  ??addCommon_handleOneTime?relay
+       6  ??addCommon_init?relay
+       6  ??addCommon_initHal?relay
+       6  ??addCommon_isrPort0?relay
+       6  ??addCommon_isrPort1?relay
+       6  ??addCommon_isrPort2?relay
+       6  ??addCommon_ledFlash?relay
+       6  ??addCommon_networkState_led?relay
+       6  ??addCommon_polling?relay
+       6  ??addCommon_sleep?relay
+       6  ??addCommon_wakeup?relay
+       5  ?Subroutine0
+       5  ?Subroutine1
+       4  ?Subroutine2
+      10  ?Subroutine3
+       1  APCFG
+       1  IEN2
+       1  IP0
+       1  IP1
+       1  P0DIR
+       1  P0INP
+       1  P0SEL
+       1  P1DIR
+       1  P1IEN
+       1  P1IFG
+       1  P1INP
+       1  P1SEL
+       1  P2DIR
+       1  P2INP
+       1  PICTL
+       1  _A_IEN0
+       1  _A_IRCON2
+       1  _A_P0
+       1  _A_P1
+       4  __Constant_0
+       4  __Constant_1388
+       4  __Constant_1f4
+       4  __Constant_258
+       4  __Constant_5dc
+       4  __Constant_64
+       1  acDelayJoinNetwork
+       1  acDelayPowerOn
+       1  acDeviceKeyTimingCounter
+       2  acDeviceKeyTimingUnit
+       1  acDeviceSetupKeyStatus
+       1  acDoubleClickCheckFlag
+       1  acDoubleClickCounter_whenKeyDown
+       1  acDoubleClickCounter_whenKeyUp
+       1  acInterruptTriggerEdgePort0
+       1  acInterruptTriggerEdgePort1
+       1  acInterruptTriggerEdgePort2
+       1  acNwkState_stopFlash
+       2  acPointer_NwkState
+       2  acPointer_TaskID
+       1  acSleepFlag
+      48  addCommon_atNormalWorkState
+      78  addCommon_delayMS
+     182  addCommon_eventLoop
+      38  addCommon_factoryReset
+      77  addCommon_handleKeyDown
+      70  addCommon_handleKeyUp
+      55  addCommon_handleOneTime
+      17  addCommon_init
+      96  addCommon_initHal
+       9  addCommon_isrPort0
+     186  addCommon_isrPort1
+      10  addCommon_isrPort2
+      72  addCommon_ledFlash
+     176  addCommon_networkState_led
+      35  addCommon_polling
+      76  addCommon_sleep
+      69  addCommon_wakeup
+
+ 
+ 1 333 bytes in segment BANKED_CODE
+   102 bytes in segment BANK_RELAYS
+    19 bytes in segment SFR_AN
+     3 bytes in segment XDATA_I
+     3 bytes in segment XDATA_ID
+    30 bytes in segment XDATA_ROM_C
+    13 bytes in segment XDATA_Z
+ 
+ 1 438 bytes of CODE  memory
+     6 bytes of CONST memory (+ 24 bytes shared)
+     0 bytes of DATA  memory (+ 19 bytes shared)
+    16 bytes of XDATA memory
+
+Errors: none
+Warnings: 2

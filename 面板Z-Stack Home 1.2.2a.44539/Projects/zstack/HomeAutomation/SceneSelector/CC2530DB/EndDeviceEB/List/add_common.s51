@@ -1,0 +1,4114 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V9.10.1.2146 for 8051               19/Jan/2018  10:12:22
+// Copyright 2004-2014 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for 8051
+//
+//    Core               =  plain
+//    Code model         =  banked
+//    Data model         =  large
+//    Calling convention =  xdata reentrant
+//    Constant location  =  data_rom
+//    Dptr setup         =  1,16
+//                          
+//    Source file        =  
+//        C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\Add\AddCommon\add_common.c
+//    Command line       =  
+//        -f "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f
+//        "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+//        -DDEFAULT_CHANLIST=0x07FFF800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+//        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+//        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+//        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+//        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+//        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+//        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+//        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+//        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+//        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+//        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+//        -DPOLL_RATE=120000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+//        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=60000)
+//        -f "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+//        "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\Add\AddCommon\add_common.c"
+//        -D SCENE_SELECTOR_TOUCHKEY -D xSCENE_SELECTOR -D ISR_KEYINTERRUPT -D
+//        OSC32K_CRYSTAL_INSTALLED=FALSE -D xxHAL_PA_LNA -D SECURE=1 -D
+//        TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D POWER_SAVING -D
+//        NWK_AUTO_POLL -D xHOLD_AUTO_START -D xZTOOL_P1 -D MT_TASK -D
+//        MT_APP_FUNC -D MT_SYS_FUNC -D MT_ZDO_FUNC -D xLCD_SUPPORTED=DEBUG -D
+//        MULTICAST_ENABLED=FALSE -D ZCL_READ -D ZCL_WRITE -D ZCL_REPORT -D
+//        xZCL_EZMODE -D ZCL_BASIC -D ZCL_IDENTIFY -D ZCL_GROUPS -D ZCL_SCENES
+//        -D ZCL_ON_OFF -D ZCL_LEVEL_CTRL -D ZCL_DIAGNOSTIC -D
+//        FEATURE_SYSTEM_STATS -lC "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack
+//        Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\List\"
+//        -lA "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\List\"
+//        --diag_suppress Pe001,Pa010 -o
+//        "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\"
+//        -e --debug --core=plain --dptr=16,1 --data_model=large
+//        --code_model=banked --calling_convention=xdata_reentrant
+//        --place_constants=data_rom --nr_virtual_regs 16 -I
+//        "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\AddSceneSelector\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\AddCommon\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\Source\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Source\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\ZMain\TI2530DB\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\hal\include\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\include\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mt\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\osal\include\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\af\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        -Ohz --require_prototypes
+//    List file          =  
+//        C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\List\add_common.s51
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME add_common
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?V0
+        EXTERN ?V1
+        EXTERN ?V2
+        EXTERN ?V3
+        EXTERN ?ALLOC_XSTACK8
+        EXTERN ?BANKED_ENTER_XDATA
+        EXTERN ?BANKED_LEAVE_XDATA
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+        EXTERN ?DEALLOC_XSTACK8
+        EXTERN ?MOVE_LONG8_XDATA_XDATA
+        EXTERN ?PUSH_XSTACK8_X_FOUR
+        EXTERN ?US_SHR
+        EXTERN ?XLOAD_R2345
+        EXTERN ?XSP
+        EXTERN __INIT_XDATA_I
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC ??addCommon_atNormalWorkState?relay
+        FUNCTION ??addCommon_atNormalWorkState?relay,0203H
+        PUBLIC ??addCommon_delayMS?relay
+        FUNCTION ??addCommon_delayMS?relay,0203H
+        PUBLIC ??addCommon_eventLoop?relay
+        FUNCTION ??addCommon_eventLoop?relay,0203H
+        PUBLIC ??addCommon_factoryReset?relay
+        FUNCTION ??addCommon_factoryReset?relay,0203H
+        PUBLIC ??addCommon_handleKeyDown?relay
+        FUNCTION ??addCommon_handleKeyDown?relay,0203H
+        PUBLIC ??addCommon_handleKeyUp?relay
+        FUNCTION ??addCommon_handleKeyUp?relay,0203H
+        PUBLIC ??addCommon_handleOneTime?relay
+        FUNCTION ??addCommon_handleOneTime?relay,0203H
+        PUBLIC ??addCommon_init?relay
+        FUNCTION ??addCommon_init?relay,0203H
+        FUNCTION ??addCommon_initHal?relay,0203H
+        PUBLIC ??addCommon_isrPort0?relay
+        FUNCTION ??addCommon_isrPort0?relay,0203H
+        PUBLIC ??addCommon_isrPort1?relay
+        FUNCTION ??addCommon_isrPort1?relay,0203H
+        PUBLIC ??addCommon_isrPort2?relay
+        FUNCTION ??addCommon_isrPort2?relay,0203H
+        PUBLIC ??addCommon_ledFlash?relay
+        FUNCTION ??addCommon_ledFlash?relay,0203H
+        PUBLIC ??addCommon_networkState_led?relay
+        FUNCTION ??addCommon_networkState_led?relay,0203H
+        PUBLIC ??addCommon_polling?relay
+        FUNCTION ??addCommon_polling?relay,0203H
+        PUBLIC ??addCommon_sleep?relay
+        FUNCTION ??addCommon_sleep?relay,0203H
+        PUBLIC ??addCommon_wakeup?relay
+        FUNCTION ??addCommon_wakeup?relay,0203H
+        PUBWEAK APCFG
+        PUBWEAK IEN2
+        PUBWEAK IP0
+        PUBWEAK IP1
+        PUBWEAK P0DIR
+        PUBWEAK P0INP
+        PUBWEAK P0SEL
+        PUBWEAK P1DIR
+        PUBWEAK P1IEN
+        PUBWEAK P1IFG
+        PUBWEAK P1INP
+        PUBWEAK P1SEL
+        PUBWEAK P2DIR
+        PUBWEAK P2INP
+        PUBWEAK PICTL
+        PUBWEAK _A_IEN0
+        PUBWEAK _A_IRCON2
+        PUBWEAK _A_P0
+        PUBWEAK _A_P1
+        PUBWEAK __Constant_0
+        PUBWEAK __Constant_1388
+        PUBWEAK __Constant_1f4
+        PUBWEAK __Constant_258
+        PUBWEAK __Constant_5dc
+        PUBWEAK __Constant_64
+        PUBLIC acDelayJoinNetwork
+        PUBLIC acDelayPowerOn
+        PUBLIC acDeviceKeyTimingCounter
+        PUBLIC acDeviceKeyTimingUnit
+        PUBLIC acDeviceSetupKeyStatus
+        PUBLIC acDoubleClickCheckFlag
+        PUBLIC acDoubleClickCounter_whenKeyDown
+        PUBLIC acDoubleClickCounter_whenKeyUp
+        PUBLIC acInterruptTriggerEdgePort0
+        PUBLIC acInterruptTriggerEdgePort1
+        PUBLIC acInterruptTriggerEdgePort2
+        PUBLIC acNwkState_stopFlash
+        PUBLIC acPointer_NwkState
+        PUBLIC acPointer_TaskID
+        PUBLIC acSleepFlag
+        PUBLIC addCommon_atNormalWorkState
+        FUNCTION addCommon_atNormalWorkState,0203H
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC addCommon_delayMS
+        FUNCTION addCommon_delayMS,0a1203H
+        ARGFRAME XSTACK, 11, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME XSTACK, 12, STACK
+        PUBLIC addCommon_eventLoop
+        FUNCTION addCommon_eventLoop,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 13, STACK
+        PUBLIC addCommon_factoryReset
+        FUNCTION addCommon_factoryReset,021203H
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME XSTACK, 4, STACK
+        PUBLIC addCommon_handleKeyDown
+        FUNCTION addCommon_handleKeyDown,021203H
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME XSTACK, 4, STACK
+        PUBLIC addCommon_handleKeyUp
+        FUNCTION addCommon_handleKeyUp,0203H
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC addCommon_handleOneTime
+        FUNCTION addCommon_handleOneTime,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC addCommon_init
+        FUNCTION addCommon_init,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        FUNCTION addCommon_initHal,021203H
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC addCommon_isrPort0
+        FUNCTION addCommon_isrPort0,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC addCommon_isrPort1
+        FUNCTION addCommon_isrPort1,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC addCommon_isrPort2
+        FUNCTION addCommon_isrPort2,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC addCommon_ledFlash
+        FUNCTION addCommon_ledFlash,0a1203H
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME XSTACK, 11, STACK
+        PUBLIC addCommon_networkState_led
+        FUNCTION addCommon_networkState_led,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 13, STACK
+        PUBLIC addCommon_polling
+        FUNCTION addCommon_polling,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC addCommon_sleep
+        FUNCTION addCommon_sleep,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC addCommon_wakeup
+        FUNCTION addCommon_wakeup,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME XSTACK, 4, STACK
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA_SP SP IDATA
+          CFI StackFrame CFA_PSP16 PSP16 XDATA
+          CFI StackFrame CFA_XSP16 XSP16 XDATA
+          CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+          CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+          CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+          CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+          CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+          CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+          CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+          CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+          CFI Resource V8:8, V9:8, V10:8, V11:8, V12:8, V13:8, V14:8, V15:8, SP:8
+          CFI Resource PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+          CFI VirtualResource ?RET:24
+          CFI Resource ?BRET_EXT:8
+          CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+          CFI ResourceParts PSP16 PSPH, PSPL
+          CFI ResourceParts XSP16 XSPH, XSPL
+          CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 1
+          CFI DataAlign -1
+          CFI ReturnAddress ?RET CODE
+          CFI CFA_DOVERLAY Used
+          CFI CFA_IOVERLAY Used
+          CFI CFA_SP SP+-3
+          CFI CFA_PSP16 PSP16+0
+          CFI CFA_XSP16 XSP16+0
+          CFI `PSW.CY` SameValue
+          CFI `B.BR0` SameValue
+          CFI `B.BR1` SameValue
+          CFI `B.BR2` SameValue
+          CFI `B.BR3` SameValue
+          CFI `B.BR4` SameValue
+          CFI `B.BR5` SameValue
+          CFI `B.BR6` SameValue
+          CFI `B.BR7` SameValue
+          CFI `VB.BR8` SameValue
+          CFI `VB.BR9` SameValue
+          CFI `VB.BR10` SameValue
+          CFI `VB.BR11` SameValue
+          CFI `VB.BR12` SameValue
+          CFI `VB.BR13` SameValue
+          CFI `VB.BR14` SameValue
+          CFI `VB.BR15` SameValue
+          CFI VB SameValue
+          CFI B Undefined
+          CFI A Undefined
+          CFI PSW SameValue
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI R0 Undefined
+          CFI R1 Undefined
+          CFI R2 Undefined
+          CFI R3 Undefined
+          CFI R4 Undefined
+          CFI R5 Undefined
+          CFI R6 SameValue
+          CFI R7 SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI V2 SameValue
+          CFI V3 SameValue
+          CFI V4 SameValue
+          CFI V5 SameValue
+          CFI V6 SameValue
+          CFI V7 SameValue
+          CFI V8 SameValue
+          CFI V9 SameValue
+          CFI V10 SameValue
+          CFI V11 SameValue
+          CFI V12 SameValue
+          CFI V13 SameValue
+          CFI V14 SameValue
+          CFI V15 SameValue
+          CFI PSPH Undefined
+          CFI PSPL Undefined
+          CFI XSPH Undefined
+          CFI XSPL Undefined
+          CFI ?RET Concat
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI EndCommon cfiCommon0
+        
+        
+          CFI Common cfiCommon1 Using cfiNames0
+          CFI CodeAlign 1
+          CFI DataAlign -1
+          CFI ReturnAddress ?RET CODE
+          CFI CFA_DOVERLAY Used
+          CFI CFA_IOVERLAY Used
+          CFI CFA_SP SP+-2
+          CFI CFA_PSP16 PSP16+0
+          CFI CFA_XSP16 XSP16+0
+          CFI `PSW.CY` SameValue
+          CFI `B.BR0` SameValue
+          CFI `B.BR1` SameValue
+          CFI `B.BR2` SameValue
+          CFI `B.BR3` SameValue
+          CFI `B.BR4` SameValue
+          CFI `B.BR5` SameValue
+          CFI `B.BR6` SameValue
+          CFI `B.BR7` SameValue
+          CFI `VB.BR8` SameValue
+          CFI `VB.BR9` SameValue
+          CFI `VB.BR10` SameValue
+          CFI `VB.BR11` SameValue
+          CFI `VB.BR12` SameValue
+          CFI `VB.BR13` SameValue
+          CFI `VB.BR14` SameValue
+          CFI `VB.BR15` SameValue
+          CFI VB SameValue
+          CFI B SameValue
+          CFI A SameValue
+          CFI PSW SameValue
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI R0 SameValue
+          CFI R1 SameValue
+          CFI R2 SameValue
+          CFI R3 SameValue
+          CFI R4 SameValue
+          CFI R5 SameValue
+          CFI R6 SameValue
+          CFI R7 SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI V2 SameValue
+          CFI V3 SameValue
+          CFI V4 SameValue
+          CFI V5 SameValue
+          CFI V6 SameValue
+          CFI V7 SameValue
+          CFI V8 SameValue
+          CFI V9 SameValue
+          CFI V10 SameValue
+          CFI V11 SameValue
+          CFI V12 SameValue
+          CFI V13 SameValue
+          CFI V14 SameValue
+          CFI V15 SameValue
+          CFI PSPH Undefined
+          CFI PSPL Undefined
+          CFI XSPH Undefined
+          CFI XSPL Undefined
+          CFI ?RET Concat
+          CFI ?BRET_EXT SameValue
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI EndCommon cfiCommon1
+        
+MT_SysCommandProcessing SYMBOL "MT_SysCommandProcessing"
+??MT_SysCommandProcessing?relay SYMBOL "?relay", MT_SysCommandProcessing
+NLME_SetPollRate    SYMBOL "NLME_SetPollRate"
+??NLME_SetPollRate?relay SYMBOL "?relay", NLME_SetPollRate
+NLME_SetQueuedPollRate SYMBOL "NLME_SetQueuedPollRate"
+??NLME_SetQueuedPollRate?relay SYMBOL "?relay", NLME_SetQueuedPollRate
+NLME_SetResponseRate SYMBOL "NLME_SetResponseRate"
+??NLME_SetResponseRate?relay SYMBOL "?relay", NLME_SetResponseRate
+Onboard_wait        SYMBOL "Onboard_wait"
+??Onboard_wait?relay SYMBOL "?relay", Onboard_wait
+addSceneSelector_factoryResetCheck SYMBOL "addSceneSelector_factoryResetCheck"
+??addSceneSelector_factoryResetCheck?relay SYMBOL "?relay", addSceneSelector_factoryResetCheck
+addSceneSelector_isrPort0 SYMBOL "addSceneSelector_isrPort0"
+??addSceneSelector_isrPort0?relay SYMBOL "?relay", addSceneSelector_isrPort0
+addSceneSelector_isrPort1 SYMBOL "addSceneSelector_isrPort1"
+??addSceneSelector_isrPort1?relay SYMBOL "?relay", addSceneSelector_isrPort1
+addSceneSelector_isrPort2 SYMBOL "addSceneSelector_isrPort2"
+??addSceneSelector_isrPort2?relay SYMBOL "?relay", addSceneSelector_isrPort2
+addSceneSelector_sendLevelControlMove SYMBOL "addSceneSelector_sendLevelControlMove"
+??addSceneSelector_sendLevelControlMove?relay SYMBOL "?relay", addSceneSelector_sendLevelControlMove
+addSceneSelector_wakeupCheck SYMBOL "addSceneSelector_wakeupCheck"
+??addSceneSelector_wakeupCheck?relay SYMBOL "?relay", addSceneSelector_wakeupCheck
+osal_pwrmgr_device  SYMBOL "osal_pwrmgr_device"
+??osal_pwrmgr_device?relay SYMBOL "?relay", osal_pwrmgr_device
+osal_pwrmgr_task_state SYMBOL "osal_pwrmgr_task_state"
+??osal_pwrmgr_task_state?relay SYMBOL "?relay", osal_pwrmgr_task_state
+osal_set_event      SYMBOL "osal_set_event"
+??osal_set_event?relay SYMBOL "?relay", osal_set_event
+osal_start_timerEx  SYMBOL "osal_start_timerEx"
+??osal_start_timerEx?relay SYMBOL "?relay", osal_start_timerEx
+osal_stop_timerEx   SYMBOL "osal_stop_timerEx"
+??osal_stop_timerEx?relay SYMBOL "?relay", osal_stop_timerEx
+zgWriteStartupOptions SYMBOL "zgWriteStartupOptions"
+??zgWriteStartupOptions?relay SYMBOL "?relay", zgWriteStartupOptions
+addCommon_atNormalWorkState SYMBOL "addCommon_atNormalWorkState"
+??addCommon_atNormalWorkState?relay SYMBOL "?relay", addCommon_atNormalWorkState
+addCommon_delayMS   SYMBOL "addCommon_delayMS"
+??addCommon_delayMS?relay SYMBOL "?relay", addCommon_delayMS
+addCommon_eventLoop SYMBOL "addCommon_eventLoop"
+??addCommon_eventLoop?relay SYMBOL "?relay", addCommon_eventLoop
+addCommon_factoryReset SYMBOL "addCommon_factoryReset"
+??addCommon_factoryReset?relay SYMBOL "?relay", addCommon_factoryReset
+addCommon_handleKeyDown SYMBOL "addCommon_handleKeyDown"
+??addCommon_handleKeyDown?relay SYMBOL "?relay", addCommon_handleKeyDown
+addCommon_handleKeyUp SYMBOL "addCommon_handleKeyUp"
+??addCommon_handleKeyUp?relay SYMBOL "?relay", addCommon_handleKeyUp
+addCommon_handleOneTime SYMBOL "addCommon_handleOneTime"
+??addCommon_handleOneTime?relay SYMBOL "?relay", addCommon_handleOneTime
+addCommon_init      SYMBOL "addCommon_init"
+??addCommon_init?relay SYMBOL "?relay", addCommon_init
+addCommon_isrPort0  SYMBOL "addCommon_isrPort0"
+??addCommon_isrPort0?relay SYMBOL "?relay", addCommon_isrPort0
+addCommon_isrPort1  SYMBOL "addCommon_isrPort1"
+??addCommon_isrPort1?relay SYMBOL "?relay", addCommon_isrPort1
+addCommon_isrPort2  SYMBOL "addCommon_isrPort2"
+??addCommon_isrPort2?relay SYMBOL "?relay", addCommon_isrPort2
+addCommon_ledFlash  SYMBOL "addCommon_ledFlash"
+??addCommon_ledFlash?relay SYMBOL "?relay", addCommon_ledFlash
+addCommon_networkState_led SYMBOL "addCommon_networkState_led"
+??addCommon_networkState_led?relay SYMBOL "?relay", addCommon_networkState_led
+addCommon_polling   SYMBOL "addCommon_polling"
+??addCommon_polling?relay SYMBOL "?relay", addCommon_polling
+addCommon_sleep     SYMBOL "addCommon_sleep"
+??addCommon_sleep?relay SYMBOL "?relay", addCommon_sleep
+addCommon_wakeup    SYMBOL "addCommon_wakeup"
+??addCommon_wakeup?relay SYMBOL "?relay", addCommon_wakeup
+
+        EXTERN ??MT_SysCommandProcessing?relay
+        FUNCTION ??MT_SysCommandProcessing?relay,00H
+        EXTERN ??NLME_SetPollRate?relay
+        FUNCTION ??NLME_SetPollRate?relay,00H
+        EXTERN ??NLME_SetQueuedPollRate?relay
+        FUNCTION ??NLME_SetQueuedPollRate?relay,00H
+        EXTERN ??NLME_SetResponseRate?relay
+        FUNCTION ??NLME_SetResponseRate?relay,00H
+        EXTERN ??Onboard_wait?relay
+        FUNCTION ??Onboard_wait?relay,00H
+        EXTERN ??addSceneSelector_factoryResetCheck?relay
+        FUNCTION ??addSceneSelector_factoryResetCheck?relay,00H
+        EXTERN ??addSceneSelector_isrPort0?relay
+        FUNCTION ??addSceneSelector_isrPort0?relay,00H
+        EXTERN ??addSceneSelector_isrPort1?relay
+        FUNCTION ??addSceneSelector_isrPort1?relay,00H
+        EXTERN ??addSceneSelector_isrPort2?relay
+        FUNCTION ??addSceneSelector_isrPort2?relay,00H
+        EXTERN ??addSceneSelector_sendLevelControlMove?relay
+        FUNCTION ??addSceneSelector_sendLevelControlMove?relay,00H
+        EXTERN ??addSceneSelector_wakeupCheck?relay
+        FUNCTION ??addSceneSelector_wakeupCheck?relay,00H
+        EXTERN ??osal_pwrmgr_device?relay
+        FUNCTION ??osal_pwrmgr_device?relay,00H
+        EXTERN ??osal_pwrmgr_task_state?relay
+        FUNCTION ??osal_pwrmgr_task_state?relay,00H
+        EXTERN ??osal_set_event?relay
+        FUNCTION ??osal_set_event?relay,00H
+        EXTERN ??osal_start_timerEx?relay
+        FUNCTION ??osal_start_timerEx?relay,00H
+        EXTERN ??osal_stop_timerEx?relay
+        FUNCTION ??osal_stop_timerEx?relay,00H
+        EXTERN ??zgWriteStartupOptions?relay
+        FUNCTION ??zgWriteStartupOptions?relay,00H
+        EXTERN MT_SysCommandProcessing
+        FUNCTION MT_SysCommandProcessing,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 4, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN NLME_SetPollRate
+        FUNCTION NLME_SetPollRate,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN NLME_SetQueuedPollRate
+        FUNCTION NLME_SetQueuedPollRate,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN NLME_SetResponseRate
+        FUNCTION NLME_SetResponseRate,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN Onboard_wait
+        FUNCTION Onboard_wait,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN addSceneSelector_factoryResetCheck
+        FUNCTION addSceneSelector_factoryResetCheck,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN addSceneSelector_isrPort0
+        FUNCTION addSceneSelector_isrPort0,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN addSceneSelector_isrPort1
+        FUNCTION addSceneSelector_isrPort1,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN addSceneSelector_isrPort2
+        FUNCTION addSceneSelector_isrPort2,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN addSceneSelector_sendLevelControlMove
+        FUNCTION addSceneSelector_sendLevelControlMove,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN addSceneSelector_wakeupCheck
+        FUNCTION addSceneSelector_wakeupCheck,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_pwrmgr_device
+        FUNCTION osal_pwrmgr_device,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_pwrmgr_task_state
+        FUNCTION osal_pwrmgr_task_state,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_set_event
+        FUNCTION osal_set_event,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_start_timerEx
+        FUNCTION osal_start_timerEx,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 13, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_stop_timerEx
+        FUNCTION osal_stop_timerEx,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zgWriteStartupOptions
+        FUNCTION zgWriteStartupOptions,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 4, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+
+// C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\Add\AddCommon\add_common.c
+//    1 /*********************************************************************
+//    2  * INCLUDES
+//    3  */
+//    4 #include "add_common.h"
+
+        ASEGN SFR_AN:DATA:NOROOT,080H
+// union <unnamed> volatile __sfr _A_P0
+_A_P0:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,08aH
+// unsigned char volatile __sfr P1IFG
+P1IFG:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,08cH
+// unsigned char volatile __sfr PICTL
+PICTL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,08dH
+// unsigned char volatile __sfr P1IEN
+P1IEN:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,08fH
+// unsigned char volatile __sfr P0INP
+P0INP:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,090H
+// union <unnamed> volatile __sfr _A_P1
+_A_P1:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,09aH
+// unsigned char volatile __sfr IEN2
+IEN2:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0a8H
+// union <unnamed> volatile __sfr _A_IEN0
+_A_IEN0:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0a9H
+// unsigned char volatile __sfr IP0
+IP0:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0b9H
+// unsigned char volatile __sfr IP1
+IP1:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0e8H
+// union <unnamed> volatile __sfr _A_IRCON2
+_A_IRCON2:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f2H
+// unsigned char volatile __sfr APCFG
+APCFG:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f3H
+// unsigned char volatile __sfr P0SEL
+P0SEL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f4H
+// unsigned char volatile __sfr P1SEL
+P1SEL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f6H
+// unsigned char volatile __sfr P1INP
+P1INP:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f7H
+// unsigned char volatile __sfr P2INP
+P2INP:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0fdH
+// unsigned char volatile __sfr P0DIR
+P0DIR:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0feH
+// unsigned char volatile __sfr P1DIR
+P1DIR:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0ffH
+// unsigned char volatile __sfr P2DIR
+P2DIR:
+        DATA8
+        DS 1
+//    5 
+//    6 /*********************************************************************
+//    7  * LOCAL VARIABLES
+//    8  */
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA16
+//    9 byte *acPointer_TaskID;
+acPointer_TaskID:
+        DS 2
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA16
+//   10 devStates_t *acPointer_NwkState;
+acPointer_NwkState:
+        DS 2
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   11 bool acNwkState_stopFlash = TRUE;
+acNwkState_stopFlash:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for acNwkState_stopFlash>`
+        REQUIRE __INIT_XDATA_I
+//   12 
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   13 volatile bool acSleepFlag = FALSE;
+acSleepFlag:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//   14 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   15 uint8 acDelayPowerOn = AC_DELAY_POWER_ON;
+acDelayPowerOn:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for acDelayPowerOn>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//   16 uint8 acDelayJoinNetwork = AC_DELAY_JOIN_NETWORK;
+acDelayJoinNetwork:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for acDelayJoinNetwork>`
+        REQUIRE __INIT_XDATA_I
+//   17 
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA16
+//   18 const uint16 acDeviceKeyTimingUnit = 100; // 100ms
+acDeviceKeyTimingUnit:
+        DW 100
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   19 uint8 acDeviceKeyTimingCounter = 0; 
+acDeviceKeyTimingCounter:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   20 byte acDeviceSetupKeyStatus = AC_KEY_NORMAL;
+acDeviceSetupKeyStatus:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//   21 
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   22 volatile uint8 acDoubleClickCounter_whenKeyUp = 0;
+acDoubleClickCounter_whenKeyUp:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   23 volatile uint8 acDoubleClickCounter_whenKeyDown = 0;
+acDoubleClickCounter_whenKeyDown:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   24 volatile bool acDoubleClickCheckFlag = FALSE;
+acDoubleClickCheckFlag:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//   25 
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   26 volatile byte acInterruptTriggerEdgePort0 = AC_INTERRUPT_TRIGGER_EDGE_FALL;
+acInterruptTriggerEdgePort0:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   27 volatile byte acInterruptTriggerEdgePort1 = AC_INTERRUPT_TRIGGER_EDGE_FALL;
+acInterruptTriggerEdgePort1:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   28 volatile byte acInterruptTriggerEdgePort2 = AC_INTERRUPT_TRIGGER_EDGE_FALL;
+acInterruptTriggerEdgePort2:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//   29 
+//   30 /*********************************************************************
+//   31  * LOCAL FUNCTIONS
+//   32  */
+//   33 void addCommon_init(void);
+//   34 static void addCommon_initHal(void);
+//   35 static void addCommon_initAl(void);
+//   36 static void addCommon_initNvItemID(void);
+//   37 static void addCommon_initNvData(void);
+//   38 uint16 addCommon_eventLoop( uint8 task_id, uint16 events );
+//   39 void addCommon_polling(void);
+//   40 void addCommon_handleOneTime(void);
+//   41 void addCommon_isrPort0(void);
+//   42 void addCommon_isrPort1(void);
+//   43 void addCommon_isrPort2(void);
+//   44 
+//   45 void addCommon_delayMS(uint16 delayMS);
+//   46 void addCommon_ledFlash(uint8 flashCount, uint16 flashDelay);
+//   47 bool addCommon_atNormalWorkState(bool judgeNetworkState);
+//   48 void addCommon_networkState_led(devStates_t nwkState);
+//   49 static void addCommon_handleKeyEvent(void);
+//   50 uint8 addCommon_handleKeyDown(void);
+//   51 uint8 addCommon_handleKeyUp(void);
+//   52 static void NLME_SetRejoinPollRate(uint32 newRate);
+//   53 void addCommon_sleep(void);
+//   54 void addCommon_wakeup(void);
+//   55 void addCommon_factoryReset(void);
+//   56 
+//   57 /*********************************************************************
+//   58  * @fn      addCommon_init
+//   59  *
+//   60  * @brief   Initial.
+//   61  *
+//   62  * @param   none
+//   63  *
+//   64  * @return  none
+//   65  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   66 void addCommon_init(void)
+addCommon_init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function addCommon_init
+        CODE
+//   67 {
+        FUNCALL addCommon_init, addCommon_initHal
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_init, addCommon_delayMS
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//   68 	addCommon_initHal();	
+        ; Setup parameters for call to function addCommon_initHal
+        LCALL   ??addCommon_initHal?relay; Banked call to: addCommon_initHal
+//   69 	addCommon_delayMS(500);
+        ; Setup parameters for call to function addCommon_delayMS
+        MOV     R2,#-0xc
+        MOV     R3,#0x1
+        LCALL   ??addCommon_delayMS?relay; Banked call to: addCommon_delayMS
+//   70 	addCommon_initAl();
+//   71 }
+        LJMP    ??Subroutine4_0 & 0xFFFF
+          CFI EndBlock cfiBlock0
+//   72 
+//   73 /*********************************************************************
+//   74  * @fn      addCommon_initHal
+//   75  *
+//   76  * @brief   Common initial hardware abstract layer.
+//   77  *
+//   78  * @param   none
+//   79  *
+//   80  * @return  none
+//   81  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   82 static void addCommon_initHal(void)
+addCommon_initHal:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function addCommon_initHal
+        CODE
+//   83 {
+        FUNCALL addCommon_initHal, Onboard_wait
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_initHal, Onboard_wait
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//   84 	APCFG = 0x00;
+        MOV     0xf2,#0x0
+//   85 	P0SEL = 0x00;
+        MOV     0xf3,#0x0
+//   86 	P0INP = 0x00;
+        MOV     0x8f,#0x0
+//   87 	P0DIR = 0x00;
+        MOV     0xfd,#0x0
+//   88 	P1SEL = 0x00;
+        MOV     0xf4,#0x0
+//   89 	P1INP = 0x00;
+        MOV     0xf6,#0x0
+//   90 	P1DIR = 0x00;
+        MOV     0xfe,#0x0
+//   91 	P2INP = 0x00;
+        MOV     0xf7,#0x0
+//   92 	P2DIR &= ~0x1f;
+        ANL     0xff,#0xe0
+//   93 	
+//   94 	APCFG &= ~0x40; // P0_6 indicates the device network state
+        ANL     0xf2,#0xbf
+//   95 	P0SEL &= ~0x40; 
+        ANL     0xf3,#0xbf
+//   96 	P0DIR |= 0x40;
+        ORL     0xfd,#0x40
+//   97 	P0INP |= 0x40;
+        ORL     0x8f,#0x40
+//   98 	
+//   99 	AC_DEVICE_LED_NETWORK_STATE = 0;
+        CLR     0x80.6
+//  100 	
+//  101 	P1SEL &= ~0x04; // Setup key on port P1_2
+        ANL     0xf4,#0xfb
+//  102 	P1DIR &= ~0x04;
+        ANL     0xfe,#0xfb
+//  103 	P2INP &= ~0x40; // port1 all pull up
+        ANL     0xf7,#0xbf
+//  104 	P1INP &= ~0x04;
+        ANL     0xf6,#0xfb
+//  105 
+//  106 	EA = 0;
+        CLR     0xa8.7
+//  107 	
+//  108 	MicroWait(50000);
+        ; Setup parameters for call to function Onboard_wait
+        MOV     R2,#0x50
+        MOV     R3,#-0x3d
+        LCALL   ??Onboard_wait?relay ; Banked call to: Onboard_wait
+//  109 	MicroWait(50000);
+        ; Setup parameters for call to function Onboard_wait
+        MOV     R2,#0x50
+        MOV     R3,#-0x3d
+        LCALL   ??Onboard_wait?relay ; Banked call to: Onboard_wait
+//  110 
+//  111 	P1IEN |= 0x04; // P1_2 interrupt enable
+        ORL     0x8d,#0x4
+//  112 	PICTL |= 0x02; // fall edge
+        ORL     0x8c,#0x2
+//  113 	P1IFG &= ~0x04; // clear interrupt flag
+        ANL     0x8a,#0xfb
+//  114 	IEN2 |= 0x10; // port1 interrupt enable
+        ORL     0x9a,#0x10
+//  115 	
+//  116 	IP0 |= (1 << 4); // set port1 interrupt highest priority
+        ORL     0xa9,#0x10
+//  117 	IP1 |= (1 << 4);
+        ORL     0xb9,#0x10
+//  118 	
+//  119 	EA = 1;
+        SETB    0xa8.7
+//  120 }
+        LJMP    ??Subroutine4_0 & 0xFFFF
+          CFI EndBlock cfiBlock1
+        REQUIRE APCFG
+        REQUIRE P0SEL
+        REQUIRE P0INP
+        REQUIRE P0DIR
+        REQUIRE P1SEL
+        REQUIRE P1INP
+        REQUIRE P1DIR
+        REQUIRE P2INP
+        REQUIRE P2DIR
+        REQUIRE _A_P0
+        REQUIRE _A_IEN0
+        REQUIRE P1IEN
+        REQUIRE PICTL
+        REQUIRE P1IFG
+        REQUIRE IEN2
+        REQUIRE IP0
+        REQUIRE IP1
+//  121 
+//  122 /*********************************************************************
+//  123  * @fn      addCommon_initAl
+//  124  *
+//  125  * @brief   Common init.
+//  126  *
+//  127  * @param   none
+//  128  *
+//  129  * @return  none
+//  130  */
+//  131 static void addCommon_initAl(void)
+//  132 {
+//  133 	addCommon_initNvItemID();
+//  134 	addCommon_initNvData();
+//  135 }
+//  136 
+//  137 /*********************************************************************
+//  138  * @fn      addCommon_initNvItemID
+//  139  *
+//  140  * @brief   Initial common non-volatile flash item ID.
+//  141  *
+//  142  * @param   none
+//  143  *
+//  144  * @return  none
+//  145  */
+//  146 static void addCommon_initNvItemID(void)
+//  147 {
+//  148 	// no operation
+//  149 }
+//  150 
+//  151 /*********************************************************************
+//  152  * @fn      addCommon_initNvData
+//  153  *
+//  154  * @brief   Common initial non-volatile flash data.
+//  155  *
+//  156  * @param   none
+//  157  *
+//  158  * @return  none
+//  159  */
+//  160 static void addCommon_initNvData(void)
+//  161 {
+//  162 	// no operation
+//  163 }
+//  164 
+//  165 /*********************************************************************
+//  166  * @fn      addCommon_eventLoop
+//  167  *
+//  168  * @brief   Common Event Loop Processor for zclGeneral.
+//  169  *
+//  170  * @param   uint8 task_id, uint16 events
+//  171  *
+//  172  * @return  none
+//  173  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  174 uint16 addCommon_eventLoop( uint8 task_id, uint16 events )
+addCommon_eventLoop:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function addCommon_eventLoop
+        CODE
+//  175 {
+        FUNCALL addCommon_eventLoop, addCommon_ledFlash
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_eventLoop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 13, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 13, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_eventLoop, addCommon_ledFlash
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_eventLoop, addSceneSelector_sendLevelControlMove
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_eventLoop, addCommon_ledFlash
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_eventLoop, addSceneSelector_factoryResetCheck
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_eventLoop, addSceneSelector_wakeupCheck
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_eventLoop, addCommon_ledFlash
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_eventLoop, addSceneSelector_factoryResetCheck
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_eventLoop, addSceneSelector_wakeupCheck
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_eventLoop, osal_stop_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_eventLoop, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 13, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 13, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_eventLoop, osal_stop_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 0
+        MOV     A,R2
+        MOV     R6,A
+        MOV     A,R3
+        MOV     R7,A
+//  176 	if (events & AC_EVENT_DEVICE_LED_NETWORK_STATE)
+        ANL     A,#0x4
+        JZ      ??addCommon_eventLoop_0
+//  177 	{
+//  178 		//AC_DEVICE_LED_NETWORK_STATE += 1;//LED灯反转，常亮或常灭
+//  179 		addCommon_ledFlash(1, 100);//闪灯
+        ; Setup parameters for call to function addCommon_ledFlash
+        MOV     R2,#0x64
+        MOV     R3,#0x0
+        MOV     R1,#0x1
+        LCALL   ??addCommon_ledFlash?relay; Banked call to: addCommon_ledFlash
+//  180 		osal_start_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_LED_NETWORK_STATE, AC_DELAY_LED_NETWORK_STATE);
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     DPTR,#__Constant_5dc
+        LCALL   ?PUSH_XSTACK8_X_FOUR
+          CFI CFA_XSP16 add(XSP16, 13)
+        LCALL   ?Subroutine2 & 0xFFFF
+??CrossCallReturnLabel_12:
+        LCALL   ??osal_start_timerEx?relay; Banked call to: osal_start_timerEx
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 9)
+//  181 		return ( events ^ AC_EVENT_DEVICE_LED_NETWORK_STATE);
+        MOV     A,R6
+        MOV     R2,A
+        MOV     A,R7
+        XRL     A,#0x4
+        LJMP    ??addCommon_eventLoop_1 & 0xFFFF
+//  182 	}
+//  183 	
+//  184 	if (events & AC_EVENT_DEVICE_KEY_TIMING)
+??addCommon_eventLoop_0:
+        MOV     A,R7
+        ANL     A,#0x8
+        JZ      ??addCommon_eventLoop_2
+//  185 	{
+//  186 		addCommon_handleKeyEvent();
+        MOV     DPTR,#acDeviceKeyTimingCounter
+        MOVX    A,@DPTR
+        CLR     C
+        SUBB    A,#-0x6a
+        JNC     ??addCommon_eventLoop_3
+        MOVX    A,@DPTR
+        INC     A
+        MOVX    @DPTR,A
+        XRL     A,#0x1
+        JNZ     ??addCommon_eventLoop_4
+        ; Setup parameters for call to function addCommon_ledFlash
+        MOV     R2,#0x64
+        MOV     R3,#0x0
+        MOV     R1,#0x1
+        LCALL   ??addCommon_ledFlash?relay; Banked call to: addCommon_ledFlash
+        SJMP    ??addCommon_eventLoop_5
+??addCommon_eventLoop_4:
+        MOVX    A,@DPTR
+        XRL     A,#0x6
+        JZ      ??addCommon_eventLoop_5
+        MOVX    A,@DPTR
+        XRL     A,#0xa
+        JNZ     ??addCommon_eventLoop_6
+        ; Setup parameters for call to function addSceneSelector_sendLevelControlMove
+        LCALL   ??addSceneSelector_sendLevelControlMove?relay; Banked call to: addSceneSelector_sendLevelControlMove
+        SJMP    ??addCommon_eventLoop_5
+??addCommon_eventLoop_6:
+        MOVX    A,@DPTR
+        XRL     A,#0x32
+        JNZ     ??addCommon_eventLoop_7
+        ; Setup parameters for call to function addCommon_ledFlash
+        MOV     R2,#-0x38
+        MOV     R3,#0x0
+        MOV     R1,#0x3
+        SJMP    ??addCommon_eventLoop_8
+??addCommon_eventLoop_7:
+        MOVX    A,@DPTR
+        XRL     A,#0x64
+        JNZ     ??addCommon_eventLoop_5
+        ; Setup parameters for call to function addCommon_ledFlash
+        MOV     R2,#-0x38
+        MOV     R3,#0x0
+        MOV     R1,#0x5
+??addCommon_eventLoop_8:
+        LCALL   ??addCommon_ledFlash?relay; Banked call to: addCommon_ledFlash
+        ; Setup parameters for call to function addSceneSelector_factoryResetCheck
+        LCALL   ??addSceneSelector_factoryResetCheck?relay; Banked call to: addSceneSelector_factoryResetCheck
+        ; Setup parameters for call to function addSceneSelector_wakeupCheck
+        LCALL   ??addSceneSelector_wakeupCheck?relay; Banked call to: addSceneSelector_wakeupCheck
+??addCommon_eventLoop_5:
+        ; Setup parameters for call to function osal_stop_timerEx
+        MOV     R2,#0x0
+        MOV     R3,#0x8
+        LCALL   ??Subroutine5_0 & 0xFFFF
+??CrossCallReturnLabel_0:
+        LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     DPTR,#__Constant_64
+        LCALL   ?PUSH_XSTACK8_X_FOUR
+          CFI CFA_XSP16 add(XSP16, 13)
+        MOV     R2,#0x0
+        MOV     R3,#0x8
+        LCALL   ??Subroutine5_0 & 0xFFFF
+??CrossCallReturnLabel_1:
+        LCALL   ??osal_start_timerEx?relay; Banked call to: osal_start_timerEx
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 9)
+        SJMP    ??addCommon_eventLoop_9
+??addCommon_eventLoop_3:
+        ; Setup parameters for call to function osal_stop_timerEx
+        MOV     R2,#0x0
+        MOV     R3,#0x8
+        LCALL   ??Subroutine5_0 & 0xFFFF
+??CrossCallReturnLabel_2:
+        LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+//  187 		return ( events ^ AC_EVENT_DEVICE_KEY_TIMING );
+??addCommon_eventLoop_9:
+        MOV     A,R6
+        MOV     R2,A
+        MOV     A,R7
+        XRL     A,#0x8
+??addCommon_eventLoop_1:
+        MOV     R3,A
+        SJMP    ??addCommon_eventLoop_10
+//  188 	}
+//  189 
+//  190 	return 0;
+??addCommon_eventLoop_2:
+        MOV     R2,#0x0
+        MOV     R3,#0x0
+          CFI EndBlock cfiBlock2
+??addCommon_eventLoop_10:
+        REQUIRE ?Subroutine1
+        ; // Fall through to label ?Subroutine1
+//  191 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine1:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI NoFunction
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 9)
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        MOV     R7,#0x1
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI EndBlock cfiBlock3
+//  192 
+//  193 /*********************************************************************
+//  194  * @fn      addCommon_polling
+//  195  *
+//  196  * @brief   Common polling.
+//  197  *
+//  198  * @param   none
+//  199  *
+//  200  * @return  none
+//  201  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  202 void addCommon_polling(void)
+addCommon_polling:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function addCommon_polling
+        CODE
+//  203 {	
+        FUNCALL addCommon_polling, addCommon_ledFlash
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  204 	if (acDelayPowerOn > 0)
+        MOV     DPTR,#acDelayPowerOn
+        MOVX    A,@DPTR
+        JZ      ??addCommon_polling_0
+//  205 	{
+//  206 		acDelayPowerOn--;
+        DEC     A
+        MOVX    @DPTR,A
+//  207 	} else 
+//  208 	{
+//  209 		// no operation
+//  210 	}
+//  211 	
+//  212 	if (acDelayJoinNetwork > 0)//两分钟后，置0
+??addCommon_polling_0:
+        MOV     DPTR,#acDelayJoinNetwork
+        MOVX    A,@DPTR
+        JZ      ??addCommon_polling_1
+//  213 	{
+//  214 		acDelayJoinNetwork--;
+        DEC     A
+        MOVX    @DPTR,A
+//  215 		addCommon_ledFlash(1, 100);
+        ; Setup parameters for call to function addCommon_ledFlash
+        MOV     R2,#0x64
+        MOV     R3,#0x0
+        MOV     R1,#0x1
+        LCALL   ??addCommon_ledFlash?relay; Banked call to: addCommon_ledFlash
+        SJMP    ??addCommon_polling_2
+//  216 	} else 
+//  217 	{
+//  218 		// no operation		
+//  219 		AC_DEVICE_LED_NETWORK_STATE = 0;
+??addCommon_polling_1:
+        CLR     0x80.6
+//  220 	}
+//  221 }
+??addCommon_polling_2:
+        SJMP    ??Subroutine4_0
+          CFI EndBlock cfiBlock4
+        REQUIRE _A_P0
+//  222 
+//  223 /*********************************************************************
+//  224  * @fn      addCommon_handleOneTime
+//  225  *
+//  226  * @brief   Common handle one time.
+//  227  *
+//  228  * @param   none
+//  229  *
+//  230  * @return  none
+//  231  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  232 void addCommon_handleOneTime(void)
+addCommon_handleOneTime:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function addCommon_handleOneTime
+        CODE
+//  233 {
+        FUNCALL addCommon_handleOneTime, addCommon_factoryReset
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  234 	// setup key	
+//  235 	if (acDeviceSetupKeyStatus == AC_KEY_DOWN) // long press
+        MOV     DPTR,#acDeviceSetupKeyStatus
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JZ      ??addCommon_handleOneTime_0
+//  236 	{
+//  237 		//addCommon_clearKeyData();
+//  238 		acDeviceSetupKeyStatus = AC_KEY_DOWN;
+//  239 	} else if (acDeviceSetupKeyStatus == AC_KEY_UP_600MS_TO_1S)
+        MOVX    A,@DPTR
+        XRL     A,#0x3
+        JNZ     ??addCommon_handleOneTime_1
+//  240 	{
+//  241 		//addCommon_clearKeyData();
+//  242 		acDeviceSetupKeyStatus = AC_KEY_NORMAL;
+        CLR     A
+        MOVX    @DPTR,A
+//  243 		if (acDoubleClickCounter_whenKeyUp <= 1) // short press
+        MOV     DPTR,#acDoubleClickCounter_whenKeyUp
+        MOVX    A,@DPTR
+        SJMP    ??addCommon_handleOneTime_0
+//  244 		{
+//  245 			// no operation
+//  246 		} else // double click
+//  247 		{
+//  248 			// no operation
+//  249 		}
+//  250 	} else if (acDeviceSetupKeyStatus == AC_KEY_UP_1S_TO_5S)
+??addCommon_handleOneTime_1:
+        MOVX    A,@DPTR
+        XRL     A,#0x4
+        JZ      ??addCommon_handleOneTime_2
+//  251 	{
+//  252 		//addCommon_clearKeyData();
+//  253 		acDeviceSetupKeyStatus = AC_KEY_NORMAL;
+//  254 		// no operation
+//  255 	} else if ((acDeviceSetupKeyStatus == AC_KEY_UP_5S_TO_10S) || (acDeviceSetupKeyStatus == AC_KEY_UP_ABOVE_10S))
+        MOVX    A,@DPTR
+        XRL     A,#0x5
+        JZ      ??addCommon_handleOneTime_3
+        MOVX    A,@DPTR
+        XRL     A,#0x6
+        JNZ     ??addCommon_handleOneTime_2
+//  256 	{
+//  257 		//addCommon_clearKeyData();
+//  258 		acDeviceSetupKeyStatus = AC_KEY_NORMAL;	
+??addCommon_handleOneTime_3:
+        CLR     A
+        MOVX    @DPTR,A
+//  259 		acDoubleClickCounter_whenKeyUp = 0;
+        MOV     DPTR,#acDoubleClickCounter_whenKeyUp
+        MOVX    @DPTR,A
+//  260 		addCommon_factoryReset();
+        ; Setup parameters for call to function addCommon_factoryReset
+        LCALL   ??addCommon_factoryReset?relay; Banked call to: addCommon_factoryReset
+        SJMP    ??addCommon_handleOneTime_0
+//  261 	}
+//  262 	
+//  263 	else // others
+//  264 		
+//  265 	{
+//  266 		//addCommon_clearKeyData();
+//  267 		acDeviceSetupKeyStatus = AC_KEY_NORMAL;
+??addCommon_handleOneTime_2:
+        CLR     A
+        MOVX    @DPTR,A
+//  268 	}
+//  269 	
+//  270 	//acDoubleClickCounter_whenKeyUp = 0;
+//  271 }
+??addCommon_handleOneTime_0:
+        SJMP    ??Subroutine4_0
+          CFI EndBlock cfiBlock5
+//  272 
+//  273 /*********************************************************************
+//  274  * @fn      addCommon_isrPort0
+//  275  *
+//  276  * @brief   Port0 interrupt service routine.
+//  277  *
+//  278  * @param   none
+//  279  *
+//  280  * @return  none
+//  281  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  282 void addCommon_isrPort0(void)
+addCommon_isrPort0:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function addCommon_isrPort0
+        CODE
+//  283 {
+        FUNCALL addCommon_isrPort0, addSceneSelector_isrPort0
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  284 #if defined(HOME_GATEWAY)
+//  285 	addHomeGateway_isrPort0();
+//  286 #elif defined(DIMMER_SWITCH) || defined(DIMMER_SWITCH_TOUCHKEY)
+//  287 	addDimmerSwitch_isrPort0();
+//  288 #elif defined(SCENE_SELECTOR) || defined(SCENE_SELECTOR_TOUCHKEY)
+//  289 	addSceneSelector_isrPort0();
+        ; Setup parameters for call to function addSceneSelector_isrPort0
+        LCALL   ??addSceneSelector_isrPort0?relay; Banked call to: addSceneSelector_isrPort0
+//  290 #elif defined(DIMMER_LIGHT)
+//  291 	addDimmerLight_isrPort0();
+//  292 #else
+//  293 #endif
+//  294 }
+        SJMP    ??Subroutine4_0
+          CFI EndBlock cfiBlock6
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine0:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI NoFunction
+          CFI CFA_SP SP+-5
+          CFI CFA_XSP16 add(XSP16, 4)
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI DPH0 Frame(CFA_SP, 5)
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI EndBlock cfiBlock7
+        REQUIRE ??Subroutine4_0
+        ; // Fall through to label ??Subroutine4_0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+??Subroutine4_0:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI NoFunction
+          CFI CFA_SP SP+-5
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI DPH0 Frame(CFA_SP, 5)
+        POP     DPH
+          CFI CFA_SP SP+-4
+          CFI DPH0 SameValue
+        POP     DPL
+          CFI CFA_SP SP+-3
+          CFI DPL0 SameValue
+        LJMP    ?BRET
+          CFI EndBlock cfiBlock8
+//  295 
+//  296 /*********************************************************************
+//  297  * @fn      addCommon_isrPort1
+//  298  *
+//  299  * @brief   Port1 interrupt service routine.
+//  300  *
+//  301  * @param   none
+//  302  *
+//  303  * @return  none
+//  304  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  305 void addCommon_isrPort1(void)
+addCommon_isrPort1:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function addCommon_isrPort1
+        CODE
+//  306 {
+        FUNCALL addCommon_isrPort1, addCommon_atNormalWorkState
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_isrPort1, Onboard_wait
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_isrPort1, addCommon_handleKeyDown
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_isrPort1, Onboard_wait
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_isrPort1, addCommon_handleKeyUp
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_isrPort1, osal_set_event
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_isrPort1, osal_set_event
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_isrPort1, addSceneSelector_isrPort1
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  307 	if (TRUE == addCommon_atNormalWorkState(FALSE))
+        ; Setup parameters for call to function addCommon_atNormalWorkState
+        MOV     R1,#0x0
+        LCALL   ??addCommon_atNormalWorkState?relay; Banked call to: addCommon_atNormalWorkState
+        MOV     A,R1
+        XRL     A,#0x1
+        JZ      $+5
+        LJMP    ??addCommon_isrPort1_0 & 0xFFFF
+//  308 	{
+//  309 		//#pragma vector = P1INT_VECTOR    
+//  310 		//__interrupt void P1_ISR(void) 
+//  311 		{
+//  312 			// P1_2(key setup)
+//  313 			if ((P1IFG & 0x04) == 0x04) 
+        MOV     A,0x8a
+        MOV     C,0xE0 /* A   */.2
+        JC      $+5
+        LJMP    ??addCommon_isrPort1_1 & 0xFFFF
+//  314 			{
+//  315 				if ((acInterruptTriggerEdgePort1 == AC_INTERRUPT_TRIGGER_EDGE_FALL) && 
+//  316 					(AC_DEVICE_SETUP_KEY == 0))
+        MOV     DPTR,#acInterruptTriggerEdgePort1
+        MOVX    A,@DPTR
+        JNZ     ??addCommon_isrPort1_2
+        MOV     C,0x90.2
+        JC      ??addCommon_isrPort1_2
+//  317 				{
+//  318 					MicroWait(10000);
+        ; Setup parameters for call to function Onboard_wait
+        MOV     R2,#0x10
+        MOV     R3,#0x27
+        LCALL   ??Onboard_wait?relay ; Banked call to: Onboard_wait
+//  319 					if ((acInterruptTriggerEdgePort1 == AC_INTERRUPT_TRIGGER_EDGE_FALL) && 
+//  320 						(AC_DEVICE_SETUP_KEY == 0))
+        MOV     DPTR,#acInterruptTriggerEdgePort1
+        MOVX    A,@DPTR
+        JZ      $+5
+        LJMP    ??addCommon_isrPort1_1 & 0xFFFF
+        MOV     C,0x90.2
+        JC      ??addCommon_isrPort1_1
+//  321 					{
+//  322 						acDeviceSetupKeyStatus = addCommon_handleKeyDown();
+        ; Setup parameters for call to function addCommon_handleKeyDown
+        LCALL   ??addCommon_handleKeyDown?relay; Banked call to: addCommon_handleKeyDown
+        MOV     A,R1
+        MOV     DPTR,#acDeviceSetupKeyStatus
+        MOVX    @DPTR,A
+//  323 						P1IFG &= ~0x04; // clear interrupt flag
+        ANL     0x8a,#0xfb
+//  324 						P1IF = 0;
+        CLR     0xe8.3
+//  325 						EA = 0;
+        CLR     0xa8.7
+//  326 						PICTL &= ~0x06;
+        ANL     0x8c,#0xf9
+//  327 						acInterruptTriggerEdgePort1 = AC_INTERRUPT_TRIGGER_EDGE_RISE;
+        MOV     DPTR,#acInterruptTriggerEdgePort1
+        MOV     A,#0x1
+        SJMP    ??addCommon_isrPort1_3
+//  328 						EA = 1;
+//  329 					}
+//  330 				} else if ((acInterruptTriggerEdgePort1 == AC_INTERRUPT_TRIGGER_EDGE_RISE) && 
+//  331 					(AC_DEVICE_SETUP_KEY == 1))
+??addCommon_isrPort1_2:
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??addCommon_isrPort1_1
+        MOV     C,0x90.2
+        JNC     ??addCommon_isrPort1_1
+//  332 				{
+//  333 					MicroWait(10000);
+        ; Setup parameters for call to function Onboard_wait
+        MOV     R2,#0x10
+        MOV     R3,#0x27
+        LCALL   ??Onboard_wait?relay ; Banked call to: Onboard_wait
+//  334 					if ((acInterruptTriggerEdgePort1 == AC_INTERRUPT_TRIGGER_EDGE_RISE) && 
+//  335 						(AC_DEVICE_SETUP_KEY == 1))
+        MOV     DPTR,#acInterruptTriggerEdgePort1
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??addCommon_isrPort1_1
+        MOV     C,0x90.2
+        JNC     ??addCommon_isrPort1_1
+//  336 					{
+//  337 						acDeviceSetupKeyStatus = addCommon_handleKeyUp();
+        ; Setup parameters for call to function addCommon_handleKeyUp
+        LCALL   ??addCommon_handleKeyUp?relay; Banked call to: addCommon_handleKeyUp
+        MOV     A,R1
+        MOV     DPTR,#acDeviceSetupKeyStatus
+        MOVX    @DPTR,A
+//  338 						if (acDeviceSetupKeyStatus == AC_KEY_UP_BELOW_600MS)
+        XRL     A,#0x2
+        JNZ     ??addCommon_isrPort1_4
+//  339 						{
+//  340 							if (acDoubleClickCheckFlag == TRUE)
+        MOV     DPTR,#acDoubleClickCheckFlag
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        MOV     DPTR,#acDeviceSetupKeyStatus
+        JNZ     ??addCommon_isrPort1_5
+//  341 							{
+//  342 								acDeviceSetupKeyStatus = AC_KEY_UP_600MS_TO_1S;
+        MOV     A,#0x3
+        MOVX    @DPTR,A
+//  343 								acDoubleClickCounter_whenKeyUp++;
+        MOV     DPTR,#acDoubleClickCounter_whenKeyUp
+        MOVX    A,@DPTR
+        INC     A
+        MOVX    @DPTR,A
+        SJMP    ??addCommon_isrPort1_6
+//  344 							} else 
+//  345 							{
+//  346 								acDeviceSetupKeyStatus = AC_KEY_UP_600MS_TO_1S;
+??addCommon_isrPort1_5:
+        MOV     A,#0x3
+        MOVX    @DPTR,A
+//  347 								osal_set_event(*acPointer_TaskID, AC_EVENT_HANDLE_ONE_TIME);
+        ; Setup parameters for call to function osal_set_event
+//  348 							}
+//  349 						} else 
+//  350 						{
+//  351 							osal_set_event(*acPointer_TaskID, AC_EVENT_HANDLE_ONE_TIME);
+??addCommon_isrPort1_4:
+        ; Setup parameters for call to function osal_set_event
+        MOV     R2,#0x0
+        MOV     R3,#0x2
+        LCALL   ??Subroutine5_0 & 0xFFFF
+//  352 						}
+??CrossCallReturnLabel_3:
+        LCALL   ??osal_set_event?relay; Banked call to: osal_set_event
+//  353 						
+//  354 						P1IFG &= ~0x04; // clear interrupt flag
+??addCommon_isrPort1_6:
+        ANL     0x8a,#0xfb
+//  355 						P1IF = 0;
+        CLR     0xe8.3
+//  356 						EA = 0;
+        CLR     0xa8.7
+//  357 						PICTL |= 0x06;
+        ORL     0x8c,#0x6
+//  358 						acInterruptTriggerEdgePort1 = AC_INTERRUPT_TRIGGER_EDGE_FALL;
+        MOV     DPTR,#acInterruptTriggerEdgePort1
+        CLR     A
+??addCommon_isrPort1_3:
+        MOVX    @DPTR,A
+//  359 						EA = 1;
+        SETB    0xa8.7
+        SJMP    ??addCommon_isrPort1_1
+//  360 					}
+//  361 				}
+//  362 			}
+//  363 		}
+//  364 	} else 
+//  365 	{
+//  366 		P1IFG &= ~0x04; // clear interrupt flag for P1_2
+??addCommon_isrPort1_0:
+        ANL     0x8a,#0xfb
+//  367 		P1IF = 0;
+        CLR     0xe8.3
+//  368 	}
+//  369 
+//  370 #if defined(HOME_GATEWAY)
+//  371 	addHomeGateway_isrPort1();		
+//  372 #elif defined(DIMMER_SWITCH) || defined(DIMMER_SWITCH_TOUCHKEY)
+//  373 	addDimmerSwitch_isrPort1();  
+//  374 #elif defined(SCENE_SELECTOR) || defined(SCENE_SELECTOR_TOUCHKEY)
+//  375 	addSceneSelector_isrPort1();
+??addCommon_isrPort1_1:
+        ; Setup parameters for call to function addSceneSelector_isrPort1
+        LCALL   ??addSceneSelector_isrPort1?relay; Banked call to: addSceneSelector_isrPort1
+//  376 #elif defined(DIMMER_LIGHT)	
+//  377 	addDimmerLight_isrPort1();	  
+//  378 #else			
+//  379 #endif
+//  380 }
+        LJMP    ??Subroutine4_0 & 0xFFFF
+          CFI EndBlock cfiBlock9
+        REQUIRE P1IFG
+        REQUIRE _A_P1
+        REQUIRE _A_IRCON2
+        REQUIRE _A_IEN0
+        REQUIRE PICTL
+//  381 
+//  382 /*********************************************************************
+//  383  * @fn      addCommon_isrPort2
+//  384  *
+//  385  * @brief   Port2 interrupt service routine.
+//  386  *
+//  387  * @param   none
+//  388  *
+//  389  * @return  none
+//  390  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  391 void addCommon_isrPort2(void)
+addCommon_isrPort2:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function addCommon_isrPort2
+        CODE
+//  392 {
+        FUNCALL addCommon_isrPort2, addSceneSelector_isrPort2
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  393 #if defined(HOME_GATEWAY)
+//  394 	addHomeGateway_isrPort2();
+//  395 #elif defined(DIMMER_SWITCH) || defined(DIMMER_SWITCH_TOUCHKEY)
+//  396 	addDimmerSwitch_isrPort2();
+//  397 #elif defined(SCENE_SELECTOR) || defined(SCENE_SELECTOR_TOUCHKEY)	
+//  398 	//if (acDelayPowerOn == 0)
+//  399 	{
+//  400 		addSceneSelector_isrPort2();
+        ; Setup parameters for call to function addSceneSelector_isrPort2
+        LCALL   ??addSceneSelector_isrPort2?relay; Banked call to: addSceneSelector_isrPort2
+//  401 	}
+//  402 #elif defined(DIMMER_LIGHT)	
+//  403 	addDimmerLight_isrPort2();
+//  404 #else			
+//  405 #endif
+//  406 }
+        LJMP    ??Subroutine4_0 & 0xFFFF
+          CFI EndBlock cfiBlock10
+//  407 
+//  408 /*********************************************************************
+//  409  * @fn      addCommon_delayMS
+//  410  *
+//  411  * @brief   Delay.
+//  412  *
+//  413  * @param   delayMS
+//  414  *
+//  415  * @return  none
+//  416  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  417 void addCommon_delayMS(uint16 delayMS) // 65536 = 1024 * 64
+addCommon_delayMS:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function addCommon_delayMS
+        CODE
+//  418 {
+        FUNCALL addCommon_delayMS, Onboard_wait
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_delayMS, Onboard_wait
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        REQUIRE ?V0
+        REQUIRE ?V1
+        REQUIRE ?V2
+        REQUIRE ?V3
+        MOV     A,#-0xc
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 12)
+        ; Saved register size: 12
+        ; Auto size: 0
+//  419 	uint16 lFactor = delayMS >> 6;
+        MOV     ?V0,R2
+        MOV     ?V1,R3
+        MOV     A,#0x6
+        MOV     R0,#?V0
+        LCALL   ?US_SHR
+        MOV     ?V2,?V0
+        MOV     ?V3,?V1
+//  420 	uint16 lRemainder = delayMS & 0x3f;
+        MOV     A,R2
+        ANL     A,#0x3f
+        MOV     ?V0,A
+//  421 
+//  422 	for (uint16 i = 0; i < lFactor; i++)
+        MOV     R6,#0x0
+        MOV     R7,#0x0
+        SJMP    ??addCommon_delayMS_0
+//  423 	{
+//  424 		MicroWait(64000);
+??addCommon_delayMS_1:
+        ; Setup parameters for call to function Onboard_wait
+        MOV     R2,#0x0
+        MOV     R3,#-0x6
+        LCALL   ??Onboard_wait?relay ; Banked call to: Onboard_wait
+//  425 	}
+        INC     R6
+        MOV     A,R6
+        JNZ     ??addCommon_delayMS_0
+        INC     R7
+??addCommon_delayMS_0:
+        CLR     C
+        MOV     A,R6
+        SUBB    A,?V2
+        MOV     A,R7
+        SUBB    A,?V3
+        JC      ??addCommon_delayMS_1
+//  426 	MicroWait(lRemainder * 1000);
+        ; Setup parameters for call to function Onboard_wait
+        MOV     R2,?V0
+        MOV     A,R2
+        MOV     B,#-0x18
+        MUL     AB
+        XCH     A,R2
+        MOV     R0,B
+        MOV     B,#0x3
+        MUL     AB
+        ADD     A,R0
+        MOV     R3,A
+        LCALL   ??Onboard_wait?relay ; Banked call to: Onboard_wait
+//  427 }
+        MOV     R7,#0x4
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI EndBlock cfiBlock11
+//  428 
+//  429 /*********************************************************************
+//  430  * @fn      addCommon_ledFlash
+//  431  *
+//  432  * @brief   Led flash.
+//  433  *
+//  434  * @param   uint8 flashCount, uint16 flashDelay
+//  435  *
+//  436  * @return  void
+//  437  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  438 void addCommon_ledFlash(uint8 flashCount, uint16 flashDelay)
+addCommon_ledFlash:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function addCommon_ledFlash
+        CODE
+//  439 {
+        FUNCALL addCommon_ledFlash, addCommon_delayMS
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 11, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 11, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_ledFlash, addCommon_delayMS
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 11, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 11, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_ledFlash, addCommon_delayMS
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 11, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 11, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        REQUIRE ?V0
+        REQUIRE ?V1
+        REQUIRE ?V2
+        MOV     A,#-0xb
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 11)
+        ; Saved register size: 11
+        ; Auto size: 0
+        MOV     ?V2,R1
+        MOV     A,R2
+        MOV     R6,A
+        MOV     A,R3
+        MOV     R7,A
+//  440 	AC_DEVICE_LED_NETWORK_STATE = 0;
+        CLR     0x80.6
+//  441 	addCommon_delayMS(flashDelay);
+        ; Setup parameters for call to function addCommon_delayMS
+        LCALL   ??addCommon_delayMS?relay; Banked call to: addCommon_delayMS
+//  442 	
+//  443 	for (int i = 0; i < flashCount; i++)
+        MOV     ?V0,#0x0
+        MOV     ?V1,#0x0
+        SJMP    ??addCommon_ledFlash_0
+//  444 	{
+//  445 		AC_DEVICE_LED_NETWORK_STATE = 1;
+??addCommon_ledFlash_1:
+        SETB    0x80.6
+//  446 		addCommon_delayMS(flashDelay);
+        ; Setup parameters for call to function addCommon_delayMS
+        MOV     A,R6
+        MOV     R2,A
+        MOV     A,R7
+        MOV     R3,A
+        LCALL   ??addCommon_delayMS?relay; Banked call to: addCommon_delayMS
+//  447 		AC_DEVICE_LED_NETWORK_STATE = 0;
+        CLR     0x80.6
+//  448 		addCommon_delayMS(flashDelay);
+        ; Setup parameters for call to function addCommon_delayMS
+        MOV     A,R6
+        MOV     R2,A
+        MOV     A,R7
+        MOV     R3,A
+        LCALL   ??addCommon_delayMS?relay; Banked call to: addCommon_delayMS
+//  449 	}
+        INC     ?V0
+        MOV     A,?V0
+        JNZ     ??addCommon_ledFlash_0
+        INC     ?V1
+??addCommon_ledFlash_0:
+        MOV     R0,?V2
+        CLR     C
+        MOV     A,?V0
+        SUBB    A,R0
+        MOV     A,?V1
+        SUBB    A,#0x0
+        MOV     C,0xD0 /* PSW */.2
+        XRL     A,PSW
+        RLC     A
+        JC      ??addCommon_ledFlash_1
+//  450 }
+        MOV     R7,#0x3
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI EndBlock cfiBlock12
+        REQUIRE _A_P0
+//  451 
+//  452 /*********************************************************************
+//  453  * @fn      addCommon_atNormalWorkState
+//  454  *
+//  455  * @brief   If get into normal work state.
+//  456  *
+//  457  * @param   bool judgeNetworkState
+//  458  *
+//  459  * @return  bool
+//  460  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  461 bool addCommon_atNormalWorkState(bool judgeNetworkState)
+addCommon_atNormalWorkState:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function addCommon_atNormalWorkState
+        CODE
+//  462 {
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+        MOV     A,R1
+        MOV     R2,A
+//  463 	if (acDelayPowerOn == 0)
+        MOV     DPTR,#acDelayPowerOn
+        MOVX    A,@DPTR
+        JNZ     ??addCommon_atNormalWorkState_0
+//  464 	{
+//  465 		if (TRUE == judgeNetworkState)
+        MOV     A,#0x1
+        XRL     A,R2
+        JNZ     ??addCommon_atNormalWorkState_1
+//  466 		{
+//  467 			if ((*acPointer_NwkState == DEV_END_DEVICE) || // Started as device after authentication
+//  468 				(*acPointer_NwkState == DEV_ROUTER) || // Device joined, authenticated and is a router
+//  469 				(*acPointer_NwkState == DEV_ZB_COORD)) // Started as Zigbee Coordinator
+        MOV     DPTR,#acPointer_NwkState
+        LCALL   ?Subroutine3 & 0xFFFF
+//  470 			{
+//  471 				return TRUE;
+//  472 			} else { return FALSE; }
+//  473 		} else { return TRUE; }
+??CrossCallReturnLabel_18:
+        MOV     R0,A
+        MOV     A,#0x6
+        XRL     A,R0
+        JZ      ??addCommon_atNormalWorkState_1
+        MOV     A,#0x7
+        XRL     A,R0
+        JZ      ??addCommon_atNormalWorkState_1
+        MOV     A,#0x9
+        XRL     A,R0
+        JNZ     ??addCommon_atNormalWorkState_0
+??addCommon_atNormalWorkState_1:
+        MOV     R1,#0x1
+        SJMP    ??addCommon_atNormalWorkState_2
+//  474 	} else { return FALSE;	}	
+??addCommon_atNormalWorkState_0:
+        MOV     R1,#0x0
+??addCommon_atNormalWorkState_2:
+        LJMP    ??Subroutine4_0 & 0xFFFF
+          CFI EndBlock cfiBlock13
+//  475 }
+//  476 
+//  477 /*********************************************************************
+//  478  * @fn      addCommon_networkState_led
+//  479  *
+//  480  * @brief  Network state led.
+//  481  *
+//  482  * @param   devStates_t nwkState
+//  483  *
+//  484  * @return  none
+//  485  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  486 void addCommon_networkState_led(devStates_t nwkState)
+addCommon_networkState_led:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function addCommon_networkState_led
+        CODE
+//  487 {
+        FUNCALL addCommon_networkState_led, osal_stop_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_networkState_led, osal_stop_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_networkState_led, osal_set_event
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_networkState_led, osal_stop_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_networkState_led, osal_start_timerEx
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 13, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 13, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 0
+        MOV     A,R1
+        MOV     R6,A
+//  488 	if ((nwkState == DEV_HOLD) || // Initialized - not started automatically
+//  489 		(nwkState == DEV_INIT) || // Initialized - not connected to anything
+//  490 		(nwkState == DEV_COORD_STARTING)) // Started as Zigbee Coordinator		
+        JZ      ??addCommon_networkState_led_0
+        MOV     A,#0x1
+        XRL     A,R6
+        JZ      ??addCommon_networkState_led_0
+        MOV     A,#0x8
+        XRL     A,R6
+        JNZ     ??addCommon_networkState_led_1
+//  491 	{
+//  492 		osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_LED_NETWORK_STATE);
+??addCommon_networkState_led_0:
+        ; Setup parameters for call to function osal_stop_timerEx
+        LCALL   ?Subroutine2 & 0xFFFF
+??CrossCallReturnLabel_13:
+        LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+//  493 		AC_DEVICE_LED_NETWORK_STATE = 1;//用此状态开灯＝＝长亮
+        SETB    0x80.6
+//  494 		acNwkState_stopFlash = TRUE;
+        MOV     DPTR,#acNwkState_stopFlash
+        MOV     A,#0x1
+        SJMP    ??addCommon_networkState_led_2
+//  495 	} else if ((nwkState == DEV_NWK_DISC) || // Discovering PAN's to join
+//  496 		(nwkState == DEV_NWK_JOINING) || // Joining a PAN
+//  497 		(nwkState == DEV_NWK_BACKOFF) || // Device is waiting before trying to rejoin
+//  498 		(nwkState == DEV_NWK_SEC_REJOIN_CURR_CHANNEL) || // ReJoining a PAN in secure mode scanning in current channel, only for end devices
+//  499 		(nwkState == DEV_NWK_SEC_REJOIN_ALL_CHANNEL) || // ReJoining a PAN in secure mode scanning in all channels, only for end devices
+//  500 		(nwkState == DEV_NWK_TC_REJOIN_CURR_CHANNEL) || // ReJoining a PAN in Trust center mode scanning in current channel, only for end devices
+//  501 		(nwkState == DEV_NWK_TC_REJOIN_ALL_CHANNEL) || // ReJoining a PAN in Trust center mode scanning in all channels, only for end devices
+//  502 		(nwkState == DEV_END_DEVICE_UNAUTH) || // Joined but not yet authenticated by trust center
+//  503 		(nwkState == DEV_NWK_KA) || // Device is sending KeepAlive message to its parent
+//  504 		(nwkState == DEV_NWK_ORPHAN)) // Device has lost information about its parent
+??addCommon_networkState_led_1:
+        MOV     A,#0x2
+        XRL     A,R6
+        JZ      ??addCommon_networkState_led_3
+        MOV     A,#0x3
+        XRL     A,R6
+        JZ      ??addCommon_networkState_led_3
+        MOV     A,#0xc
+        XRL     A,R6
+        JZ      ??addCommon_networkState_led_3
+        MOV     A,#0x4
+        XRL     A,R6
+        JZ      ??addCommon_networkState_led_3
+        MOV     A,#0xd
+        XRL     A,R6
+        JZ      ??addCommon_networkState_led_3
+        MOV     A,#0xe
+        XRL     A,R6
+        JZ      ??addCommon_networkState_led_3
+        MOV     A,#0xf
+        XRL     A,R6
+        JZ      ??addCommon_networkState_led_3
+        MOV     A,#0x5
+        XRL     A,R6
+        JZ      ??addCommon_networkState_led_3
+        MOV     A,#0xb
+        XRL     A,R6
+        JZ      ??addCommon_networkState_led_3
+        MOV     A,#0xa
+        XRL     A,R6
+        JNZ     ??addCommon_networkState_led_4
+//  505 	{
+//  506 		if (acNwkState_stopFlash == TRUE)
+??addCommon_networkState_led_3:
+        MOV     DPTR,#acNwkState_stopFlash
+        MOVX    A,@DPTR
+        XRL     A,#0x1
+        JNZ     ??addCommon_networkState_led_5
+//  507 		{
+//  508 			osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_LED_NETWORK_STATE);
+        ; Setup parameters for call to function osal_stop_timerEx
+        LCALL   ?Subroutine2 & 0xFFFF
+??CrossCallReturnLabel_14:
+        LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+//  509 			osal_set_event(*acPointer_TaskID, AC_EVENT_DEVICE_LED_NETWORK_STATE);//状态灯闪1S开关闪灯
+        ; Setup parameters for call to function osal_set_event
+        LCALL   ?Subroutine2 & 0xFFFF
+??CrossCallReturnLabel_15:
+        LCALL   ??osal_set_event?relay; Banked call to: osal_set_event
+//  510 			acNwkState_stopFlash = FALSE;
+        MOV     DPTR,#acNwkState_stopFlash
+        CLR     A
+??addCommon_networkState_led_2:
+        MOVX    @DPTR,A
+        SJMP    ??addCommon_networkState_led_5
+//  511 		}
+//  512 	} else if ((nwkState == DEV_END_DEVICE) || // Started as device after authentication
+//  513 		(nwkState == DEV_ROUTER) || // Device joined, authenticated and is a router
+//  514 		(nwkState == DEV_ZB_COORD)) // Started as Zigbee Coordinator
+??addCommon_networkState_led_4:
+        MOV     A,#0x6
+        XRL     A,R6
+        JZ      ??addCommon_networkState_led_6
+        MOV     A,#0x7
+        XRL     A,R6
+        JZ      ??addCommon_networkState_led_6
+        MOV     A,#0x9
+        XRL     A,R6
+        JNZ     ??addCommon_networkState_led_5
+//  515 	{
+//  516 		osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_LED_NETWORK_STATE);
+??addCommon_networkState_led_6:
+        ; Setup parameters for call to function osal_stop_timerEx
+        LCALL   ?Subroutine2 & 0xFFFF
+??CrossCallReturnLabel_16:
+        LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+//  517 		AC_DEVICE_LED_NETWORK_STATE = 0;//用此状态关灯
+        CLR     0x80.6
+//  518 		acNwkState_stopFlash = TRUE;
+        MOV     DPTR,#acNwkState_stopFlash
+        MOV     A,#0x1
+        MOVX    @DPTR,A
+//  519 		
+//  520 #if defined(POWER_SAVING)
+//  521 		if (acSleepFlag == FALSE)
+        MOV     DPTR,#acSleepFlag
+        MOVX    A,@DPTR
+        JNZ     ??addCommon_networkState_led_5
+//  522 		{
+//  523 			//addCommon_sleep();
+//  524 			acDelayJoinNetwork = AC_DELAY_DEEP_SLEEP_AFTER_JOIN_NETWORK;
+        MOV     DPTR,#acDelayJoinNetwork
+        MOV     A,#0xc
+        MOVX    @DPTR,A
+//  525 			osal_start_timerEx(*acPointer_TaskID, AC_EVENT_POLLING, AC_DELAY_POLLING);
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     DPTR,#__Constant_1388
+        LCALL   ?PUSH_XSTACK8_X_FOUR
+          CFI CFA_XSP16 add(XSP16, 13)
+        MOV     R2,#0x0
+        MOV     R3,#0x1
+        LCALL   ??Subroutine5_0 & 0xFFFF
+//  526 		}
+//  527 #else
+//  528 #endif
+//  529 	}
+??CrossCallReturnLabel_4:
+        LCALL   ??osal_start_timerEx?relay; Banked call to: osal_start_timerEx
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 9)
+//  530 }
+??addCommon_networkState_led_5:
+        LJMP    ?Subroutine1 & 0xFFFF
+          CFI EndBlock cfiBlock14
+        REQUIRE _A_P0
+//  531 
+//  532 /*********************************************************************
+//  533  * @fn      addCommon_handleKeyEvent
+//  534  *
+//  535  * @brief   Setup key down.
+//  536  *
+//  537  * @param   void
+//  538  *
+//  539  * @return  void
+//  540  */
+//  541 static void addCommon_handleKeyEvent(void)
+//  542 {	
+//  543 	if (acDeviceKeyTimingCounter < 150) // max 15000ms
+//  544 	{
+//  545 		acDeviceKeyTimingCounter++;
+//  546 		if (acDeviceKeyTimingCounter == 1) // 100ms
+//  547 		{
+//  548 			addCommon_ledFlash(1, 100);
+//  549 		} else if (acDeviceKeyTimingCounter == 6) // 600ms
+//  550 		{
+//  551 			//addCommon_ledFlash(2, 100);
+//  552 		} else if (acDeviceKeyTimingCounter == 10) // 1000ms
+//  553 		{
+//  554 			//addCommon_ledFlash(2, 100);
+//  555 #if defined(DIMMER_SWITCH) || defined(DIMMER_SWITCH_TOUCHKEY)
+//  556 			addDimmerSwitch_sendLevelControlMove();
+//  557 #elif defined(SCENE_SELECTOR) || defined(SCENE_SELECTOR_TOUCHKEY)
+//  558 			addSceneSelector_sendLevelControlMove();
+//  559 #else
+//  560 #endif
+//  561 		} else if (acDeviceKeyTimingCounter == 50) // 5000ms
+//  562 		{
+//  563 			addCommon_ledFlash(3, 200);
+//  564 #if defined(DIMMER_SWITCH) || defined(DIMMER_SWITCH_TOUCHKEY)
+//  565 			addDimmerSwitch_factoryResetCheck();
+//  566 			addDimmerSwitch_wakeupCheck();
+//  567 #elif defined(SCENE_SELECTOR) || defined(SCENE_SELECTOR_TOUCHKEY)
+//  568 			addSceneSelector_factoryResetCheck();
+//  569 			addSceneSelector_wakeupCheck();
+//  570 #else
+//  571 #endif
+//  572 		} else if (acDeviceKeyTimingCounter == 100) // 10000ms
+//  573 		{
+//  574 			addCommon_ledFlash(5, 200);
+//  575 #if defined(DIMMER_SWITCH) || defined(DIMMER_SWITCH_TOUCHKEY)
+//  576 			addDimmerSwitch_factoryResetCheck();
+//  577 			addDimmerSwitch_wakeupCheck();
+//  578 #elif defined(SCENE_SELECTOR) || defined(SCENE_SELECTOR_TOUCHKEY)
+//  579 			addSceneSelector_factoryResetCheck();
+//  580 			addSceneSelector_wakeupCheck();
+//  581 #else
+//  582 #endif
+//  583 		}
+//  584 		osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_KEY_TIMING);
+//  585 		osal_start_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_KEY_TIMING, acDeviceKeyTimingUnit); // 100ms
+//  586 	} else 
+//  587 	{
+//  588 		osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_KEY_TIMING);
+//  589 	}
+//  590 }
+//  591 
+//  592 /*********************************************************************
+//  593  * @fn      addCommon_handleKeyDown
+//  594  *
+//  595  * @brief   Key down.
+//  596  *
+//  597  * @param   void
+//  598  *
+//  599  * @return  uint8
+//  600  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  601 uint8 addCommon_handleKeyDown(void)
+addCommon_handleKeyDown:
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function addCommon_handleKeyDown
+        CODE
+//  602 {
+        FUNCALL addCommon_handleKeyDown, osal_start_timerEx
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 4, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 4, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_handleKeyDown, osal_stop_timerEx
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_handleKeyDown, osal_set_event
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  603 	if (acDoubleClickCheckFlag == FALSE)
+        MOV     DPTR,#acDoubleClickCheckFlag
+        MOVX    A,@DPTR
+        JNZ     ??addCommon_handleKeyDown_0
+//  604 	{
+//  605 
+//  606 		osal_start_timerEx(*acPointer_TaskID, AC_EVENT_DOUBLE_CLICK_CHECK, AC_DELAY_DOUBLE_CLICK);
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     DPTR,#__Constant_258
+        LCALL   ?PUSH_XSTACK8_X_FOUR
+          CFI CFA_XSP16 add(XSP16, 4)
+        MOV     R2,#0x0
+        MOV     R3,#0x20
+        LCALL   ??Subroutine5_0 & 0xFFFF
+??CrossCallReturnLabel_5:
+        LCALL   ??osal_start_timerEx?relay; Banked call to: osal_start_timerEx
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 XSP16+0
+//  607 		acDoubleClickCheckFlag = TRUE;
+        MOV     DPTR,#acDoubleClickCheckFlag
+        MOV     A,#0x1
+        MOVX    @DPTR,A
+//  608 		acDoubleClickCounter_whenKeyUp = 0;
+        MOV     DPTR,#acDoubleClickCounter_whenKeyUp
+        CLR     A
+        MOVX    @DPTR,A
+//  609 		acDoubleClickCounter_whenKeyDown++;
+        MOV     DPTR,#acDoubleClickCounter_whenKeyDown
+        MOVX    A,@DPTR
+        INC     A
+        MOVX    @DPTR,A
+//  610 	}
+//  611 	
+//  612 	osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_KEY_TIMING);
+??addCommon_handleKeyDown_0:
+        ; Setup parameters for call to function osal_stop_timerEx
+        MOV     R2,#0x0
+        MOV     R3,#0x8
+        LCALL   ??Subroutine5_0 & 0xFFFF
+??CrossCallReturnLabel_6:
+        LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+//  613 	acDeviceKeyTimingCounter = 0;
+        MOV     DPTR,#acDeviceKeyTimingCounter
+        CLR     A
+        MOVX    @DPTR,A
+//  614 	osal_set_event(*acPointer_TaskID, AC_EVENT_DEVICE_KEY_TIMING);
+        ; Setup parameters for call to function osal_set_event
+        MOV     R2,A
+        MOV     R3,#0x8
+        LCALL   ??Subroutine5_0 & 0xFFFF
+??CrossCallReturnLabel_7:
+        LCALL   ??osal_set_event?relay; Banked call to: osal_set_event
+//  615 	
+//  616 	return AC_KEY_DOWN;
+        MOV     R1,#0x1
+        LJMP    ??Subroutine4_0 & 0xFFFF
+          CFI EndBlock cfiBlock15
+//  617 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine2:
+          CFI Block cfiCond16 Using cfiCommon0
+          CFI Function addCommon_eventLoop
+          CFI Conditional ??CrossCallReturnLabel_12
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI CFA_SP SP+-2
+          CFI CFA_XSP16 add(XSP16, 13)
+          CFI Block cfiCond17 Using cfiCommon0
+          CFI (cfiCond17) Function addCommon_networkState_led
+          CFI (cfiCond17) Conditional ??CrossCallReturnLabel_13
+          CFI (cfiCond17) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond17) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond17) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond17) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond17) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond17) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond17) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond17) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond17) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond17) CFA_SP SP+-2
+          CFI (cfiCond17) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond18 Using cfiCommon0
+          CFI (cfiCond18) Function addCommon_networkState_led
+          CFI (cfiCond18) Conditional ??CrossCallReturnLabel_14
+          CFI (cfiCond18) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond18) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond18) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond18) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond18) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond18) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond18) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond18) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond18) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond18) CFA_SP SP+-2
+          CFI (cfiCond18) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond19 Using cfiCommon0
+          CFI (cfiCond19) Function addCommon_networkState_led
+          CFI (cfiCond19) Conditional ??CrossCallReturnLabel_15
+          CFI (cfiCond19) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond19) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond19) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond19) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond19) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond19) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond19) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond19) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond19) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond19) CFA_SP SP+-2
+          CFI (cfiCond19) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond20 Using cfiCommon0
+          CFI (cfiCond20) Function addCommon_networkState_led
+          CFI (cfiCond20) Conditional ??CrossCallReturnLabel_16
+          CFI (cfiCond20) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond20) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond20) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond20) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond20) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond20) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond20) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond20) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond20) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond20) CFA_SP SP+-2
+          CFI (cfiCond20) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond21 Using cfiCommon0
+          CFI (cfiCond21) Function addCommon_sleep
+          CFI (cfiCond21) Conditional ??CrossCallReturnLabel_17
+          CFI (cfiCond21) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond21) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond21) CFA_SP SP+-7
+          CFI Block cfiPicker22 Using cfiCommon1
+          CFI (cfiPicker22) NoFunction
+          CFI (cfiPicker22) Picker
+        MOV     R2,#0x0
+        MOV     R3,#0x4
+          CFI EndBlock cfiCond16
+          CFI EndBlock cfiCond17
+          CFI EndBlock cfiCond18
+          CFI EndBlock cfiCond19
+          CFI EndBlock cfiCond20
+          CFI EndBlock cfiCond21
+          CFI EndBlock cfiPicker22
+        REQUIRE ??Subroutine5_0
+        ; // Fall through to label ??Subroutine5_0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+??Subroutine5_0:
+          CFI Block cfiCond23 Using cfiCommon0
+          CFI Function addCommon_eventLoop
+          CFI Conditional ??CrossCallReturnLabel_0
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI CFA_SP SP+-2
+          CFI CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond24 Using cfiCommon0
+          CFI (cfiCond24) Function addCommon_eventLoop
+          CFI (cfiCond24) Conditional ??CrossCallReturnLabel_1
+          CFI (cfiCond24) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond24) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond24) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond24) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond24) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond24) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond24) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond24) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond24) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond24) CFA_SP SP+-2
+          CFI (cfiCond24) CFA_XSP16 add(XSP16, 13)
+          CFI Block cfiCond25 Using cfiCommon0
+          CFI (cfiCond25) Function addCommon_eventLoop
+          CFI (cfiCond25) Conditional ??CrossCallReturnLabel_2
+          CFI (cfiCond25) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond25) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond25) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond25) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond25) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond25) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond25) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond25) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond25) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond25) CFA_SP SP+-2
+          CFI (cfiCond25) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond26 Using cfiCommon0
+          CFI (cfiCond26) Function addCommon_isrPort1
+          CFI (cfiCond26) Conditional ??CrossCallReturnLabel_3
+          CFI (cfiCond26) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond26) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond26) CFA_SP SP+-7
+          CFI Block cfiCond27 Using cfiCommon0
+          CFI (cfiCond27) Function addCommon_networkState_led
+          CFI (cfiCond27) Conditional ??CrossCallReturnLabel_4
+          CFI (cfiCond27) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond27) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond27) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond27) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond27) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond27) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond27) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond27) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond27) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond27) CFA_SP SP+-2
+          CFI (cfiCond27) CFA_XSP16 add(XSP16, 13)
+          CFI Block cfiCond28 Using cfiCommon0
+          CFI (cfiCond28) Function addCommon_handleKeyDown
+          CFI (cfiCond28) Conditional ??CrossCallReturnLabel_5
+          CFI (cfiCond28) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond28) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond28) CFA_SP SP+-7
+          CFI (cfiCond28) CFA_XSP16 add(XSP16, 4)
+          CFI Block cfiCond29 Using cfiCommon0
+          CFI (cfiCond29) Function addCommon_handleKeyDown
+          CFI (cfiCond29) Conditional ??CrossCallReturnLabel_6
+          CFI (cfiCond29) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond29) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond29) CFA_SP SP+-7
+          CFI Block cfiCond30 Using cfiCommon0
+          CFI (cfiCond30) Function addCommon_handleKeyDown
+          CFI (cfiCond30) Conditional ??CrossCallReturnLabel_7
+          CFI (cfiCond30) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond30) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond30) CFA_SP SP+-7
+          CFI Block cfiCond31 Using cfiCommon0
+          CFI (cfiCond31) Function addCommon_sleep
+          CFI (cfiCond31) Conditional ??CrossCallReturnLabel_8
+          CFI (cfiCond31) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond31) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond31) CFA_SP SP+-7
+          CFI Block cfiCond32 Using cfiCommon0
+          CFI (cfiCond32) Function addCommon_sleep
+          CFI (cfiCond32) Conditional ??CrossCallReturnLabel_9
+          CFI (cfiCond32) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond32) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond32) CFA_SP SP+-7
+          CFI Block cfiCond33 Using cfiCommon0
+          CFI (cfiCond33) Function addCommon_wakeup
+          CFI (cfiCond33) Conditional ??CrossCallReturnLabel_10
+          CFI (cfiCond33) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond33) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond33) CFA_SP SP+-7
+          CFI Block cfiCond34 Using cfiCommon0
+          CFI (cfiCond34) Function addCommon_wakeup
+          CFI (cfiCond34) Conditional ??CrossCallReturnLabel_11
+          CFI (cfiCond34) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond34) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond34) CFA_SP SP+-7
+          CFI (cfiCond34) CFA_XSP16 add(XSP16, 4)
+          CFI Block cfiCond35 Using cfiCommon0
+          CFI (cfiCond35) Function addCommon_eventLoop
+          CFI (cfiCond35) Conditional ??CrossCallReturnLabel_12
+          CFI (cfiCond35) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond35) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond35) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond35) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond35) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond35) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond35) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond35) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond35) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond35) CFA_SP SP+-2
+          CFI (cfiCond35) CFA_XSP16 add(XSP16, 13)
+          CFI Block cfiCond36 Using cfiCommon0
+          CFI (cfiCond36) Function addCommon_networkState_led
+          CFI (cfiCond36) Conditional ??CrossCallReturnLabel_13
+          CFI (cfiCond36) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond36) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond36) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond36) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond36) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond36) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond36) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond36) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond36) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond36) CFA_SP SP+-2
+          CFI (cfiCond36) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond37 Using cfiCommon0
+          CFI (cfiCond37) Function addCommon_networkState_led
+          CFI (cfiCond37) Conditional ??CrossCallReturnLabel_14
+          CFI (cfiCond37) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond37) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond37) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond37) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond37) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond37) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond37) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond37) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond37) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond37) CFA_SP SP+-2
+          CFI (cfiCond37) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond38 Using cfiCommon0
+          CFI (cfiCond38) Function addCommon_networkState_led
+          CFI (cfiCond38) Conditional ??CrossCallReturnLabel_15
+          CFI (cfiCond38) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond38) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond38) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond38) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond38) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond38) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond38) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond38) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond38) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond38) CFA_SP SP+-2
+          CFI (cfiCond38) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond39 Using cfiCommon0
+          CFI (cfiCond39) Function addCommon_networkState_led
+          CFI (cfiCond39) Conditional ??CrossCallReturnLabel_16
+          CFI (cfiCond39) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond39) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond39) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond39) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond39) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond39) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond39) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond39) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond39) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond39) CFA_SP SP+-2
+          CFI (cfiCond39) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond40 Using cfiCommon0
+          CFI (cfiCond40) Function addCommon_sleep
+          CFI (cfiCond40) Conditional ??CrossCallReturnLabel_17
+          CFI (cfiCond40) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond40) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond40) CFA_SP SP+-7
+          CFI Block cfiPicker41 Using cfiCommon1
+          CFI (cfiPicker41) NoFunction
+          CFI (cfiPicker41) Picker
+        MOV     DPTR,#acPointer_TaskID
+        LCALL   ?Subroutine3 & 0xFFFF
+??CrossCallReturnLabel_19:
+        MOV     R1,A
+        RET
+          CFI EndBlock cfiCond23
+          CFI EndBlock cfiCond24
+          CFI EndBlock cfiCond25
+          CFI EndBlock cfiCond26
+          CFI EndBlock cfiCond27
+          CFI EndBlock cfiCond28
+          CFI EndBlock cfiCond29
+          CFI EndBlock cfiCond30
+          CFI EndBlock cfiCond31
+          CFI EndBlock cfiCond32
+          CFI EndBlock cfiCond33
+          CFI EndBlock cfiCond34
+          CFI EndBlock cfiCond35
+          CFI EndBlock cfiCond36
+          CFI EndBlock cfiCond37
+          CFI EndBlock cfiCond38
+          CFI EndBlock cfiCond39
+          CFI EndBlock cfiCond40
+          CFI EndBlock cfiPicker41
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine3:
+          CFI Block cfiCond42 Using cfiCommon0
+          CFI Function addCommon_atNormalWorkState
+          CFI Conditional ??CrossCallReturnLabel_18
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-7
+          CFI Block cfiCond43 Using cfiCommon0
+          CFI (cfiCond43) Function addCommon_eventLoop
+          CFI (cfiCond43) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_12
+          CFI (cfiCond43) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond43) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond43) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond43) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond43) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond43) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond43) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond43) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond43) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond43) CFA_SP SP+-4
+          CFI (cfiCond43) CFA_XSP16 add(XSP16, 13)
+          CFI Block cfiCond44 Using cfiCommon0
+          CFI (cfiCond44) Function addCommon_networkState_led
+          CFI (cfiCond44) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_13
+          CFI (cfiCond44) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond44) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond44) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond44) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond44) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond44) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond44) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond44) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond44) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond44) CFA_SP SP+-4
+          CFI (cfiCond44) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond45 Using cfiCommon0
+          CFI (cfiCond45) Function addCommon_networkState_led
+          CFI (cfiCond45) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_14
+          CFI (cfiCond45) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond45) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond45) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond45) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond45) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond45) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond45) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond45) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond45) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond45) CFA_SP SP+-4
+          CFI (cfiCond45) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond46 Using cfiCommon0
+          CFI (cfiCond46) Function addCommon_networkState_led
+          CFI (cfiCond46) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_15
+          CFI (cfiCond46) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond46) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond46) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond46) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond46) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond46) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond46) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond46) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond46) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond46) CFA_SP SP+-4
+          CFI (cfiCond46) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond47 Using cfiCommon0
+          CFI (cfiCond47) Function addCommon_networkState_led
+          CFI (cfiCond47) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_16
+          CFI (cfiCond47) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond47) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond47) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond47) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond47) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond47) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond47) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond47) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond47) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond47) CFA_SP SP+-4
+          CFI (cfiCond47) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond48 Using cfiCommon0
+          CFI (cfiCond48) Function addCommon_sleep
+          CFI (cfiCond48) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_17
+          CFI (cfiCond48) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond48) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond48) CFA_SP SP+-9
+          CFI Block cfiCond49 Using cfiCommon0
+          CFI (cfiCond49) Function addCommon_eventLoop
+          CFI (cfiCond49) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_0
+          CFI (cfiCond49) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond49) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond49) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond49) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond49) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond49) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond49) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond49) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond49) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond49) CFA_SP SP+-4
+          CFI (cfiCond49) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond50 Using cfiCommon0
+          CFI (cfiCond50) Function addCommon_eventLoop
+          CFI (cfiCond50) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_1
+          CFI (cfiCond50) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond50) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond50) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond50) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond50) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond50) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond50) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond50) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond50) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond50) CFA_SP SP+-4
+          CFI (cfiCond50) CFA_XSP16 add(XSP16, 13)
+          CFI Block cfiCond51 Using cfiCommon0
+          CFI (cfiCond51) Function addCommon_eventLoop
+          CFI (cfiCond51) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_2
+          CFI (cfiCond51) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond51) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond51) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond51) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond51) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond51) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond51) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond51) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond51) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond51) CFA_SP SP+-4
+          CFI (cfiCond51) CFA_XSP16 add(XSP16, 9)
+          CFI Block cfiCond52 Using cfiCommon0
+          CFI (cfiCond52) Function addCommon_isrPort1
+          CFI (cfiCond52) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_3
+          CFI (cfiCond52) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond52) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond52) CFA_SP SP+-9
+          CFI Block cfiCond53 Using cfiCommon0
+          CFI (cfiCond53) Function addCommon_networkState_led
+          CFI (cfiCond53) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_4
+          CFI (cfiCond53) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond53) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond53) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond53) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond53) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond53) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond53) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond53) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond53) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond53) CFA_SP SP+-4
+          CFI (cfiCond53) CFA_XSP16 add(XSP16, 13)
+          CFI Block cfiCond54 Using cfiCommon0
+          CFI (cfiCond54) Function addCommon_handleKeyDown
+          CFI (cfiCond54) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_5
+          CFI (cfiCond54) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond54) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond54) CFA_SP SP+-9
+          CFI (cfiCond54) CFA_XSP16 add(XSP16, 4)
+          CFI Block cfiCond55 Using cfiCommon0
+          CFI (cfiCond55) Function addCommon_handleKeyDown
+          CFI (cfiCond55) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_6
+          CFI (cfiCond55) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond55) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond55) CFA_SP SP+-9
+          CFI Block cfiCond56 Using cfiCommon0
+          CFI (cfiCond56) Function addCommon_handleKeyDown
+          CFI (cfiCond56) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_7
+          CFI (cfiCond56) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond56) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond56) CFA_SP SP+-9
+          CFI Block cfiCond57 Using cfiCommon0
+          CFI (cfiCond57) Function addCommon_sleep
+          CFI (cfiCond57) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_8
+          CFI (cfiCond57) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond57) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond57) CFA_SP SP+-9
+          CFI Block cfiCond58 Using cfiCommon0
+          CFI (cfiCond58) Function addCommon_sleep
+          CFI (cfiCond58) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_9
+          CFI (cfiCond58) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond58) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond58) CFA_SP SP+-9
+          CFI Block cfiCond59 Using cfiCommon0
+          CFI (cfiCond59) Function addCommon_wakeup
+          CFI (cfiCond59) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_10
+          CFI (cfiCond59) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond59) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond59) CFA_SP SP+-9
+          CFI Block cfiCond60 Using cfiCommon0
+          CFI (cfiCond60) Function addCommon_wakeup
+          CFI (cfiCond60) Conditional ??CrossCallReturnLabel_19, ??CrossCallReturnLabel_11
+          CFI (cfiCond60) DPL0 Frame(CFA_SP, 4)
+          CFI (cfiCond60) DPH0 Frame(CFA_SP, 5)
+          CFI (cfiCond60) CFA_SP SP+-9
+          CFI (cfiCond60) CFA_XSP16 add(XSP16, 4)
+          CFI Block cfiPicker61 Using cfiCommon1
+          CFI (cfiPicker61) NoFunction
+          CFI (cfiPicker61) Picker
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     DPH,A
+        MOV     DPL,R0
+        MOVX    A,@DPTR
+        RET
+          CFI EndBlock cfiCond42
+          CFI EndBlock cfiCond43
+          CFI EndBlock cfiCond44
+          CFI EndBlock cfiCond45
+          CFI EndBlock cfiCond46
+          CFI EndBlock cfiCond47
+          CFI EndBlock cfiCond48
+          CFI EndBlock cfiCond49
+          CFI EndBlock cfiCond50
+          CFI EndBlock cfiCond51
+          CFI EndBlock cfiCond52
+          CFI EndBlock cfiCond53
+          CFI EndBlock cfiCond54
+          CFI EndBlock cfiCond55
+          CFI EndBlock cfiCond56
+          CFI EndBlock cfiCond57
+          CFI EndBlock cfiCond58
+          CFI EndBlock cfiCond59
+          CFI EndBlock cfiCond60
+          CFI EndBlock cfiPicker61
+//  618 
+//  619 /*********************************************************************
+//  620  * @fn      addCommon_handleKeyUp
+//  621  *
+//  622  * @brief   Key up.
+//  623  *
+//  624  * @param   void
+//  625  *
+//  626  * @return  uint8
+//  627  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  628 uint8 addCommon_handleKeyUp(void)
+addCommon_handleKeyUp:
+          CFI Block cfiBlock62 Using cfiCommon0
+          CFI Function addCommon_handleKeyUp
+        CODE
+//  629 {
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  630 	//osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_KEY_TIMING);
+//  631 	if ((acDeviceKeyTimingCounter >= 1) && (acDeviceKeyTimingCounter < 6)) // >= 100ms && < 600ms
+        MOV     DPTR,#acDeviceKeyTimingCounter
+        MOVX    A,@DPTR
+        JZ      ??addCommon_handleKeyUp_0
+        CLR     C
+        SUBB    A,#0x6
+        JNC     ??addCommon_handleKeyUp_0
+//  632 	{
+//  633 		return AC_KEY_UP_BELOW_600MS;
+        MOV     R1,#0x2
+        SJMP    ??addCommon_handleKeyUp_1
+//  634 	} else if ((acDeviceKeyTimingCounter >= 6) && (acDeviceKeyTimingCounter < 10)) // >= 600ms && < 1000ms
+??addCommon_handleKeyUp_0:
+        MOVX    A,@DPTR
+        ADD     A,#-0x6
+        CLR     C
+        SUBB    A,#0x4
+        JNC     ??addCommon_handleKeyUp_2
+//  635 	{
+//  636 		return AC_KEY_UP_600MS_TO_1S;
+        MOV     R1,#0x3
+        SJMP    ??addCommon_handleKeyUp_1
+//  637 	} else if ((acDeviceKeyTimingCounter >= 10) && (acDeviceKeyTimingCounter < 50)) // >= 1000ms && < 5000ms
+??addCommon_handleKeyUp_2:
+        MOVX    A,@DPTR
+        ADD     A,#-0xa
+        CLR     C
+        SUBB    A,#0x28
+        JNC     ??addCommon_handleKeyUp_3
+//  638 	{
+//  639 		return AC_KEY_UP_1S_TO_5S;
+        MOV     R1,#0x4
+        SJMP    ??addCommon_handleKeyUp_1
+//  640 	} else if ((acDeviceKeyTimingCounter >= 50) && (acDeviceKeyTimingCounter < 100)) // >= 5000ms && < 10000ms
+??addCommon_handleKeyUp_3:
+        MOVX    A,@DPTR
+        ADD     A,#-0x32
+        CLR     C
+        SUBB    A,#0x32
+        JNC     ??addCommon_handleKeyUp_4
+//  641 	{
+//  642 		return AC_KEY_UP_5S_TO_10S;
+        MOV     R1,#0x5
+        SJMP    ??addCommon_handleKeyUp_1
+//  643 	} else if (acDeviceKeyTimingCounter >= 100) // >= 10000ms
+??addCommon_handleKeyUp_4:
+        MOVX    A,@DPTR
+        CLR     C
+        SUBB    A,#0x64
+        JC      ??addCommon_handleKeyUp_5
+//  644 	{
+//  645 		return AC_KEY_UP_ABOVE_10S;
+        MOV     R1,#0x6
+        SJMP    ??addCommon_handleKeyUp_1
+//  646 	} else 
+//  647 	{
+//  648 		return AC_KEY_NORMAL;
+??addCommon_handleKeyUp_5:
+        MOV     R1,#0x0
+//  649 	}
+??addCommon_handleKeyUp_1:
+        LJMP    ??Subroutine4_0 & 0xFFFF
+          CFI EndBlock cfiBlock62
+//  650 	acDeviceKeyTimingCounter = 0;
+//  651 }
+//  652 
+//  653 /**************************************************************************************************
+//  654  * @fn          NLME_SetRejoinPollRate
+//  655  *
+//  656  * @brief       
+//  657  *
+//  658  * input parameters
+//  659  *
+//  660  * @param       newRate = number of milliseconds to do next poll.
+//  661  *                        0 will turn off the polling.
+//  662  *                        1 will do a one time poll.
+//  663  *
+//  664  * output parameters
+//  665  *
+//  666  * None.
+//  667  *
+//  668  * @return      None.
+//  669  **************************************************************************************************
+//  670  */
+//  671 static void NLME_SetRejoinPollRate(uint32 newRate)
+//  672 {
+//  673   osal_nv_write(ZCD_NV_REJOIN_POLL_RATE, 0, 2, (uint8 *)(&newRate));
+//  674 }
+//  675 
+//  676 /*********************************************************************
+//  677  * @fn      addCommon_sleep
+//  678  *
+//  679  * @brief   Sleep.
+//  680  *
+//  681  * @param   void
+//  682  *
+//  683  * @return  void
+//  684  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  685 void addCommon_sleep(void)
+addCommon_sleep:
+          CFI Block cfiBlock63 Using cfiCommon0
+          CFI Function addCommon_sleep
+        CODE
+//  686 {
+        FUNCALL addCommon_sleep, addCommon_ledFlash
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_sleep, osal_stop_timerEx
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_sleep, osal_stop_timerEx
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_sleep, osal_pwrmgr_device
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_sleep, osal_pwrmgr_task_state
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_sleep, NLME_SetPollRate
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_sleep, NLME_SetQueuedPollRate
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_sleep, NLME_SetResponseRate
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  687 #if defined(POWER_SAVING)
+//  688 	acSleepFlag = TRUE;			// wakeUp时候会设置为FALSE
+        MOV     DPTR,#acSleepFlag
+        MOV     A,#0x1
+        MOVX    @DPTR,A
+//  689 
+//  690 	addCommon_ledFlash(7, 100);
+        ; Setup parameters for call to function addCommon_ledFlash
+        MOV     R2,#0x64
+        MOV     R3,#0x0
+        MOV     R1,#0x7
+        LCALL   ??addCommon_ledFlash?relay; Banked call to: addCommon_ledFlash
+//  691 
+//  692 	osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_DEVICE_LED_NETWORK_STATE);
+        ; Setup parameters for call to function osal_stop_timerEx
+        LCALL   ?Subroutine2 & 0xFFFF
+??CrossCallReturnLabel_17:
+        LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+//  693 	AC_DEVICE_LED_NETWORK_STATE = 0;
+        CLR     0x80.6
+//  694 	osal_stop_timerEx(*acPointer_TaskID, AC_EVENT_POLLING);
+        ; Setup parameters for call to function osal_stop_timerEx
+        MOV     R2,#0x0
+        MOV     R3,#0x1
+        LCALL   ??Subroutine5_0 & 0xFFFF
+??CrossCallReturnLabel_8:
+        LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+//  695 
+//  696 	osal_pwrmgr_device(PWRMGR_BATTERY);
+        ; Setup parameters for call to function osal_pwrmgr_device
+        MOV     R1,#0x1
+        LCALL   ??osal_pwrmgr_device?relay; Banked call to: osal_pwrmgr_device
+//  697 	osal_pwrmgr_task_state(*acPointer_TaskID, PWRMGR_CONSERVE);
+        ; Setup parameters for call to function osal_pwrmgr_task_state
+        MOV     R2,#0x0
+        LCALL   ??Subroutine5_0 & 0xFFFF
+??CrossCallReturnLabel_9:
+        LCALL   ??osal_pwrmgr_task_state?relay; Banked call to: osal_pwrmgr_task_state
+//  698 	
+//  699 	NLME_SetPollRate(0);
+        ; Setup parameters for call to function NLME_SetPollRate
+        MOV     DPTR,#__Constant_0
+        LCALL   ?XLOAD_R2345
+        LCALL   ??NLME_SetPollRate?relay; Banked call to: NLME_SetPollRate
+//  700 	//zgPollRate = 0;
+//  701 	NLME_SetQueuedPollRate(0);
+        ; Setup parameters for call to function NLME_SetQueuedPollRate
+        MOV     R2,#0x0
+        MOV     R3,#0x0
+        LCALL   ??NLME_SetQueuedPollRate?relay; Banked call to: NLME_SetQueuedPollRate
+//  702 	//zgQueuedPollRate = 0;
+//  703 	NLME_SetResponseRate(0);
+        ; Setup parameters for call to function NLME_SetResponseRate
+        MOV     R2,#0x0
+        MOV     R3,#0x0
+        LCALL   ??NLME_SetResponseRate?relay; Banked call to: NLME_SetResponseRate
+//  704 	//zgResponsePollRate = 0;
+//  705 	//NLME_SetRejoinPollRate(0);
+//  706 	//zgRejoinPollRate = 0;
+//  707 	
+//  708 #else
+//  709 #endif
+//  710 }
+        LJMP    ??Subroutine4_0 & 0xFFFF
+          CFI EndBlock cfiBlock63
+        REQUIRE _A_P0
+//  711 
+//  712 /*********************************************************************
+//  713  * @fn      addCommon_wakeup
+//  714  *
+//  715  * @brief   Wakeup.
+//  716  *
+//  717  * @param   void
+//  718  *
+//  719  * @return  void
+//  720  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  721 void addCommon_wakeup(void)
+addCommon_wakeup:
+          CFI Block cfiBlock64 Using cfiCommon0
+          CFI Function addCommon_wakeup
+        CODE
+//  722 {
+        FUNCALL addCommon_wakeup, osal_pwrmgr_device
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_wakeup, osal_pwrmgr_task_state
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_wakeup, NLME_SetPollRate
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_wakeup, NLME_SetQueuedPollRate
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_wakeup, NLME_SetResponseRate
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_wakeup, osal_start_timerEx
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 4, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 4, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  723 #if defined(POWER_SAVING)
+//  724 	acSleepFlag = FALSE;
+        MOV     DPTR,#acSleepFlag
+        CLR     A
+        MOVX    @DPTR,A
+//  725 
+//  726 	osal_pwrmgr_device(PWRMGR_ALWAYS_ON);
+        ; Setup parameters for call to function osal_pwrmgr_device
+        MOV     R1,A
+        LCALL   ??osal_pwrmgr_device?relay; Banked call to: osal_pwrmgr_device
+//  727 	osal_pwrmgr_task_state(*acPointer_TaskID, PWRMGR_HOLD);
+        ; Setup parameters for call to function osal_pwrmgr_task_state
+        MOV     R2,#0x1
+        LCALL   ??Subroutine5_0 & 0xFFFF
+??CrossCallReturnLabel_10:
+        LCALL   ??osal_pwrmgr_task_state?relay; Banked call to: osal_pwrmgr_task_state
+//  728 
+//  729 	NLME_SetPollRate(500);
+        ; Setup parameters for call to function NLME_SetPollRate
+        MOV     DPTR,#__Constant_1f4
+        LCALL   ?XLOAD_R2345
+        LCALL   ??NLME_SetPollRate?relay; Banked call to: NLME_SetPollRate
+//  730 	//zgPollRate = 1000;
+//  731 	NLME_SetQueuedPollRate(100);
+        ; Setup parameters for call to function NLME_SetQueuedPollRate
+        MOV     R2,#0x64
+        MOV     R3,#0x0
+        LCALL   ??NLME_SetQueuedPollRate?relay; Banked call to: NLME_SetQueuedPollRate
+//  732 	//zgQueuedPollRate = 100;
+//  733 	NLME_SetResponseRate(100);
+        ; Setup parameters for call to function NLME_SetResponseRate
+        MOV     R2,#0x64
+        MOV     R3,#0x0
+        LCALL   ??NLME_SetResponseRate?relay; Banked call to: NLME_SetResponseRate
+//  734 	//zgResponsePollRate = 100;
+//  735 	//NLME_SetRejoinPollRate(440);
+//  736 	//zgRejoinPollRate = 440;
+//  737 	
+//  738 	acDelayJoinNetwork = AC_DELAY_JOIN_NETWORK;
+        MOV     DPTR,#acDelayJoinNetwork
+        MOV     A,#0x18
+        MOVX    @DPTR,A
+//  739 	osal_start_timerEx(*acPointer_TaskID, AC_EVENT_POLLING, AC_DELAY_POLLING);
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     DPTR,#__Constant_1388
+        LCALL   ?PUSH_XSTACK8_X_FOUR
+          CFI CFA_XSP16 add(XSP16, 4)
+        MOV     R2,#0x0
+        MOV     R3,#0x1
+        LCALL   ??Subroutine5_0 & 0xFFFF
+??CrossCallReturnLabel_11:
+        LCALL   ??osal_start_timerEx?relay; Banked call to: osal_start_timerEx
+        LJMP    ?Subroutine0 & 0xFFFF
+          CFI EndBlock cfiBlock64
+//  740 	
+//  741 #else
+//  742 #endif
+//  743 }
+//  744 
+//  745 /*********************************************************************
+//  746  * @fn		addCommon_factoryReset
+//  747  *
+//  748  * @brief	Callback from the ZCL General Cluster Library
+//  749  *			to set all the Basic Cluster attributes to	default values.
+//  750  *
+//  751  * @param	none
+//  752  *
+//  753  * @return	none
+//  754  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  755 void addCommon_factoryReset(void)
+addCommon_factoryReset:
+          CFI Block cfiBlock65 Using cfiCommon0
+          CFI Function addCommon_factoryReset
+        CODE
+//  756 {
+        FUNCALL addCommon_factoryReset, zgWriteStartupOptions
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 4, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 4, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL addCommon_factoryReset, MT_SysCommandProcessing
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 4, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 4, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 4
+        MOV     A,#-0x4
+        LCALL   ?ALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 4)
+//  757 	uint8 tempProcessCmd[] = {1, 0, 0, 0}; // used for reset command, { length + cmd0 + cmd1 + data }
+        MOV     DPTR,#`?<Constant {1, 0, 0, 0}>`
+        MOV     R4,?XSP + 0
+        MOV     R5,?XSP + 1
+        MOV     A,#0x4
+        LCALL   ?MOVE_LONG8_XDATA_XDATA
+//  758 
+//  759 	// Put device back to factory default settings
+//  760 	zgWriteStartupOptions(ZG_STARTUP_SET, 3);	// bit set both default configuration and default network
+        ; Setup parameters for call to function zgWriteStartupOptions
+        MOV     R2,#0x3
+        MOV     R1,#-0x1
+        LCALL   ??zgWriteStartupOptions?relay; Banked call to: zgWriteStartupOptions
+//  761 
+//  762 	// restart device
+//  763 	MT_SysCommandProcessing(tempProcessCmd);
+        ; Setup parameters for call to function MT_SysCommandProcessing
+        MOV     R2,?XSP + 0
+        MOV     R3,?XSP + 1
+        LCALL   ??MT_SysCommandProcessing?relay; Banked call to: MT_SysCommandProcessing
+//  764 }
+        LJMP    ?Subroutine0 & 0xFFFF
+          CFI EndBlock cfiBlock65
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for acNwkState_stopFlash>`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for acDelayPowerOn>`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for acDelayJoinNetwork>`:
+        DATA8
+        DB 24
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_init?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_init
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_initHal?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_initHal
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_eventLoop?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_eventLoop
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_polling?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_polling
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_handleOneTime?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_handleOneTime
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_isrPort0?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_isrPort0
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_isrPort1?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_isrPort1
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_isrPort2?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_isrPort2
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_delayMS?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_delayMS
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_ledFlash?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_ledFlash
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_atNormalWorkState?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_atNormalWorkState
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_networkState_led?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_networkState_led
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_handleKeyDown?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_handleKeyDown
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_handleKeyUp?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_handleKeyUp
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_sleep?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_sleep
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_wakeup?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_wakeup
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??addCommon_factoryReset?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    addCommon_factoryReset
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+`?<Constant {1, 0, 0, 0}>`:
+        DATA8
+        DB 1
+        DB 0
+        DB 0
+        DB 0
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_5dc:
+        DD 1500
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_64:
+        DD 100
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_1388:
+        DD 5000
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_258:
+        DD 600
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_0:
+        DD 0
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_1f4:
+        DD 500
+
+        END
+//  765 
+// 
+// 1 333 bytes in segment BANKED_CODE
+//   102 bytes in segment BANK_RELAYS
+//    19 bytes in segment SFR_AN
+//     3 bytes in segment XDATA_I
+//     3 bytes in segment XDATA_ID
+//    30 bytes in segment XDATA_ROM_C
+//    13 bytes in segment XDATA_Z
+// 
+// 1 438 bytes of CODE  memory
+//     6 bytes of CONST memory (+ 24 bytes shared)
+//     0 bytes of DATA  memory (+ 19 bytes shared)
+//    16 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: 2

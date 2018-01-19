@@ -1,0 +1,3003 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V9.10.1.2146 for 8051               18/Jan/2018  14:04:34
+// Copyright 2004-2014 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for 8051
+//
+//    Core               =  plain
+//    Code model         =  banked
+//    Data model         =  large
+//    Calling convention =  xdata reentrant
+//    Constant location  =  data_rom
+//    Dptr setup         =  1,16
+//                          
+//    Source file        =  
+//        C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\Source\zcl_sceneselector.c
+//    Command line       =  
+//        -f "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f
+//        "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+//        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+//        -DDEFAULT_CHANLIST=0x07FFF800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+//        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+//        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+//        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+//        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+//        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+//        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+//        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+//        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+//        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+//        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+//        -DPOLL_RATE=120000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+//        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=60000)
+//        -f "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+//        "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\Source\zcl_sceneselector.c"
+//        -D SCENE_SELECTOR_TOUCHKEY -D xSCENE_SELECTOR -D ISR_KEYINTERRUPT -D
+//        OSC32K_CRYSTAL_INSTALLED=FALSE -D xxHAL_PA_LNA -D SECURE=1 -D
+//        TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D POWER_SAVING -D
+//        NWK_AUTO_POLL -D xHOLD_AUTO_START -D xZTOOL_P1 -D MT_TASK -D
+//        MT_APP_FUNC -D MT_SYS_FUNC -D MT_ZDO_FUNC -D xLCD_SUPPORTED=DEBUG -D
+//        MULTICAST_ENABLED=FALSE -D ZCL_READ -D ZCL_WRITE -D ZCL_REPORT -D
+//        xZCL_EZMODE -D ZCL_BASIC -D ZCL_IDENTIFY -D ZCL_GROUPS -D ZCL_SCENES
+//        -D ZCL_ON_OFF -D ZCL_LEVEL_CTRL -D ZCL_DIAGNOSTIC -D
+//        FEATURE_SYSTEM_STATS -lC "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack
+//        Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\List\"
+//        -lA "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\List\"
+//        --diag_suppress Pe001,Pa010 -o
+//        "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\"
+//        -e --debug --core=plain --dptr=16,1 --data_model=large
+//        --code_model=banked --calling_convention=xdata_reentrant
+//        --place_constants=data_rom --nr_virtual_regs 16 -I
+//        "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\AddSceneSelector\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\AddCommon\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\Source\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Source\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\ZMain\TI2530DB\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\hal\include\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\include\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mt\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\osal\include\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\af\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\zmac\"
+//        -I "C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+//        -Ohz --require_prototypes
+//    List file          =  
+//        C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home
+//        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\List\zcl_sceneselector.s51
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME zcl_sceneselector
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?V0
+        EXTERN ?V1
+        EXTERN ?V2
+        EXTERN ?V4
+        EXTERN ?V5
+        EXTERN ?BANKED_ENTER_XDATA
+        EXTERN ?BANKED_LEAVE_XDATA
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+        EXTERN ?DEALLOC_XSTACK8
+        EXTERN ?PUSH_XSTACK8_X_FOUR
+        EXTERN __INIT_XDATA_I
+        EXTERN __INIT_XDATA_Z
+
+        FUNCTION ??zclSceneSelector_BasicResetCB?relay,0203H
+        FUNCTION ??zclSceneSelector_IdentifyCB?relay,0203H
+        FUNCTION ??zclSceneSelector_IdentifyQueryRspCB?relay,0203H
+        PUBLIC ??zclSceneSelector_Init?relay
+        FUNCTION ??zclSceneSelector_Init?relay,0203H
+        PUBLIC ??zclSceneSelector_LcdDisplayHelpMode?relay
+        FUNCTION ??zclSceneSelector_LcdDisplayHelpMode?relay,0203H
+        PUBLIC ??zclSceneSelector_LcdDisplayMainMode?relay
+        FUNCTION ??zclSceneSelector_LcdDisplayMainMode?relay,0203H
+        PUBLIC ??zclSceneSelector_LcdDisplayUpdate?relay
+        FUNCTION ??zclSceneSelector_LcdDisplayUpdate?relay,0203H
+        FUNCTION ??zclSceneSelector_ProcessIdentifyTimeChange?re,0203H
+        PUBLIC ??zclSceneSelector_event_loop?relay
+        FUNCTION ??zclSceneSelector_event_loop?relay,0203H
+        PUBWEAK __Constant_3e8
+        PUBLIC gPermitDuration
+        PUBLIC giSwScreenMode
+        PUBLIC zclSceneSelectorSeqNum
+        FUNCTION zclSceneSelector_BasicResetCB,021603H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC zclSceneSelector_DstAddr
+        FUNCTION zclSceneSelector_IdentifyCB,021603H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        FUNCTION zclSceneSelector_IdentifyQueryRspCB,0603H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC zclSceneSelector_Init
+        FUNCTION zclSceneSelector_Init,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        PUBLIC zclSceneSelector_LcdDisplayHelpMode
+        FUNCTION zclSceneSelector_LcdDisplayHelpMode,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC zclSceneSelector_LcdDisplayMainMode
+        FUNCTION zclSceneSelector_LcdDisplayMainMode,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC zclSceneSelector_LcdDisplayUpdate
+        FUNCTION zclSceneSelector_LcdDisplayUpdate,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC zclSceneSelector_NwkState
+        PUBLIC zclSceneSelector_OnOffSwitchActions
+        PUBLIC zclSceneSelector_OnOffSwitchType
+        FUNCTION zclSceneSelector_ProcessIdentifyTimeChange,021203H
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME XSTACK, 4, STACK
+        PUBLIC zclSceneSelector_TaskID
+        PUBLIC zclSceneSelector_event_loop
+        FUNCTION zclSceneSelector_event_loop,0a1203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 14, STACK
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA_SP SP IDATA
+          CFI StackFrame CFA_PSP16 PSP16 XDATA
+          CFI StackFrame CFA_XSP16 XSP16 XDATA
+          CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+          CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+          CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+          CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+          CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+          CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+          CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+          CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+          CFI Resource V8:8, V9:8, V10:8, V11:8, V12:8, V13:8, V14:8, V15:8, SP:8
+          CFI Resource PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+          CFI VirtualResource ?RET:24
+          CFI Resource ?BRET_EXT:8
+          CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+          CFI ResourceParts PSP16 PSPH, PSPL
+          CFI ResourceParts XSP16 XSPH, XSPL
+          CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 1
+          CFI DataAlign -1
+          CFI ReturnAddress ?RET CODE
+          CFI CFA_DOVERLAY Used
+          CFI CFA_IOVERLAY Used
+          CFI CFA_SP SP+-3
+          CFI CFA_PSP16 PSP16+0
+          CFI CFA_XSP16 XSP16+0
+          CFI `PSW.CY` SameValue
+          CFI `B.BR0` SameValue
+          CFI `B.BR1` SameValue
+          CFI `B.BR2` SameValue
+          CFI `B.BR3` SameValue
+          CFI `B.BR4` SameValue
+          CFI `B.BR5` SameValue
+          CFI `B.BR6` SameValue
+          CFI `B.BR7` SameValue
+          CFI `VB.BR8` SameValue
+          CFI `VB.BR9` SameValue
+          CFI `VB.BR10` SameValue
+          CFI `VB.BR11` SameValue
+          CFI `VB.BR12` SameValue
+          CFI `VB.BR13` SameValue
+          CFI `VB.BR14` SameValue
+          CFI `VB.BR15` SameValue
+          CFI VB SameValue
+          CFI B Undefined
+          CFI A Undefined
+          CFI PSW SameValue
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI R0 Undefined
+          CFI R1 Undefined
+          CFI R2 Undefined
+          CFI R3 Undefined
+          CFI R4 Undefined
+          CFI R5 Undefined
+          CFI R6 SameValue
+          CFI R7 SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI V2 SameValue
+          CFI V3 SameValue
+          CFI V4 SameValue
+          CFI V5 SameValue
+          CFI V6 SameValue
+          CFI V7 SameValue
+          CFI V8 SameValue
+          CFI V9 SameValue
+          CFI V10 SameValue
+          CFI V11 SameValue
+          CFI V12 SameValue
+          CFI V13 SameValue
+          CFI V14 SameValue
+          CFI V15 SameValue
+          CFI PSPH Undefined
+          CFI PSPL Undefined
+          CFI XSPH Undefined
+          CFI XSPL Undefined
+          CFI ?RET Concat
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI EndCommon cfiCommon0
+        
+        
+          CFI Common cfiCommon1 Using cfiNames0
+          CFI CodeAlign 1
+          CFI DataAlign -1
+          CFI ReturnAddress ?RET CODE
+          CFI CFA_DOVERLAY Used
+          CFI CFA_IOVERLAY Used
+          CFI CFA_SP SP+-2
+          CFI CFA_PSP16 PSP16+0
+          CFI CFA_XSP16 XSP16+0
+          CFI `PSW.CY` SameValue
+          CFI `B.BR0` SameValue
+          CFI `B.BR1` SameValue
+          CFI `B.BR2` SameValue
+          CFI `B.BR3` SameValue
+          CFI `B.BR4` SameValue
+          CFI `B.BR5` SameValue
+          CFI `B.BR6` SameValue
+          CFI `B.BR7` SameValue
+          CFI `VB.BR8` SameValue
+          CFI `VB.BR9` SameValue
+          CFI `VB.BR10` SameValue
+          CFI `VB.BR11` SameValue
+          CFI `VB.BR12` SameValue
+          CFI `VB.BR13` SameValue
+          CFI `VB.BR14` SameValue
+          CFI `VB.BR15` SameValue
+          CFI VB SameValue
+          CFI B SameValue
+          CFI A SameValue
+          CFI PSW SameValue
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI R0 SameValue
+          CFI R1 SameValue
+          CFI R2 SameValue
+          CFI R3 SameValue
+          CFI R4 SameValue
+          CFI R5 SameValue
+          CFI R6 SameValue
+          CFI R7 SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI V2 SameValue
+          CFI V3 SameValue
+          CFI V4 SameValue
+          CFI V5 SameValue
+          CFI V6 SameValue
+          CFI V7 SameValue
+          CFI V8 SameValue
+          CFI V9 SameValue
+          CFI V10 SameValue
+          CFI V11 SameValue
+          CFI V12 SameValue
+          CFI V13 SameValue
+          CFI V14 SameValue
+          CFI V15 SameValue
+          CFI PSPH Undefined
+          CFI PSPL Undefined
+          CFI XSPH Undefined
+          CFI XSPL Undefined
+          CFI ?RET Concat
+          CFI ?BRET_EXT SameValue
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI EndCommon cfiCommon1
+        
+HalLedBlink         SYMBOL "HalLedBlink"
+??HalLedBlink?relay SYMBOL "?relay", HalLedBlink
+HalLedSet           SYMBOL "HalLedSet"
+??HalLedSet?relay   SYMBOL "?relay", HalLedSet
+MT_SysCommandProcessing SYMBOL "MT_SysCommandProcessing"
+??MT_SysCommandProcessing?relay SYMBOL "?relay", MT_SysCommandProcessing
+RegisterForKeys     SYMBOL "RegisterForKeys"
+??RegisterForKeys?relay SYMBOL "?relay", RegisterForKeys
+ZDO_RegisterForZDOMsg SYMBOL "ZDO_RegisterForZDOMsg"
+??ZDO_RegisterForZDOMsg?relay SYMBOL "?relay", ZDO_RegisterForZDOMsg
+addCommon_networkState_led SYMBOL "addCommon_networkState_led"
+??addCommon_networkState_led?relay SYMBOL "?relay", addCommon_networkState_led
+addSceneSelector_eventLoop SYMBOL "addSceneSelector_eventLoop"
+??addSceneSelector_eventLoop?relay SYMBOL "?relay", addSceneSelector_eventLoop
+addSceneSelector_init SYMBOL "addSceneSelector_init"
+??addSceneSelector_init?relay SYMBOL "?relay", addSceneSelector_init
+afRegister          SYMBOL "afRegister"
+??afRegister?relay  SYMBOL "?relay", afRegister
+osal_mem_free       SYMBOL "osal_mem_free"
+??osal_mem_free?relay SYMBOL "?relay", osal_mem_free
+osal_msg_deallocate SYMBOL "osal_msg_deallocate"
+??osal_msg_deallocate?relay SYMBOL "?relay", osal_msg_deallocate
+osal_msg_receive    SYMBOL "osal_msg_receive"
+??osal_msg_receive?relay SYMBOL "?relay", osal_msg_receive
+osal_start_timerEx  SYMBOL "osal_start_timerEx"
+??osal_start_timerEx?relay SYMBOL "?relay", osal_start_timerEx
+osal_stop_timerEx   SYMBOL "osal_stop_timerEx"
+??osal_stop_timerEx?relay SYMBOL "?relay", osal_stop_timerEx
+zclGeneral_RegisterCmdCallbacks SYMBOL "zclGeneral_RegisterCmdCallbacks"
+??zclGeneral_RegisterCmdCallbacks?relay SYMBOL "?relay", zclGeneral_RegisterCmdCallbacks
+zclHA_Init          SYMBOL "zclHA_Init"
+??zclHA_Init?relay  SYMBOL "?relay", zclHA_Init
+zcl_registerAttrList SYMBOL "zcl_registerAttrList"
+??zcl_registerAttrList?relay SYMBOL "?relay", zcl_registerAttrList
+zcl_registerForMsg  SYMBOL "zcl_registerForMsg"
+??zcl_registerForMsg?relay SYMBOL "?relay", zcl_registerForMsg
+zgWriteStartupOptions SYMBOL "zgWriteStartupOptions"
+??zgWriteStartupOptions?relay SYMBOL "?relay", zgWriteStartupOptions
+zclSceneSelector_Init SYMBOL "zclSceneSelector_Init"
+??zclSceneSelector_Init?relay SYMBOL "?relay", zclSceneSelector_Init
+zclSceneSelector_LcdDisplayHelpMode SYMBOL "zclSceneSelector_LcdDisplayHelpMode"
+??zclSceneSelector_LcdDisplayHelpMode?relay SYMBOL "?relay", zclSceneSelector_LcdDisplayHelpMode
+zclSceneSelector_LcdDisplayMainMode SYMBOL "zclSceneSelector_LcdDisplayMainMode"
+??zclSceneSelector_LcdDisplayMainMode?relay SYMBOL "?relay", zclSceneSelector_LcdDisplayMainMode
+zclSceneSelector_LcdDisplayUpdate SYMBOL "zclSceneSelector_LcdDisplayUpdate"
+??zclSceneSelector_LcdDisplayUpdate?relay SYMBOL "?relay", zclSceneSelector_LcdDisplayUpdate
+zclSceneSelector_event_loop SYMBOL "zclSceneSelector_event_loop"
+??zclSceneSelector_event_loop?relay SYMBOL "?relay", zclSceneSelector_event_loop
+
+        EXTERN ??HalLedBlink?relay
+        FUNCTION ??HalLedBlink?relay,00H
+        EXTERN ??HalLedSet?relay
+        FUNCTION ??HalLedSet?relay,00H
+        EXTERN ??MT_SysCommandProcessing?relay
+        FUNCTION ??MT_SysCommandProcessing?relay,00H
+        EXTERN ??RegisterForKeys?relay
+        FUNCTION ??RegisterForKeys?relay,00H
+        EXTERN ??ZDO_RegisterForZDOMsg?relay
+        FUNCTION ??ZDO_RegisterForZDOMsg?relay,00H
+        EXTERN ??addCommon_networkState_led?relay
+        FUNCTION ??addCommon_networkState_led?relay,00H
+        EXTERN ??addSceneSelector_eventLoop?relay
+        FUNCTION ??addSceneSelector_eventLoop?relay,00H
+        EXTERN ??addSceneSelector_init?relay
+        FUNCTION ??addSceneSelector_init?relay,00H
+        EXTERN ??afRegister?relay
+        FUNCTION ??afRegister?relay,00H
+        EXTERN ??osal_mem_free?relay
+        FUNCTION ??osal_mem_free?relay,00H
+        EXTERN ??osal_msg_deallocate?relay
+        FUNCTION ??osal_msg_deallocate?relay,00H
+        EXTERN ??osal_msg_receive?relay
+        FUNCTION ??osal_msg_receive?relay,00H
+        EXTERN ??osal_start_timerEx?relay
+        FUNCTION ??osal_start_timerEx?relay,00H
+        EXTERN ??osal_stop_timerEx?relay
+        FUNCTION ??osal_stop_timerEx?relay,00H
+        EXTERN ??zclGeneral_RegisterCmdCallbacks?relay
+        FUNCTION ??zclGeneral_RegisterCmdCallbacks?relay,00H
+        EXTERN ??zclHA_Init?relay
+        FUNCTION ??zclHA_Init?relay,00H
+        EXTERN ??zcl_registerAttrList?relay
+        FUNCTION ??zcl_registerAttrList?relay,00H
+        EXTERN ??zcl_registerForMsg?relay
+        FUNCTION ??zcl_registerForMsg?relay,00H
+        EXTERN ??zgWriteStartupOptions?relay
+        FUNCTION ??zgWriteStartupOptions?relay,00H
+        EXTERN HalLedBlink
+        FUNCTION HalLedBlink,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN HalLedSet
+        FUNCTION HalLedSet,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN MT_SysCommandProcessing
+        FUNCTION MT_SysCommandProcessing,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN RegisterForKeys
+        FUNCTION RegisterForKeys,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN ZDO_RegisterForZDOMsg
+        FUNCTION ZDO_RegisterForZDOMsg,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN addCommon_networkState_led
+        FUNCTION addCommon_networkState_led,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN addSceneSelector_eventLoop
+        FUNCTION addSceneSelector_eventLoop,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN addSceneSelector_init
+        FUNCTION addSceneSelector_init,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN afRegister
+        FUNCTION afRegister,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_mem_free
+        FUNCTION osal_mem_free,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_msg_deallocate
+        FUNCTION osal_msg_deallocate,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_msg_receive
+        FUNCTION osal_msg_receive,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_start_timerEx
+        FUNCTION osal_start_timerEx,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 4, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN osal_stop_timerEx
+        FUNCTION osal_stop_timerEx,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclGeneral_RegisterCmdCallbacks
+        FUNCTION zclGeneral_RegisterCmdCallbacks,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclHA_Init
+        FUNCTION zclHA_Init,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zclSceneSelector_Attrs
+        EXTERN zclSceneSelector_IdentifyTime
+        EXTERN zclSceneSelector_OnOff
+        EXTERN zclSceneSelector_SimpleDesc1
+        EXTERN zclSceneSelector_SimpleDesc2
+        EXTERN zclSceneSelector_SimpleDesc3
+        EXTERN zclSceneSelector_SimpleDesc4
+        EXTERN zcl_registerAttrList
+        FUNCTION zcl_registerAttrList,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zcl_registerForMsg
+        FUNCTION zcl_registerForMsg,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN zgWriteStartupOptions
+        FUNCTION zgWriteStartupOptions,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+
+// C:\Users\JC_liang\Desktop\LIFUD\Ãæ°åZ-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\Source\zcl_sceneselector.c
+//    1 /**************************************************************************************************
+//    2   Filename:       zcl_samplesw.c
+//    3   Revised:        $Date: 2015-08-19 17:11:00 -0700 (Wed, 19 Aug 2015) $
+//    4   Revision:       $Revision: 44460 $
+//    5 
+//    6   Description:    Zigbee Cluster Library - sample device application.
+//    7 
+//    8 
+//    9   Copyright 2006-2013 Texas Instruments Incorporated. All rights reserved.
+//   10 
+//   11   IMPORTANT: Your use of this Software is limited to those specific rights
+//   12   granted under the terms of a software license agreement between the user
+//   13   who downloaded the software, his/her employer (which must be your employer)
+//   14   and Texas Instruments Incorporated (the "License").  You may not use this
+//   15   Software unless you agree to abide by the terms of the License. The License
+//   16   limits your use, and you acknowledge, that the Software may not be modified,
+//   17   copied or distributed unless embedded on a Texas Instruments microcontroller
+//   18   or used solely and exclusively in conjunction with a Texas Instruments radio
+//   19   frequency transceiver, which is integrated into your product.  Other than for
+//   20   the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   21   works of, modify, distribute, perform, display or sell this Software and/or
+//   22   its documentation for any purpose.
+//   23 
+//   24   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   25   PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+//   26   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+//   27   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   28   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   29   NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   30   LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   31   INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   32   OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   33   OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   34   (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   35 
+//   36   Should you have any questions regarding your right to use this Software,
+//   37   contact Texas Instruments Incorporated at www.TI.com.
+//   38 **************************************************************************************************/
+//   39 
+//   40 /*********************************************************************
+//   41   This device will be like an On/Off Switch device. This application
+//   42   is not intended to be a On/Off Switch device, but will use the device
+//   43   description to implement this sample code.
+//   44 
+//   45   ----------------------------------------
+//   46   Main:
+//   47     - SW1: Toggle remote light
+//   48     - SW2: Invoke EZMode
+//   49     - SW4: Enable/Disable Permit Join
+//   50     - SW5: Go to Help screen
+//   51   ----------------------------------------
+//   52 *********************************************************************/
+//   53 
+//   54 /*********************************************************************
+//   55  * INCLUDES
+//   56  */
+//   57 #include "ZComDef.h"
+//   58 #include "OSAL.h"
+//   59 #include "AF.h"
+//   60 #include "ZDApp.h"
+//   61 #include "ZDObject.h"
+//   62 #include "ZDProfile.h"
+//   63 #include "MT_SYS.h"
+//   64 
+//   65 #include "zcl.h"
+//   66 #include "zcl_general.h"
+//   67 #include "zcl_ha.h"
+//   68 #include "zcl_sceneselector.h"
+//   69 #include "zcl_ezmode.h"
+//   70 
+//   71 #include "onboard.h"
+//   72 
+//   73 /* HAL */
+//   74 #include "hal_lcd.h"
+//   75 #include "hal_led.h"
+//   76 #include "hal_key.h"
+//   77 
+//   78 #if defined (OTA_CLIENT) && (OTA_CLIENT == TRUE)
+//   79 #include "zcl_ota.h"
+//   80 #include "hal_ota.h"
+//   81 #endif
+//   82 
+//   83 
+//   84 /*********************************************************************
+//   85  * MACROS
+//   86  */
+//   87 
+//   88 /*********************************************************************
+//   89  * CONSTANTS
+//   90  */
+//   91 /*********************************************************************
+//   92  * TYPEDEFS
+//   93  */
+//   94 
+//   95 /*********************************************************************
+//   96  * GLOBAL VARIABLES
+//   97  */
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//   98 byte zclSceneSelector_TaskID;
+zclSceneSelector_TaskID:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//   99 
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  100 uint8 zclSceneSelectorSeqNum;
+zclSceneSelectorSeqNum:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//  101 
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  102 uint8 zclSceneSelector_OnOffSwitchType = ON_OFF_SWITCH_TYPE_TOGGLE;
+zclSceneSelector_OnOffSwitchType:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//  103 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  104 uint8 zclSceneSelector_OnOffSwitchActions = ON_OFF_SWITCH_ACTIONS_2;   // Toggle -> Toggle
+zclSceneSelector_OnOffSwitchActions:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for zclSceneSelector_OnOffSwitch`
+        REQUIRE __INIT_XDATA_I
+//  105 
+//  106 /*********************************************************************
+//  107  * GLOBAL FUNCTIONS
+//  108  */
+//  109 
+//  110 /*********************************************************************
+//  111  * LOCAL VARIABLES
+//  112  */
+//  113 #ifdef ZCL_ON_OFF
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  114 afAddrType_t zclSceneSelector_DstAddr;
+zclSceneSelector_DstAddr:
+        DS 12
+        REQUIRE __INIT_XDATA_Z
+//  115 #endif
+//  116 
+//  117 #ifdef ZCL_EZMODE
+//  118 static void zclSceneSelector_ProcessZDOMsgs( zdoIncomingMsg_t *pMsg );
+//  119 static void zclSceneSelector_EZModeCB( zlcEZMode_State_t state, zclEZMode_CBData_t *pData );
+//  120 
+//  121 static const zclEZMode_RegisterData_t zclSceneSelector_RegisterEZModeData =
+//  122 {
+//  123   &zclSceneSelector_TaskID,
+//  124   SCENESELECTOR_EZMODE_NEXTSTATE_EVT,
+//  125   SCENESELECTOR_EZMODE_TIMEOUT_EVT,
+//  126   &zclSceneSelectorSeqNum,
+//  127   zclSceneSelector_EZModeCB
+//  128 };
+//  129 
+//  130 // NOT ZLC_EZMODE, Use EndDeviceBind
+//  131 #else
+//  132 
+//  133 static cId_t bindingOutClusters[] =
+//  134 {
+//  135   ZCL_CLUSTER_ID_GEN_ON_OFF
+//  136 };
+//  137 #define ZCLSCENESELECTOR_BINDINGLIST   (sizeof(bindingOutClusters)/sizeof(bindingOutClusters[0]))
+//  138 #endif  // ZLC_EZMODE
+//  139 
+//  140 // Endpoint to allow SYS_APP_MSGs
+//  141 /*static endPointDesc_t sceneSelector_TestEp =
+//  142 {
+//  143   SCENESELECTOR_ENDPOINT,                  // endpoint
+//  144   &zclSceneSelector_TaskID,
+//  145   (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
+//  146   (afNetworkLatencyReq_t)0            // No Network Latency req
+//  147 };*/
+//  148 //###########################################################################
+//  149 //###########################################################################
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  150 static endPointDesc_t sceneSelector_TestEp1 =
+sceneSelector_TestEp1:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for sceneSelector_TestEp1>`
+        REQUIRE __INIT_XDATA_I
+//  151 {
+//  152   SCENESELECTOR_ENDPOINT1,                  // endpoint
+//  153   &zclSceneSelector_TaskID,
+//  154   (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
+//  155   (afNetworkLatencyReq_t)0            // No Network Latency req
+//  156 };
+//  157 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  158 static endPointDesc_t sceneSelector_TestEp2 =
+sceneSelector_TestEp2:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for sceneSelector_TestEp2>`
+        REQUIRE __INIT_XDATA_I
+//  159 {
+//  160   SCENESELECTOR_ENDPOINT2,                  // endpoint
+//  161   &zclSceneSelector_TaskID,
+//  162   (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
+//  163   (afNetworkLatencyReq_t)0            // No Network Latency req
+//  164 };
+//  165 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  166 static endPointDesc_t sceneSelector_TestEp3 =
+sceneSelector_TestEp3:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for sceneSelector_TestEp3>`
+        REQUIRE __INIT_XDATA_I
+//  167 {
+//  168   SCENESELECTOR_ENDPOINT3,                  // endpoint
+//  169   &zclSceneSelector_TaskID,
+//  170   (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
+//  171   (afNetworkLatencyReq_t)0            // No Network Latency req
+//  172 };
+//  173 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  174 static endPointDesc_t sceneSelector_TestEp4 =
+sceneSelector_TestEp4:
+        DATA8
+        DS 6
+        REQUIRE `?<Initializer for sceneSelector_TestEp4>`
+        REQUIRE __INIT_XDATA_I
+//  175 {
+//  176   SCENESELECTOR_ENDPOINT4,                  // endpoint
+//  177   &zclSceneSelector_TaskID,
+//  178   (SimpleDescriptionFormat_t *)NULL,  // No Simple description for this test endpoint
+//  179   (afNetworkLatencyReq_t)0            // No Network Latency req
+//  180 };
+//  181 //###########################################################################
+//  182 //###########################################################################
+//  183 
+//  184 
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  185 uint8 giSwScreenMode = SW_MAINMODE;   // display the main screen mode first
+giSwScreenMode:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//  186 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  187 static uint8 aProcessCmd[] = { 1, 0, 0, 0 }; // used for reset command, { length + cmd0 + cmd1 + data }
+aProcessCmd:
+        DATA32
+        DS 4
+        REQUIRE `?<Initializer for aProcessCmd>`
+        REQUIRE __INIT_XDATA_I
+//  188 
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  189 uint8 gPermitDuration = 0;    // permit joining default to disabled
+gPermitDuration:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//  190 
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  191 devStates_t zclSceneSelector_NwkState = DEV_INIT;
+zclSceneSelector_NwkState:
+        DATA8
+        DS 1
+        REQUIRE `?<Initializer for zclSceneSelector_NwkState>`
+        REQUIRE __INIT_XDATA_I
+//  192 
+//  193 #if defined (OTA_CLIENT) && (OTA_CLIENT == TRUE)
+//  194 #define DEVICE_POLL_RATE                 8000   // Poll rate for end device
+//  195 #endif
+//  196 
+//  197 /*********************************************************************
+//  198  * LOCAL FUNCTIONS
+//  199  */
+//  200 static void zclSceneSelector_HandleKeys( byte shift, byte keys );
+//  201 static void zclSceneSelector_BasicResetCB( void );
+//  202 static void zclSceneSelector_IdentifyCB( zclIdentify_t *pCmd );
+//  203 static void zclSceneSelector_IdentifyQueryRspCB(  zclIdentifyQueryRsp_t *pRsp );
+//  204 static void zclSceneSelector_ProcessIdentifyTimeChange( void );
+//  205 
+//  206 // app display functions
+//  207 void zclSceneSelector_LcdDisplayUpdate(void);
+//  208 void zclSceneSelector_LcdDisplayMainMode(void);
+//  209 void zclSceneSelector_LcdDisplayHelpMode(void);
+//  210 
+//  211 // Functions to process ZCL Foundation incoming Command/Response messages
+//  212 static void zclSceneSelector_ProcessIncomingMsg( zclIncomingMsg_t *msg );
+//  213 #ifdef ZCL_READ
+//  214 static uint8 zclSceneSelector_ProcessInReadRspCmd( zclIncomingMsg_t *pInMsg );
+//  215 #endif
+//  216 #ifdef ZCL_WRITE
+//  217 static uint8 zclSceneSelector_ProcessInWriteRspCmd( zclIncomingMsg_t *pInMsg );
+//  218 #endif
+//  219 static uint8 zclSceneSelector_ProcessInDefaultRspCmd( zclIncomingMsg_t *pInMsg );
+//  220 #ifdef ZCL_DISCOVER
+//  221 static uint8 zclSceneSelector_ProcessInDiscCmdsRspCmd( zclIncomingMsg_t *pInMsg );
+//  222 static uint8 zclSceneSelector_ProcessInDiscAttrsRspCmd( zclIncomingMsg_t *pInMsg );
+//  223 static uint8 zclSceneSelector_ProcessInDiscAttrsExtRspCmd( zclIncomingMsg_t *pInMsg );
+//  224 #endif
+//  225 
+//  226 #if defined (OTA_CLIENT) && (OTA_CLIENT == TRUE)
+//  227 static void zclSceneSelector_ProcessOTAMsgs( zclOTA_CallbackMsg_t* pMsg );
+//  228 #endif
+//  229 
+//  230 /*********************************************************************
+//  231  * ZCL General Profile Callback table
+//  232  */
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  233 static zclGeneral_AppCallbacks_t zclSceneSelector_CmdCallbacks =
+zclSceneSelector_CmdCallbacks:
+        DATA8
+        DS 36
+        REQUIRE `?<Initializer for zclSceneSelector_CmdCallback`
+        REQUIRE __INIT_XDATA_I
+//  234 {
+//  235   zclSceneSelector_BasicResetCB,               // Basic Cluster Reset command
+//  236   zclSceneSelector_IdentifyCB,                 // Identify command
+//  237 #ifdef ZCL_EZMODE
+//  238   NULL,                                   // Identify EZ-Mode Invoke command
+//  239   NULL,                                   // Identify Update Commission State command
+//  240 #endif
+//  241   NULL,                                   // Identify Trigger Effect command
+//  242   zclSceneSelector_IdentifyQueryRspCB,         // Identify Query Response command
+//  243   NULL,                                   // On/Off cluster commands
+//  244   NULL,                                   // On/Off cluster enhanced command Off with Effect
+//  245   NULL,                                   // On/Off cluster enhanced command On with Recall Global Scene
+//  246   NULL,                                   // On/Off cluster enhanced command On with Timed Off
+//  247 #ifdef ZCL_LEVEL_CTRL
+//  248   NULL,                                   // Level Control Move to Level command
+//  249   NULL,                                   // Level Control Move command
+//  250   NULL,                                   // Level Control Step command
+//  251   NULL,                                   // Level Control Stop command
+//  252 #endif
+//  253 #ifdef ZCL_GROUPS
+//  254   NULL,                                   // Group Response commands
+//  255 #endif
+//  256 #ifdef ZCL_SCENES
+//  257   NULL,                                   // Scene Store Request command
+//  258   NULL,                                   // Scene Recall Request command
+//  259   NULL,                                   // Scene Response command
+//  260 #endif
+//  261 #ifdef ZCL_ALARMS
+//  262   NULL,                                   // Alarm (Response) commands
+//  263 #endif
+//  264 #ifdef SE_UK_EXT
+//  265   NULL,                                   // Get Event Log command
+//  266   NULL,                                   // Publish Event Log command
+//  267 #endif
+//  268   NULL,                                   // RSSI Location command
+//  269   NULL                                    // RSSI Location Response command
+//  270 };
+//  271 
+//  272 
+//  273 /*********************************************************************
+//  274  * STATUS STRINGS
+//  275  */
+//  276 #ifdef LCD_SUPPORTED
+//  277 const char sDeviceName[]   = "  Sample Switch";
+//  278 const char sClearLine[]    = " ";
+//  279 const char sSwLight[]      = "SW1: ToggleLight";
+//  280 const char sSwEZMode[]     = "SW2: EZ-Mode";
+//  281 const char sSwHelp[]       = "SW5: Help";
+//  282 const char sCmdSent[]      = "  COMMAND SENT";
+//  283 #endif
+//  284 
+//  285 /*********************************************************************
+//  286  * @fn          zclSceneSelector_Init
+//  287  *
+//  288  * @brief       Initialization function for the zclGeneral layer.
+//  289  *
+//  290  * @param       none
+//  291  *
+//  292  * @return      none
+//  293  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  294 void zclSceneSelector_Init( byte task_id )
+zclSceneSelector_Init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function zclSceneSelector_Init
+        CODE
+//  295 {
+        FUNCALL zclSceneSelector_Init, zclHA_Init
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, zclHA_Init
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, zclHA_Init
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, zclHA_Init
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, zclGeneral_RegisterCmdCallbacks
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, zclGeneral_RegisterCmdCallbacks
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, zclGeneral_RegisterCmdCallbacks
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, zclGeneral_RegisterCmdCallbacks
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, zcl_registerAttrList
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, zcl_registerAttrList
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, zcl_registerAttrList
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, zcl_registerAttrList
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, zcl_registerForMsg
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, RegisterForKeys
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, afRegister
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, afRegister
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, afRegister
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, afRegister
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, ZDO_RegisterForZDOMsg
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, ZDO_RegisterForZDOMsg
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_Init, addSceneSelector_init
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 0
+        MOV     A,R1
+//  296   zclSceneSelector_TaskID = task_id;
+        MOV     DPTR,#zclSceneSelector_TaskID
+        MOVX    @DPTR,A
+//  297 
+//  298 #ifdef ZCL_ON_OFF
+//  299   // Set destination address to indirect
+//  300   zclSceneSelector_DstAddr.addrMode = (afAddrMode_t)AddrNotPresent;
+        MOV     DPTR,#zclSceneSelector_DstAddr + 8
+        CLR     A
+        MOVX    @DPTR,A
+//  301   zclSceneSelector_DstAddr.endPoint = 0;
+        INC     DPTR
+        MOVX    @DPTR,A
+//  302   zclSceneSelector_DstAddr.addr.shortAddr = 0;
+        MOV     DPTR,#zclSceneSelector_DstAddr
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOVX    @DPTR,A
+//  303 #endif
+//  304 
+//  305   // This app is part of the Home Automation Profile
+//  306   //zclHA_Init( &zclSceneSelector_SimpleDesc );
+//  307 //###########################################################################
+//  308 //###########################################################################
+//  309   zclHA_Init( &zclSceneSelector_SimpleDesc1 );
+        ; Setup parameters for call to function zclHA_Init
+        MOV     R2,#zclSceneSelector_SimpleDesc1 & 0xff
+        MOV     R3,#(zclSceneSelector_SimpleDesc1 >> 8) & 0xff
+        LCALL   ??zclHA_Init?relay   ; Banked call to: zclHA_Init
+//  310   zclHA_Init( &zclSceneSelector_SimpleDesc2 );
+        ; Setup parameters for call to function zclHA_Init
+        MOV     R2,#zclSceneSelector_SimpleDesc2 & 0xff
+        MOV     R3,#(zclSceneSelector_SimpleDesc2 >> 8) & 0xff
+        LCALL   ??zclHA_Init?relay   ; Banked call to: zclHA_Init
+//  311   zclHA_Init( &zclSceneSelector_SimpleDesc3 );
+        ; Setup parameters for call to function zclHA_Init
+        MOV     R2,#zclSceneSelector_SimpleDesc3 & 0xff
+        MOV     R3,#(zclSceneSelector_SimpleDesc3 >> 8) & 0xff
+        LCALL   ??zclHA_Init?relay   ; Banked call to: zclHA_Init
+//  312   zclHA_Init( &zclSceneSelector_SimpleDesc4 );
+        ; Setup parameters for call to function zclHA_Init
+        MOV     R2,#zclSceneSelector_SimpleDesc4 & 0xff
+        MOV     R3,#(zclSceneSelector_SimpleDesc4 >> 8) & 0xff
+        LCALL   ??zclHA_Init?relay   ; Banked call to: zclHA_Init
+//  313 //###########################################################################
+//  314 //###########################################################################
+//  315 
+//  316   // Register the ZCL General Cluster Library callback functions
+//  317   //zclGeneral_RegisterCmdCallbacks( SCENESELECTOR_ENDPOINT, &zclSceneSelector_CmdCallbacks );
+//  318 //###########################################################################
+//  319 //###########################################################################
+//  320   zclGeneral_RegisterCmdCallbacks( SCENESELECTOR_ENDPOINT1, &zclSceneSelector_CmdCallbacks );
+        ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+        MOV     R2,#zclSceneSelector_CmdCallbacks & 0xff
+        MOV     R3,#(zclSceneSelector_CmdCallbacks >> 8) & 0xff
+        MOV     R1,#0x1
+        LCALL   ??zclGeneral_RegisterCmdCallbacks?relay; Banked call to: zclGeneral_RegisterCmdCallbacks
+//  321   zclGeneral_RegisterCmdCallbacks( SCENESELECTOR_ENDPOINT2, &zclSceneSelector_CmdCallbacks );
+        ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+        MOV     R2,#zclSceneSelector_CmdCallbacks & 0xff
+        MOV     R3,#(zclSceneSelector_CmdCallbacks >> 8) & 0xff
+        MOV     R1,#0x2
+        LCALL   ??zclGeneral_RegisterCmdCallbacks?relay; Banked call to: zclGeneral_RegisterCmdCallbacks
+//  322   zclGeneral_RegisterCmdCallbacks( SCENESELECTOR_ENDPOINT3, &zclSceneSelector_CmdCallbacks );
+        ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+        MOV     R2,#zclSceneSelector_CmdCallbacks & 0xff
+        MOV     R3,#(zclSceneSelector_CmdCallbacks >> 8) & 0xff
+        MOV     R1,#0x3
+        LCALL   ??zclGeneral_RegisterCmdCallbacks?relay; Banked call to: zclGeneral_RegisterCmdCallbacks
+//  323   zclGeneral_RegisterCmdCallbacks( SCENESELECTOR_ENDPOINT4, &zclSceneSelector_CmdCallbacks ); 
+        ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+        MOV     R2,#zclSceneSelector_CmdCallbacks & 0xff
+        MOV     R3,#(zclSceneSelector_CmdCallbacks >> 8) & 0xff
+        MOV     R1,#0x4
+        LCALL   ??zclGeneral_RegisterCmdCallbacks?relay; Banked call to: zclGeneral_RegisterCmdCallbacks
+//  324 //###########################################################################
+//  325 //###########################################################################
+//  326 
+//  327   // Register the application's attribute list
+//  328   //zcl_registerAttrList( SCENESELECTOR_ENDPOINT, SCENESELECTOR_MAX_ATTRIBUTES, zclSceneSelector_Attrs );
+//  329 //###########################################################################
+//  330 //###########################################################################
+//  331   zcl_registerAttrList( SCENESELECTOR_ENDPOINT1, SCENESELECTOR_MAX_ATTRIBUTES, zclSceneSelector_Attrs );
+        ; Setup parameters for call to function zcl_registerAttrList
+        MOV     R4,#zclSceneSelector_Attrs & 0xff
+        MOV     R5,#(zclSceneSelector_Attrs >> 8) & 0xff
+        MOV     R2,#0xf
+        MOV     R1,#0x1
+        LCALL   ??zcl_registerAttrList?relay; Banked call to: zcl_registerAttrList
+//  332   zcl_registerAttrList( SCENESELECTOR_ENDPOINT2, SCENESELECTOR_MAX_ATTRIBUTES, zclSceneSelector_Attrs );
+        ; Setup parameters for call to function zcl_registerAttrList
+        MOV     R4,#zclSceneSelector_Attrs & 0xff
+        MOV     R5,#(zclSceneSelector_Attrs >> 8) & 0xff
+        MOV     R2,#0xf
+        MOV     R1,#0x2
+        LCALL   ??zcl_registerAttrList?relay; Banked call to: zcl_registerAttrList
+//  333   zcl_registerAttrList( SCENESELECTOR_ENDPOINT3, SCENESELECTOR_MAX_ATTRIBUTES, zclSceneSelector_Attrs );
+        ; Setup parameters for call to function zcl_registerAttrList
+        MOV     R4,#zclSceneSelector_Attrs & 0xff
+        MOV     R5,#(zclSceneSelector_Attrs >> 8) & 0xff
+        MOV     R2,#0xf
+        MOV     R1,#0x3
+        LCALL   ??zcl_registerAttrList?relay; Banked call to: zcl_registerAttrList
+//  334   zcl_registerAttrList( SCENESELECTOR_ENDPOINT4, SCENESELECTOR_MAX_ATTRIBUTES, zclSceneSelector_Attrs );   
+        ; Setup parameters for call to function zcl_registerAttrList
+        MOV     R4,#zclSceneSelector_Attrs & 0xff
+        MOV     R5,#(zclSceneSelector_Attrs >> 8) & 0xff
+        MOV     R2,#0xf
+        MOV     R1,#0x4
+        LCALL   ??zcl_registerAttrList?relay; Banked call to: zcl_registerAttrList
+//  335 //###########################################################################
+//  336 //###########################################################################
+//  337 
+//  338   // Register the Application to receive the unprocessed Foundation command/response messages
+//  339   zcl_registerForMsg( zclSceneSelector_TaskID );
+        ; Setup parameters for call to function zcl_registerForMsg
+        MOV     DPTR,#zclSceneSelector_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??zcl_registerForMsg?relay; Banked call to: zcl_registerForMsg
+//  340 
+//  341 #ifdef ZCL_EZMODE
+//  342   // Register EZ-Mode
+//  343   zcl_RegisterEZMode( &zclSceneSelector_RegisterEZModeData );
+//  344 
+//  345   // Register with the ZDO to receive Match Descriptor Responses
+//  346   ZDO_RegisterForZDOMsg(task_id, Match_Desc_rsp);
+//  347 #endif
+//  348 
+//  349   // Register for all key events - This app will handle all key events
+//  350   RegisterForKeys( zclSceneSelector_TaskID );
+        ; Setup parameters for call to function RegisterForKeys
+        MOV     DPTR,#zclSceneSelector_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??RegisterForKeys?relay; Banked call to: RegisterForKeys
+//  351 
+//  352   // Register for a test endpoint
+//  353   //afRegister( &sceneSelector_TestEp );
+//  354 //###########################################################################
+//  355 //###########################################################################
+//  356   afRegister( &sceneSelector_TestEp1 );
+        ; Setup parameters for call to function afRegister
+        MOV     R2,#sceneSelector_TestEp1 & 0xff
+        MOV     R3,#(sceneSelector_TestEp1 >> 8) & 0xff
+        LCALL   ??afRegister?relay   ; Banked call to: afRegister
+//  357   afRegister( &sceneSelector_TestEp2 );
+        ; Setup parameters for call to function afRegister
+        MOV     R2,#sceneSelector_TestEp2 & 0xff
+        MOV     R3,#(sceneSelector_TestEp2 >> 8) & 0xff
+        LCALL   ??afRegister?relay   ; Banked call to: afRegister
+//  358   afRegister( &sceneSelector_TestEp3 );
+        ; Setup parameters for call to function afRegister
+        MOV     R2,#sceneSelector_TestEp3 & 0xff
+        MOV     R3,#(sceneSelector_TestEp3 >> 8) & 0xff
+        LCALL   ??afRegister?relay   ; Banked call to: afRegister
+//  359   afRegister( &sceneSelector_TestEp4 ); 
+        ; Setup parameters for call to function afRegister
+        MOV     R2,#sceneSelector_TestEp4 & 0xff
+        MOV     R3,#(sceneSelector_TestEp4 >> 8) & 0xff
+        LCALL   ??afRegister?relay   ; Banked call to: afRegister
+//  360 //###########################################################################
+//  361 //###########################################################################
+//  362 
+//  363   ZDO_RegisterForZDOMsg( zclSceneSelector_TaskID, End_Device_Bind_rsp );
+        ; Setup parameters for call to function ZDO_RegisterForZDOMsg
+        MOV     R2,#0x20
+        MOV     R3,#-0x80
+        MOV     DPTR,#zclSceneSelector_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??ZDO_RegisterForZDOMsg?relay; Banked call to: ZDO_RegisterForZDOMsg
+//  364   ZDO_RegisterForZDOMsg( zclSceneSelector_TaskID, Match_Desc_rsp );
+        ; Setup parameters for call to function ZDO_RegisterForZDOMsg
+        MOV     R2,#0x6
+        MOV     R3,#-0x80
+        MOV     DPTR,#zclSceneSelector_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??ZDO_RegisterForZDOMsg?relay; Banked call to: ZDO_RegisterForZDOMsg
+//  365 
+//  366 #ifdef LCD_SUPPORTED
+//  367   HalLcdWriteString ( (char *)sDeviceName, HAL_LCD_LINE_3 );
+//  368 #endif
+//  369 
+//  370 #if defined (OTA_CLIENT) && (OTA_CLIENT == TRUE)
+//  371   // Register for callback events from the ZCL OTA
+//  372   zclOTA_Register(zclSceneSelector_TaskID);
+//  373 #endif
+//  374 
+//  375 //###################################################################
+//  376 //###################################################################
+//  377 	addSceneSelector_init();
+        ; Setup parameters for call to function addSceneSelector_init
+        LCALL   ??addSceneSelector_init?relay; Banked call to: addSceneSelector_init
+//  378 //###################################################################
+//  379 //###################################################################
+//  380 
+//  381 }
+        MOV     R7,#0x1
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI EndBlock cfiBlock0
+//  382 
+//  383 /*********************************************************************
+//  384  * @fn          zclSample_event_loop
+//  385  *
+//  386  * @brief       Event Loop Processor for zclGeneral.
+//  387  *
+//  388  * @param       none
+//  389  *
+//  390  * @return      none
+//  391  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  392 uint16 zclSceneSelector_event_loop( uint8 task_id, uint16 events )
+zclSceneSelector_event_loop:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function zclSceneSelector_event_loop
+        CODE
+//  393 {
+        FUNCALL zclSceneSelector_event_loop, zclSceneSelector_ProcessIdentifyTimeChange
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 14, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_event_loop, addCommon_networkState_led
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 14, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_event_loop, osal_msg_deallocate
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 14, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_event_loop, osal_msg_receive
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 14, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_event_loop, osal_mem_free
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 14, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_event_loop, addSceneSelector_eventLoop
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 14, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 14, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        REQUIRE ?V0
+        REQUIRE ?V1
+        REQUIRE ?V2
+        REQUIRE ?V4
+        REQUIRE ?V5
+        MOV     A,#-0xe
+        LCALL   ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-13)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 14)
+        ; Saved register size: 14
+        ; Auto size: 0
+        MOV     A,R2
+        MOV     R6,A
+        MOV     A,R3
+        MOV     R7,A
+//  394   afIncomingMSGPacket_t *MSGpkt;
+//  395   (void)task_id;  // Intentionally unreferenced parameter
+//  396 
+//  397   if ( events & SYS_EVENT_MSG )
+        ANL     A,#0x80
+        JNZ     ??zclSceneSelector_event_loop_0
+//  398   {
+//  399     while ( (MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( zclSceneSelector_TaskID )) )
+//  400     {
+//  401       switch ( MSGpkt->hdr.event )
+//  402       {
+//  403 #ifdef ZCL_EZMODE
+//  404         case ZDO_CB_MSG:
+//  405           zclSceneSelector_ProcessZDOMsgs( (zdoIncomingMsg_t *)MSGpkt );
+//  406           break;
+//  407 #endif
+//  408         case ZCL_INCOMING_MSG:
+//  409           // Incoming ZCL Foundation command/response messages
+//  410           zclSceneSelector_ProcessIncomingMsg( (zclIncomingMsg_t *)MSGpkt );
+//  411           break;
+//  412 
+//  413         case KEY_CHANGE:
+//  414           zclSceneSelector_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+//  415           break;
+//  416 
+//  417         case ZDO_STATE_CHANGE:
+//  418           zclSceneSelector_NwkState = (devStates_t)(MSGpkt->hdr.status);
+//  419 
+//  420 //###################################################################
+//  421 //###################################################################
+//  422 	addCommon_networkState_led(zclSceneSelector_NwkState);
+//  423 //###################################################################
+//  424 //###################################################################
+//  425 
+//  426           // now on the network
+//  427           if ( (zclSceneSelector_NwkState == DEV_ZB_COORD) ||
+//  428                (zclSceneSelector_NwkState == DEV_ROUTER)   ||
+//  429                (zclSceneSelector_NwkState == DEV_END_DEVICE) )
+//  430           {
+//  431 #ifndef HOLD_AUTO_START
+//  432             giSwScreenMode = SW_MAINMODE;
+//  433             zclSceneSelector_LcdDisplayUpdate();
+//  434 #endif
+//  435 #ifdef ZCL_EZMODE
+//  436             zcl_EZModeAction( EZMODE_ACTION_NETWORK_STARTED, NULL );
+//  437 #endif
+//  438           }
+//  439           break;
+//  440 
+//  441 #if defined (OTA_CLIENT) && (OTA_CLIENT == TRUE)
+//  442         case ZCL_OTA_CALLBACK_IND:
+//  443           zclSceneSelector_ProcessOTAMsgs( (zclOTA_CallbackMsg_t*)MSGpkt  );
+//  444           break;
+//  445 #endif
+//  446 
+//  447         default:
+//  448           break;
+//  449       }
+//  450 
+//  451       // Release the memory
+//  452       osal_msg_deallocate( (uint8 *)MSGpkt );
+//  453     }
+//  454 
+//  455     // return unprocessed events
+//  456     return (events ^ SYS_EVENT_MSG);
+//  457   }
+//  458 
+//  459   if ( events & SCENESELECTOR_IDENTIFY_TIMEOUT_EVT )
+        MOV     A,R6
+        MOV     C,0xE0 /* A   */.0
+        JC      $+5
+        LJMP    ??zclSceneSelector_event_loop_1 & 0xFFFF
+//  460   {
+//  461     zclSceneSelector_IdentifyTime = 10;
+        MOV     DPTR,#zclSceneSelector_IdentifyTime
+        MOV     A,#0xa
+        MOVX    @DPTR,A
+        INC     DPTR
+        CLR     A
+        MOVX    @DPTR,A
+//  462     zclSceneSelector_ProcessIdentifyTimeChange();
+        ; Setup parameters for call to function zclSceneSelector_ProcessIdentifyTimeChange
+        LCALL   ??zclSceneSelector_ProcessIdentifyTimeChange?re; Banked call to: zclSceneSelector_ProcessIdentifyTimeChange
+//  463 
+//  464     return ( events ^ SCENESELECTOR_IDENTIFY_TIMEOUT_EVT );
+        MOV     A,R6
+        XRL     A,#0x1
+        MOV     R2,A
+        MOV     A,R7
+        LJMP    ??zclSceneSelector_event_loop_2 & 0xFFFF
+//  465   }
+??zclSceneSelector_event_loop_3:
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     DPTR,#zclSceneSelector_NwkState
+        MOVX    @DPTR,A
+        ; Setup parameters for call to function addCommon_networkState_led
+        MOV     R1,A
+        LCALL   ??addCommon_networkState_led?relay; Banked call to: addCommon_networkState_led
+        MOV     DPTR,#zclSceneSelector_NwkState
+        MOVX    A,@DPTR
+        XRL     A,#0x9
+        JZ      ??zclSceneSelector_event_loop_4
+        MOVX    A,@DPTR
+        XRL     A,#0x7
+        JZ      ??zclSceneSelector_event_loop_4
+        MOVX    A,@DPTR
+        XRL     A,#0x6
+        JNZ     ??zclSceneSelector_event_loop_5
+??zclSceneSelector_event_loop_4:
+        MOV     DPTR,#giSwScreenMode
+        CLR     A
+        MOVX    @DPTR,A
+??zclSceneSelector_event_loop_5:
+        ; Setup parameters for call to function osal_msg_deallocate
+        MOV     R2,?V0
+        MOV     R3,?V1
+        LCALL   ??osal_msg_deallocate?relay; Banked call to: osal_msg_deallocate
+??zclSceneSelector_event_loop_0:
+        ; Setup parameters for call to function osal_msg_receive
+        MOV     DPTR,#zclSceneSelector_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??osal_msg_receive?relay; Banked call to: osal_msg_receive
+        MOV     ?V0,R2
+        MOV     ?V1,R3
+        MOV     A,R2
+        ORL     A,?V1
+        JZ      ??zclSceneSelector_event_loop_6
+        MOV     DPL,R2
+        MOV     DPH,R3
+        MOVX    A,@DPTR
+        ADD     A,#-0x34
+        JZ      ??zclSceneSelector_event_loop_7
+        ADD     A,#0x63
+        JZ      ??zclSceneSelector_event_loop_3
+        SJMP    ??zclSceneSelector_event_loop_5
+??zclSceneSelector_event_loop_7:
+        MOV     A,R2
+        ADD     A,#0x17
+        MOV     R0,A
+        CLR     A
+        ADDC    A,?V1
+        MOV     R1,A
+        MOV     A,R0
+        MOV     R2,A
+        MOV     A,R1
+        MOV     R3,A
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        MOVX    A,@DPTR
+        DEC     A
+        JZ      ??zclSceneSelector_event_loop_8
+        ADD     A,#-0x3
+        JNZ     ??zclSceneSelector_event_loop_9
+        LCALL   ?Subroutine1 & 0xFFFF
+??CrossCallReturnLabel_0:
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R0
+        CLR     C
+        SUBB    A,R1
+        JNC     ??zclSceneSelector_event_loop_9
+        INC     R0
+        SJMP    ??CrossCallReturnLabel_0
+??zclSceneSelector_event_loop_8:
+        LCALL   ?Subroutine1 & 0xFFFF
+??CrossCallReturnLabel_1:
+        SJMP    ??zclSceneSelector_event_loop_10
+??zclSceneSelector_event_loop_11:
+        INC     R0
+??zclSceneSelector_event_loop_10:
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R0
+        CLR     C
+        SUBB    A,R1
+        JC      ??zclSceneSelector_event_loop_11
+??zclSceneSelector_event_loop_9:
+        MOV     DPL,R2
+        MOV     DPH,R3
+        MOVX    A,@DPTR
+        MOV     R2,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R3,A
+        MOV     A,R2
+        ORL     A,R3
+        JZ      ??zclSceneSelector_event_loop_5
+        ; Setup parameters for call to function osal_mem_free
+        LCALL   ??osal_mem_free?relay; Banked call to: osal_mem_free
+        SJMP    ??zclSceneSelector_event_loop_5
+??zclSceneSelector_event_loop_6:
+        MOV     A,R6
+        MOV     R2,A
+        MOV     A,R7
+        XRL     A,#0x80
+??zclSceneSelector_event_loop_2:
+        MOV     R3,A
+        SJMP    ??zclSceneSelector_event_loop_12
+//  466 
+//  467   if ( events & SCENESELECTOR_MAIN_SCREEN_EVT )
+??zclSceneSelector_event_loop_1:
+        ANL     A,#0x10
+        JZ      ??zclSceneSelector_event_loop_13
+//  468   {
+//  469     giSwScreenMode = SW_MAINMODE;
+        MOV     DPTR,#giSwScreenMode
+        CLR     A
+        MOVX    @DPTR,A
+//  470 
+//  471     zclSceneSelector_LcdDisplayUpdate();
+//  472 
+//  473 #ifdef LCD_SUPPORTED
+//  474     HalLcdWriteString( (char *)sClearLine, HAL_LCD_LINE_2 );
+//  475 #endif
+//  476     return ( events ^ SCENESELECTOR_MAIN_SCREEN_EVT );
+        MOV     A,R6
+        XRL     A,#0x10
+        MOV     R2,A
+        SJMP    ??zclSceneSelector_event_loop_12
+//  477   }
+//  478 
+//  479 #ifdef ZCL_EZMODE
+//  480   if ( events & SCENESELECTOR_EZMODE_NEXTSTATE_EVT )
+//  481   {
+//  482     zcl_EZModeAction ( EZMODE_ACTION_PROCESS, NULL );   // going on to next state
+//  483     return ( events ^ SCENESELECTOR_EZMODE_NEXTSTATE_EVT );
+//  484   }
+//  485 
+//  486   if ( events & SCENESELECTOR_EZMODE_TIMEOUT_EVT )
+//  487   {
+//  488     zcl_EZModeAction ( EZMODE_ACTION_TIMED_OUT, NULL ); // EZ-Mode timed out
+//  489     return ( events ^ SCENESELECTOR_EZMODE_TIMEOUT_EVT );
+//  490   }
+//  491 
+//  492 #endif // ZLC_EZMODE
+//  493 
+//  494 //###################################################################
+//  495 //###################################################################
+//  496 	return addSceneSelector_eventLoop(task_id, events);
+??zclSceneSelector_event_loop_13:
+        ; Setup parameters for call to function addSceneSelector_eventLoop
+        LCALL   ??addSceneSelector_eventLoop?relay; Banked call to: addSceneSelector_eventLoop
+??zclSceneSelector_event_loop_12:
+        MOV     R7,#0x6
+        LJMP    ?BANKED_LEAVE_XDATA
+          CFI EndBlock cfiBlock1
+//  497 //###################################################################
+//  498 //###################################################################
+//  499 
+//  500   // Discard unknown events
+//  501   return 0;
+//  502 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine1:
+          CFI Block cfiCond2 Using cfiCommon0
+          CFI Function zclSceneSelector_event_loop
+          CFI Conditional ??CrossCallReturnLabel_0
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-13)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI CFA_SP SP+-2
+          CFI CFA_XSP16 add(XSP16, 14)
+          CFI Block cfiCond3 Using cfiCommon0
+          CFI (cfiCond3) Function zclSceneSelector_event_loop
+          CFI (cfiCond3) Conditional ??CrossCallReturnLabel_1
+          CFI (cfiCond3) R6 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+          CFI (cfiCond3) VB load(1, XDATA, add(CFA_XSP16, literal(-13)))
+          CFI (cfiCond3) V0 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI (cfiCond3) V1 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI (cfiCond3) V2 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI (cfiCond3) V3 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI (cfiCond3) V4 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI (cfiCond3) V5 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI (cfiCond3) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI (cfiCond3) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI (cfiCond3) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI (cfiCond3) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI (cfiCond3) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI (cfiCond3) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI (cfiCond3) CFA_SP SP+-2
+          CFI (cfiCond3) CFA_XSP16 add(XSP16, 14)
+          CFI Block cfiPicker4 Using cfiCommon1
+          CFI (cfiPicker4) NoFunction
+          CFI (cfiPicker4) Picker
+        MOV     DPL,R2
+        MOV     DPH,R3
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     DPL,R0
+        MOV     DPH,R1
+        MOV     R0,#0x0
+        RET
+          CFI EndBlock cfiCond2
+          CFI EndBlock cfiCond3
+          CFI EndBlock cfiPicker4
+//  503 
+//  504 /*********************************************************************
+//  505  * @fn      zclSceneSelector_HandleKeys
+//  506  *
+//  507  * @brief   Handles all key events for this device.
+//  508  *
+//  509  * @param   shift - true if in shift/alt.
+//  510  * @param   keys - bit field for key events. Valid entries:
+//  511  *                 HAL_KEY_SW_5
+//  512  *                 HAL_KEY_SW_4
+//  513  *                 HAL_KEY_SW_2
+//  514  *                 HAL_KEY_SW_1
+//  515  *
+//  516  * @return  none
+//  517  */
+//  518 static void zclSceneSelector_HandleKeys( byte shift, byte keys )
+//  519 {
+//  520 //#####################################################################
+//  521 //#####################################################################
+//  522 /*
+//  523   // toggle remote light
+//  524   if ( keys & HAL_KEY_SW_1 )
+//  525   {
+//  526     giSwScreenMode = SW_MAINMODE;   // remove help screen if there
+//  527 
+//  528     // Using this as the "Light Switch"
+//  529 #ifdef ZCL_ON_OFF
+//  530     zclGeneral_SendOnOff_CmdToggle( SCENESELECTOR_ENDPOINT, &zclSceneSelector_DstAddr, FALSE, 0 );
+//  531 #endif
+//  532 #ifdef LCD_SUPPORTED
+//  533     HalLcdWriteString( (char *)sCmdSent, HAL_LCD_LINE_2 );
+//  534 
+//  535     // clear message on screen after 3 seconds
+//  536     osal_start_timerEx( zclSceneSelector_TaskID, SCENESELECTOR_MAIN_SCREEN_EVT, 3000 );
+//  537 #endif
+//  538   }
+//  539 
+//  540   // invoke EZ-Mode
+//  541   if ( keys & HAL_KEY_SW_2 )
+//  542   {
+//  543     giSwScreenMode = SW_MAINMODE;   // remove help screen if there
+//  544 
+//  545 #ifdef ZCL_EZMODE
+//  546     {
+//  547       zclEZMode_InvokeData_t ezModeData;
+//  548       static uint16 clusterIDs[] = { ZCL_CLUSTER_ID_GEN_ON_OFF };   // only bind on the on/off cluster
+//  549 
+//  550       // Invoke EZ-Mode
+//  551       ezModeData.endpoint = SCENESELECTOR_ENDPOINT; // endpoint on which to invoke EZ-Mode
+//  552       if ( (zclSceneSelector_NwkState == DEV_ZB_COORD) ||
+//  553                (zclSceneSelector_NwkState == DEV_ROUTER)   ||
+//  554                (zclSceneSelector_NwkState == DEV_END_DEVICE) )
+//  555       {
+//  556         ezModeData.onNetwork = TRUE;      // node is already on the network
+//  557       }
+//  558       else
+//  559       {
+//  560         ezModeData.onNetwork = FALSE;     // node is not yet on the network
+//  561       }
+//  562       ezModeData.initiator = TRUE;        // OnOffSwitch is an initiator
+//  563       ezModeData.numActiveOutClusters = 1;   // active output cluster
+//  564       ezModeData.pActiveOutClusterIDs = clusterIDs;
+//  565       ezModeData.numActiveInClusters = 0;  // no active input clusters
+//  566       ezModeData.pActiveInClusterIDs = NULL;
+//  567       zcl_InvokeEZMode( &ezModeData );
+//  568 
+//  569  #ifdef LCD_SUPPORTED
+//  570       HalLcdWriteString( "EZMode", HAL_LCD_LINE_2 );
+//  571  #endif
+//  572     }
+//  573 
+//  574 #else // NOT ZCL_EZMODE
+//  575     // bind to remote light
+//  576     zAddrType_t dstAddr;
+//  577     HalLedSet ( HAL_LED_4, HAL_LED_MODE_OFF );
+//  578 
+//  579     // Initiate an End Device Bind Request, this bind request will
+//  580     // only use a cluster list that is important to binding.
+//  581     dstAddr.addrMode = afAddr16Bit;
+//  582     dstAddr.addr.shortAddr = 0;   // Coordinator makes the match
+//  583     ZDP_EndDeviceBindReq( &dstAddr, NLME_GetShortAddr(),
+//  584                            SCENESELECTOR_ENDPOINT,
+//  585                            ZCL_HA_PROFILE_ID,
+//  586                            0, NULL,   // No incoming clusters to bind
+//  587                            ZCLSCENESELECTOR_BINDINGLIST, bindingOutClusters,
+//  588                            TRUE );
+//  589 #endif // ZCL_EZMODE
+//  590   }
+//  591 
+//  592   // toggle permit join
+//  593   if ( keys & HAL_KEY_SW_4 )
+//  594   {
+//  595     giSwScreenMode = SW_MAINMODE;   // remove help screen if there
+//  596 
+//  597     if ( ( zclSceneSelector_NwkState == DEV_ZB_COORD ) ||
+//  598          ( zclSceneSelector_NwkState == DEV_ROUTER ) )
+//  599     {
+//  600       zAddrType_t tmpAddr;
+//  601 
+//  602       tmpAddr.addrMode = Addr16Bit;
+//  603       tmpAddr.addr.shortAddr = NLME_GetShortAddr();
+//  604 
+//  605       // toggle permit join
+//  606       gPermitDuration = gPermitDuration ? 0 : 0xff;
+//  607 
+//  608       // Trust Center significance is always true
+//  609       ZDP_MgmtPermitJoinReq( &tmpAddr, gPermitDuration, TRUE, FALSE );
+//  610     }
+//  611   }
+//  612 
+//  613   if ( shift && ( keys & HAL_KEY_SW_5 ) )
+//  614   {
+//  615     zclSceneSelector_BasicResetCB();
+//  616   }
+//  617   else if ( keys & HAL_KEY_SW_5 )
+//  618   {
+//  619     giSwScreenMode = giSwScreenMode ? SW_MAINMODE : SW_HELPMODE;
+//  620 #ifdef LCD_SUPPORTED
+//  621     HalLcdWriteString( (char *)sClearLine, HAL_LCD_LINE_2 );
+//  622 #endif
+//  623   }
+//  624 
+//  625   // update the display
+//  626   zclSceneSelector_LcdDisplayUpdate();
+//  627 */
+//  628 //#####################################################################
+//  629 //#####################################################################
+//  630 }
+//  631 
+//  632 /*********************************************************************
+//  633  * @fn      zclSceneSelector_LcdDisplayUpdate
+//  634  *
+//  635  * @brief   Called to update the LCD display.
+//  636  *
+//  637  * @param   none
+//  638  *
+//  639  * @return  none
+//  640  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  641 void zclSceneSelector_LcdDisplayUpdate(void)
+zclSceneSelector_LcdDisplayUpdate:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function zclSceneSelector_LcdDisplayUpdate
+        CODE
+//  642 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  643 //#####################################################################
+//  644 //#####################################################################
+//  645 /*
+//  646   if ( giSwScreenMode == SW_HELPMODE )
+//  647   {
+//  648     zclSceneSelector_LcdDisplayHelpMode();
+//  649   }
+//  650   else
+//  651   {
+//  652     zclSceneSelector_LcdDisplayMainMode();
+//  653   }
+//  654 */
+//  655 //#####################################################################
+//  656 //#####################################################################
+//  657 }
+        LJMP    ?BRET
+          CFI EndBlock cfiBlock5
+//  658 
+//  659 /*********************************************************************
+//  660  * @fn      zclSceneSelector_LcdDisplayMainMode
+//  661  *
+//  662  * @brief   Called to display the main screen on the LCD.
+//  663  *
+//  664  * @param   none
+//  665  *
+//  666  * @return  none
+//  667  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  668 void zclSceneSelector_LcdDisplayMainMode(void)
+zclSceneSelector_LcdDisplayMainMode:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function zclSceneSelector_LcdDisplayMainMode
+        CODE
+//  669 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  670 //#####################################################################
+//  671 //#####################################################################
+//  672 /*
+//  673   if ( zclSceneSelector_NwkState == DEV_ZB_COORD )
+//  674   {
+//  675     zclHA_LcdStatusLine1(0);
+//  676   }
+//  677   else if ( zclSceneSelector_NwkState == DEV_ROUTER )
+//  678   {
+//  679     zclHA_LcdStatusLine1(1);
+//  680   }
+//  681   else if ( zclSceneSelector_NwkState == DEV_END_DEVICE )
+//  682   {
+//  683     zclHA_LcdStatusLine1(2);
+//  684   }
+//  685 
+//  686 #ifdef LCD_SUPPORTED
+//  687   if ( ( zclSceneSelector_NwkState == DEV_ZB_COORD ) ||
+//  688        ( zclSceneSelector_NwkState == DEV_ROUTER ) )
+//  689   {
+//  690     // display help key with permit join status
+//  691     if ( gPermitDuration )
+//  692     {
+//  693       HalLcdWriteString("SW5: Help      *", HAL_LCD_LINE_3);
+//  694     }
+//  695     else
+//  696     {
+//  697       HalLcdWriteString("SW5: Help       ", HAL_LCD_LINE_3);
+//  698     }
+//  699   }
+//  700   else
+//  701   {
+//  702     // display help key
+//  703     HalLcdWriteString((char *)sSwHelp, HAL_LCD_LINE_3);
+//  704   }
+//  705 #endif
+//  706 */
+//  707 //#####################################################################
+//  708 //#####################################################################
+//  709 }
+        LJMP    ?BRET
+          CFI EndBlock cfiBlock6
+//  710 
+//  711 /*********************************************************************
+//  712  * @fn      zclSceneSelector_LcdDisplayHelpMode
+//  713  *
+//  714  * @brief   Called to display the SW options on the LCD.
+//  715  *
+//  716  * @param   none
+//  717  *
+//  718  * @return  none
+//  719  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  720 void zclSceneSelector_LcdDisplayHelpMode(void)
+zclSceneSelector_LcdDisplayHelpMode:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function zclSceneSelector_LcdDisplayHelpMode
+        CODE
+//  721 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  722 //#####################################################################
+//  723 //#####################################################################
+//  724 /*
+//  725 #ifdef LCD_SUPPORTED
+//  726   HalLcdWriteString( (char *)sSwLight, HAL_LCD_LINE_1 );
+//  727   HalLcdWriteString( (char *)sSwEZMode, HAL_LCD_LINE_2 );
+//  728   HalLcdWriteString( (char *)sSwHelp, HAL_LCD_LINE_3 );
+//  729 #endif
+//  730 */
+//  731 //#####################################################################
+//  732 //#####################################################################
+//  733 }
+        LJMP    ?BRET
+          CFI EndBlock cfiBlock7
+//  734 
+//  735 /*********************************************************************
+//  736  * @fn      zclSceneSelector_ProcessIdentifyTimeChange
+//  737  *
+//  738  * @brief   Called to process any change to the IdentifyTime attribute.
+//  739  *
+//  740  * @param   none
+//  741  *
+//  742  * @return  none
+//  743  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  744 static void zclSceneSelector_ProcessIdentifyTimeChange( void )
+zclSceneSelector_ProcessIdentifyTimeChange:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function zclSceneSelector_ProcessIdentifyTimeChange
+        CODE
+//  745 {
+        FUNCALL zclSceneSelector_ProcessIdentifyTimeChange, osal_start_timerEx
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 4, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 4, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_ProcessIdentifyTimeChange, HalLedBlink
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_ProcessIdentifyTimeChange, HalLedSet
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_ProcessIdentifyTimeChange, HalLedSet
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_ProcessIdentifyTimeChange, osal_stop_timerEx
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  746   if ( zclSceneSelector_IdentifyTime > 0 )
+        MOV     DPTR,#zclSceneSelector_IdentifyTime
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R0
+        ORL     A,R1
+        JZ      ??zclSceneSelector_ProcessIdentifyTimeChange_0
+//  747   {
+//  748     osal_start_timerEx( zclSceneSelector_TaskID, SCENESELECTOR_IDENTIFY_TIMEOUT_EVT, 1000 );
+        ; Setup parameters for call to function osal_start_timerEx
+        MOV     DPTR,#__Constant_3e8
+        LCALL   ?PUSH_XSTACK8_X_FOUR
+          CFI CFA_XSP16 add(XSP16, 4)
+        MOV     R2,#0x1
+        MOV     R3,#0x0
+        MOV     DPTR,#zclSceneSelector_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??osal_start_timerEx?relay; Banked call to: osal_start_timerEx
+        MOV     A,#0x4
+        LCALL   ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 XSP16+0
+//  749     HalLedBlink ( HAL_LED_4, 0xFF, HAL_LED_DEFAULT_DUTY_CYCLE, HAL_LED_DEFAULT_FLASH_TIME );
+        ; Setup parameters for call to function HalLedBlink
+        MOV     R4,#-0x18
+        MOV     R5,#0x3
+        MOV     R3,#0x5
+        MOV     R2,#-0x1
+        MOV     R1,#0x8
+        LCALL   ??HalLedBlink?relay  ; Banked call to: HalLedBlink
+        SJMP    ??zclSceneSelector_ProcessIdentifyTimeChange_1
+//  750   }
+//  751   else
+//  752   {
+//  753     if ( zclSceneSelector_OnOff )
+??zclSceneSelector_ProcessIdentifyTimeChange_0:
+        MOV     DPTR,#zclSceneSelector_OnOff
+        MOVX    A,@DPTR
+        JZ      ??zclSceneSelector_ProcessIdentifyTimeChange_2
+//  754       HalLedSet ( HAL_LED_4, HAL_LED_MODE_ON );
+        ; Setup parameters for call to function HalLedSet
+        MOV     R2,#0x1
+        SJMP    ??zclSceneSelector_ProcessIdentifyTimeChange_3
+//  755     else
+//  756       HalLedSet ( HAL_LED_4, HAL_LED_MODE_OFF );
+??zclSceneSelector_ProcessIdentifyTimeChange_2:
+        ; Setup parameters for call to function HalLedSet
+        MOV     R2,#0x0
+??zclSceneSelector_ProcessIdentifyTimeChange_3:
+        MOV     R1,#0x8
+        LCALL   ??HalLedSet?relay    ; Banked call to: HalLedSet
+//  757     osal_stop_timerEx( zclSceneSelector_TaskID, SCENESELECTOR_IDENTIFY_TIMEOUT_EVT );
+        ; Setup parameters for call to function osal_stop_timerEx
+        MOV     R2,#0x1
+        MOV     R3,#0x0
+        MOV     DPTR,#zclSceneSelector_TaskID
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??osal_stop_timerEx?relay; Banked call to: osal_stop_timerEx
+          CFI EndBlock cfiBlock8
+//  758   }
+//  759 }
+??zclSceneSelector_ProcessIdentifyTimeChange_1:
+        REQUIRE ?Subroutine0
+        ; // Fall through to label ?Subroutine0
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine0:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI NoFunction
+          CFI CFA_SP SP+-5
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI DPH0 Frame(CFA_SP, 5)
+        POP     DPH
+          CFI CFA_SP SP+-4
+          CFI DPH0 SameValue
+        POP     DPL
+          CFI CFA_SP SP+-3
+          CFI DPL0 SameValue
+        LJMP    ?BRET
+          CFI EndBlock cfiBlock9
+//  760 
+//  761 /*********************************************************************
+//  762  * @fn      zclSceneSelector_BasicResetCB
+//  763  *
+//  764  * @brief   Callback from the ZCL General Cluster Library
+//  765  *          to set all the Basic Cluster attributes to  default values.
+//  766  *
+//  767  * @param   none
+//  768  *
+//  769  * @return  none
+//  770  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  771 static void zclSceneSelector_BasicResetCB( void )
+zclSceneSelector_BasicResetCB:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function zclSceneSelector_BasicResetCB
+        CODE
+//  772 {
+        FUNCALL zclSceneSelector_BasicResetCB, zgWriteStartupOptions
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL zclSceneSelector_BasicResetCB, MT_SysCommandProcessing
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  773   // Put device back to factory default settings
+//  774   zgWriteStartupOptions( ZG_STARTUP_SET, 3 );   // bit set both default configuration and default network
+        ; Setup parameters for call to function zgWriteStartupOptions
+        MOV     R2,#0x3
+        MOV     R1,#-0x1
+        LCALL   ??zgWriteStartupOptions?relay; Banked call to: zgWriteStartupOptions
+//  775 
+//  776   // restart device
+//  777   MT_SysCommandProcessing( aProcessCmd );
+        ; Setup parameters for call to function MT_SysCommandProcessing
+        MOV     R2,#aProcessCmd & 0xff
+        MOV     R3,#(aProcessCmd >> 8) & 0xff
+        LCALL   ??MT_SysCommandProcessing?relay; Banked call to: MT_SysCommandProcessing
+//  778 }
+        SJMP    ?Subroutine0
+          CFI EndBlock cfiBlock10
+//  779 
+//  780 /*********************************************************************
+//  781  * @fn      zclSceneSelector_IdentifyCB
+//  782  *
+//  783  * @brief   Callback from the ZCL General Cluster Library when
+//  784  *          it received an Identity Command for this application.
+//  785  *
+//  786  * @param   srcAddr - source address and endpoint of the response message
+//  787  * @param   identifyTime - the number of seconds to identify yourself
+//  788  *
+//  789  * @return  none
+//  790  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  791 static void zclSceneSelector_IdentifyCB( zclIdentify_t *pCmd )
+zclSceneSelector_IdentifyCB:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function zclSceneSelector_IdentifyCB
+        CODE
+//  792 {
+        FUNCALL zclSceneSelector_IdentifyCB, zclSceneSelector_ProcessIdentifyTimeChange
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH    DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH    DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  793   zclSceneSelector_IdentifyTime = pCmd->identifyTime;
+        MOV     DPL,R2
+        MOV     DPH,R3
+        INC     DPTR
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     DPTR,#zclSceneSelector_IdentifyTime
+        MOV     A,R0
+        MOVX    @DPTR,A
+        INC     DPTR
+        MOV     A,R1
+        MOVX    @DPTR,A
+//  794   zclSceneSelector_ProcessIdentifyTimeChange();
+        ; Setup parameters for call to function zclSceneSelector_ProcessIdentifyTimeChange
+        LCALL   ??zclSceneSelector_ProcessIdentifyTimeChange?re; Banked call to: zclSceneSelector_ProcessIdentifyTimeChange
+//  795 }
+        SJMP    ?Subroutine0
+          CFI EndBlock cfiBlock11
+//  796 
+//  797 /*********************************************************************
+//  798  * @fn      zclSceneSelector_IdentifyQueryRspCB
+//  799  *
+//  800  * @brief   Callback from the ZCL General Cluster Library when
+//  801  *          it received an Identity Query Response Command for this application.
+//  802  *
+//  803  * @param   srcAddr - source address
+//  804  * @param   timeout - number of seconds to identify yourself (valid for query response)
+//  805  *
+//  806  * @return  none
+//  807  */
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  808 static void zclSceneSelector_IdentifyQueryRspCB(  zclIdentifyQueryRsp_t *pRsp )
+zclSceneSelector_IdentifyQueryRspCB:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function zclSceneSelector_IdentifyQueryRspCB
+        CODE
+//  809 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  810   (void)pRsp;
+//  811 #ifdef ZCL_EZMODE
+//  812   {
+//  813     zclEZMode_ActionData_t data;
+//  814     data.pIdentifyQueryRsp = pRsp;
+//  815     zcl_EZModeAction ( EZMODE_ACTION_IDENTIFY_QUERY_RSP, &data );
+//  816   }
+//  817 #endif
+//  818 }
+        LJMP    ?BRET
+          CFI EndBlock cfiBlock12
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSceneSelector_OnOffSwitch`:
+        DATA8
+        DB 2
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for sceneSelector_TestEp1>`:
+        DATA8
+        DB 1
+        DATA16
+        DW zclSceneSelector_TaskID
+        DW 0H
+        DATA8
+        DB 0
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for sceneSelector_TestEp2>`:
+        DATA8
+        DB 2
+        DATA16
+        DW zclSceneSelector_TaskID
+        DW 0H
+        DATA8
+        DB 0
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for sceneSelector_TestEp3>`:
+        DATA8
+        DB 3
+        DATA16
+        DW zclSceneSelector_TaskID
+        DW 0H
+        DATA8
+        DB 0
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for sceneSelector_TestEp4>`:
+        DATA8
+        DB 4
+        DATA16
+        DW zclSceneSelector_TaskID
+        DW 0H
+        DATA8
+        DB 0
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for aProcessCmd>`:
+        DATA8
+        DB 1
+        DB 0
+        DB 0
+        DB 0
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSceneSelector_NwkState>`:
+        DATA8
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for zclSceneSelector_CmdCallback`:
+        DATA16
+        DW ??zclSceneSelector_BasicResetCB?relay
+        DW ??zclSceneSelector_IdentifyCB?relay
+        DW 0H
+        DW ??zclSceneSelector_IdentifyQueryRspCB?relay
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+        DW 0H
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_3e8:
+        DD 1000
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSceneSelector_Init?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    zclSceneSelector_Init
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSceneSelector_event_loop?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    zclSceneSelector_event_loop
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSceneSelector_LcdDisplayUpdate?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    zclSceneSelector_LcdDisplayUpdate
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSceneSelector_LcdDisplayMainMode?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    zclSceneSelector_LcdDisplayMainMode
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSceneSelector_LcdDisplayHelpMode?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    zclSceneSelector_LcdDisplayHelpMode
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSceneSelector_ProcessIdentifyTimeChange?re:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    zclSceneSelector_ProcessIdentifyTimeChange
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSceneSelector_BasicResetCB?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    zclSceneSelector_BasicResetCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSceneSelector_IdentifyCB?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    zclSceneSelector_IdentifyCB
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??zclSceneSelector_IdentifyQueryRspCB?relay:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    zclSceneSelector_IdentifyQueryRspCB
+
+        END
+//  819 
+//  820 /******************************************************************************
+//  821  *
+//  822  *  Functions for processing ZCL Foundation incoming Command/Response messages
+//  823  *
+//  824  *****************************************************************************/
+//  825 
+//  826 /*********************************************************************
+//  827  * @fn      zclSceneSelector_ProcessIncomingMsg
+//  828  *
+//  829  * @brief   Process ZCL Foundation incoming message
+//  830  *
+//  831  * @param   pInMsg - pointer to the received message
+//  832  *
+//  833  * @return  none
+//  834  */
+//  835 static void zclSceneSelector_ProcessIncomingMsg( zclIncomingMsg_t *pInMsg )
+//  836 {
+//  837   switch ( pInMsg->zclHdr.commandID )
+//  838   {
+//  839 #ifdef ZCL_READ
+//  840     case ZCL_CMD_READ_RSP:
+//  841       zclSceneSelector_ProcessInReadRspCmd( pInMsg );
+//  842       break;
+//  843 #endif
+//  844 #ifdef ZCL_WRITE
+//  845     case ZCL_CMD_WRITE_RSP:
+//  846       zclSceneSelector_ProcessInWriteRspCmd( pInMsg );
+//  847       break;
+//  848 #endif
+//  849 #ifdef ZCL_REPORT
+//  850     // See ZCL Test Applicaiton (zcl_testapp.c) for sample code on Attribute Reporting
+//  851     case ZCL_CMD_CONFIG_REPORT:
+//  852       //zclSceneSelector_ProcessInConfigReportCmd( pInMsg );
+//  853       break;
+//  854 
+//  855     case ZCL_CMD_CONFIG_REPORT_RSP:
+//  856       //zclSceneSelector_ProcessInConfigReportRspCmd( pInMsg );
+//  857       break;
+//  858 
+//  859     case ZCL_CMD_READ_REPORT_CFG:
+//  860       //zclSceneSelector_ProcessInReadReportCfgCmd( pInMsg );
+//  861       break;
+//  862 
+//  863     case ZCL_CMD_READ_REPORT_CFG_RSP:
+//  864       //zclSceneSelector_ProcessInReadReportCfgRspCmd( pInMsg );
+//  865       break;
+//  866 
+//  867     case ZCL_CMD_REPORT:
+//  868       //zclSceneSelector_ProcessInReportCmd( pInMsg );
+//  869       break;
+//  870 #endif
+//  871     case ZCL_CMD_DEFAULT_RSP:
+//  872       zclSceneSelector_ProcessInDefaultRspCmd( pInMsg );
+//  873       break;
+//  874 #ifdef ZCL_DISCOVER
+//  875     case ZCL_CMD_DISCOVER_CMDS_RECEIVED_RSP:
+//  876       zclSceneSelector_ProcessInDiscCmdsRspCmd( pInMsg );
+//  877       break;
+//  878 
+//  879     case ZCL_CMD_DISCOVER_CMDS_GEN_RSP:
+//  880       zclSceneSelector_ProcessInDiscCmdsRspCmd( pInMsg );
+//  881       break;
+//  882 
+//  883     case ZCL_CMD_DISCOVER_ATTRS_RSP:
+//  884       zclSceneSelector_ProcessInDiscAttrsRspCmd( pInMsg );
+//  885       break;
+//  886 
+//  887     case ZCL_CMD_DISCOVER_ATTRS_EXT_RSP:
+//  888       zclSceneSelector_ProcessInDiscAttrsExtRspCmd( pInMsg );
+//  889       break;
+//  890 #endif
+//  891     default:
+//  892       break;
+//  893   }
+//  894 
+//  895   if ( pInMsg->attrCmd )
+//  896     osal_mem_free( pInMsg->attrCmd );
+//  897 }
+//  898 
+//  899 #ifdef ZCL_READ
+//  900 /*********************************************************************
+//  901  * @fn      zclSceneSelector_ProcessInReadRspCmd
+//  902  *
+//  903  * @brief   Process the "Profile" Read Response Command
+//  904  *
+//  905  * @param   pInMsg - incoming message to process
+//  906  *
+//  907  * @return  none
+//  908  */
+//  909 static uint8 zclSceneSelector_ProcessInReadRspCmd( zclIncomingMsg_t *pInMsg )
+//  910 {
+//  911   zclReadRspCmd_t *readRspCmd;
+//  912   uint8 i;
+//  913 
+//  914   readRspCmd = (zclReadRspCmd_t *)pInMsg->attrCmd;
+//  915   for (i = 0; i < readRspCmd->numAttr; i++)
+//  916   {
+//  917     // Notify the originator of the results of the original read attributes
+//  918     // attempt and, for each successfull request, the value of the requested
+//  919     // attribute
+//  920   }
+//  921 
+//  922   return TRUE;
+//  923 }
+//  924 #endif // ZCL_READ
+//  925 
+//  926 #ifdef ZCL_WRITE
+//  927 /*********************************************************************
+//  928  * @fn      zclSceneSelector_ProcessInWriteRspCmd
+//  929  *
+//  930  * @brief   Process the "Profile" Write Response Command
+//  931  *
+//  932  * @param   pInMsg - incoming message to process
+//  933  *
+//  934  * @return  none
+//  935  */
+//  936 static uint8 zclSceneSelector_ProcessInWriteRspCmd( zclIncomingMsg_t *pInMsg )
+//  937 {
+//  938   zclWriteRspCmd_t *writeRspCmd;
+//  939   uint8 i;
+//  940 
+//  941   writeRspCmd = (zclWriteRspCmd_t *)pInMsg->attrCmd;
+//  942   for (i = 0; i < writeRspCmd->numAttr; i++)
+//  943   {
+//  944     // Notify the device of the results of the its original write attributes
+//  945     // command.
+//  946   }
+//  947 
+//  948   return TRUE;
+//  949 }
+//  950 #endif // ZCL_WRITE
+//  951 
+//  952 /*********************************************************************
+//  953  * @fn      zclSceneSelector_ProcessInDefaultRspCmd
+//  954  *
+//  955  * @brief   Process the "Profile" Default Response Command
+//  956  *
+//  957  * @param   pInMsg - incoming message to process
+//  958  *
+//  959  * @return  none
+//  960  */
+//  961 static uint8 zclSceneSelector_ProcessInDefaultRspCmd( zclIncomingMsg_t *pInMsg )
+//  962 {
+//  963   // zclDefaultRspCmd_t *defaultRspCmd = (zclDefaultRspCmd_t *)pInMsg->attrCmd;
+//  964   // Device is notified of the Default Response command.
+//  965   (void)pInMsg;
+//  966   return TRUE;
+//  967 }
+//  968 
+//  969 #ifdef ZCL_DISCOVER
+//  970 /*********************************************************************
+//  971  * @fn      zclSceneSelector_ProcessInDiscCmdsRspCmd
+//  972  *
+//  973  * @brief   Process the Discover Commands Response Command
+//  974  *
+//  975  * @param   pInMsg - incoming message to process
+//  976  *
+//  977  * @return  none
+//  978  */
+//  979 static uint8 zclSceneSelector_ProcessInDiscCmdsRspCmd( zclIncomingMsg_t *pInMsg )
+//  980 {
+//  981   zclDiscoverCmdsCmdRsp_t *discoverRspCmd;
+//  982   uint8 i;
+//  983 
+//  984   discoverRspCmd = (zclDiscoverCmdsCmdRsp_t *)pInMsg->attrCmd;
+//  985   for ( i = 0; i < discoverRspCmd->numCmd; i++ )
+//  986   {
+//  987     // Device is notified of the result of its attribute discovery command.
+//  988   }
+//  989 
+//  990   return TRUE;
+//  991 }
+//  992 
+//  993 /*********************************************************************
+//  994  * @fn      zclSceneSelector_ProcessInDiscAttrsRspCmd
+//  995  *
+//  996  * @brief   Process the "Profile" Discover Attributes Response Command
+//  997  *
+//  998  * @param   pInMsg - incoming message to process
+//  999  *
+// 1000  * @return  none
+// 1001  */
+// 1002 static uint8 zclSceneSelector_ProcessInDiscAttrsRspCmd( zclIncomingMsg_t *pInMsg )
+// 1003 {
+// 1004   zclDiscoverAttrsRspCmd_t *discoverRspCmd;
+// 1005   uint8 i;
+// 1006 
+// 1007   discoverRspCmd = (zclDiscoverAttrsRspCmd_t *)pInMsg->attrCmd;
+// 1008   for ( i = 0; i < discoverRspCmd->numAttr; i++ )
+// 1009   {
+// 1010     // Device is notified of the result of its attribute discovery command.
+// 1011   }
+// 1012 
+// 1013   return TRUE;
+// 1014 }
+// 1015 
+// 1016 /*********************************************************************
+// 1017  * @fn      zclSceneSelector_ProcessInDiscAttrsExtRspCmd
+// 1018  *
+// 1019  * @brief   Process the "Profile" Discover Attributes Extended Response Command
+// 1020  *
+// 1021  * @param   pInMsg - incoming message to process
+// 1022  *
+// 1023  * @return  none
+// 1024  */
+// 1025 static uint8 zclSceneSelector_ProcessInDiscAttrsExtRspCmd( zclIncomingMsg_t *pInMsg )
+// 1026 {
+// 1027   zclDiscoverAttrsExtRsp_t *discoverRspCmd;
+// 1028   uint8 i;
+// 1029 
+// 1030   discoverRspCmd = (zclDiscoverAttrsExtRsp_t *)pInMsg->attrCmd;
+// 1031   for ( i = 0; i < discoverRspCmd->numAttr; i++ )
+// 1032   {
+// 1033     // Device is notified of the result of its attribute discovery command.
+// 1034   }
+// 1035 
+// 1036   return TRUE;
+// 1037 }
+// 1038 #endif // ZCL_DISCOVER
+// 1039 
+// 1040 #if ZCL_EZMODE
+// 1041 /*********************************************************************
+// 1042  * @fn      zclSceneSelector_ProcessZDOMsgs
+// 1043  *
+// 1044  * @brief   Called when this node receives a ZDO/ZDP response.
+// 1045  *
+// 1046  * @param   none
+// 1047  *
+// 1048  * @return  status
+// 1049  */
+// 1050 static void zclSceneSelector_ProcessZDOMsgs( zdoIncomingMsg_t *pMsg )
+// 1051 {
+// 1052 
+// 1053   // Let EZ-Mode know of the Match Descriptor Reponse (same as ActiveEP Response)
+// 1054   if ( pMsg->clusterID == Match_Desc_rsp )
+// 1055   {
+// 1056     zclEZMode_ActionData_t data;
+// 1057     ZDO_ActiveEndpointRsp_t *pRsp = ZDO_ParseEPListRsp( pMsg );
+// 1058     data.pMatchDescRsp = pRsp;
+// 1059     zcl_EZModeAction( EZMODE_ACTION_MATCH_DESC_RSP, &data );
+// 1060     osal_mem_free(pRsp);
+// 1061   }
+// 1062 }
+// 1063 
+// 1064 /*********************************************************************
+// 1065  * @fn      zclSceneSelector_EZModeCB
+// 1066  *
+// 1067  * @brief   The Application is informed of events. This can be used to show on the UI what is
+// 1068 *           going on during EZ-Mode steering/finding/binding.
+// 1069  *
+// 1070  * @param   state - an
+// 1071  *
+// 1072  * @return  none
+// 1073  */
+// 1074 static void zclSceneSelector_EZModeCB( zlcEZMode_State_t state, zclEZMode_CBData_t *pData )
+// 1075 {
+// 1076 #ifdef LCD_SUPPORTED
+// 1077   char szLine[20];
+// 1078   char *pStr;
+// 1079   uint8 err;
+// 1080 #endif
+// 1081 
+// 1082   // time to go into identify mode
+// 1083   if ( state == EZMODE_STATE_IDENTIFYING )
+// 1084   {
+// 1085     zclSceneSelector_IdentifyTime = (EZMODE_TIME / 1000);  // convert to seconds
+// 1086     zclSceneSelector_ProcessIdentifyTimeChange();
+// 1087   }
+// 1088 
+// 1089   // autoclosing, show what happened (success, cancelled, etc...)
+// 1090   if( state == EZMODE_STATE_AUTOCLOSE )
+// 1091   {
+// 1092 #ifdef LCD_SUPPORTED
+// 1093     pStr = NULL;
+// 1094     err = pData->sAutoClose.err;
+// 1095     if ( err == EZMODE_ERR_SUCCESS )
+// 1096     {
+// 1097       pStr = "EZMode: Success";
+// 1098     }
+// 1099     else if ( err == EZMODE_ERR_NOMATCH )
+// 1100     {
+// 1101       pStr = "EZMode: NoMatch"; // not a match made in heaven
+// 1102     }
+// 1103     if ( pStr )
+// 1104     {
+// 1105       if ( giSwScreenMode == SW_MAINMODE )
+// 1106         HalLcdWriteString ( pStr, HAL_LCD_LINE_2 );
+// 1107     }
+// 1108 #endif
+// 1109   }
+// 1110 
+// 1111   // finished, either show DstAddr/EP, or nothing (depending on success or not)
+// 1112   if( state == EZMODE_STATE_FINISH )
+// 1113   {
+// 1114     // turn off identify mode
+// 1115     zclSceneSelector_IdentifyTime = 0;
+// 1116     zclSceneSelector_ProcessIdentifyTimeChange();
+// 1117 
+// 1118 #ifdef LCD_SUPPORTED
+// 1119     // if successful, inform user which nwkaddr/ep we bound to
+// 1120     pStr = NULL;
+// 1121     err = pData->sFinish.err;
+// 1122     if( err == EZMODE_ERR_SUCCESS )
+// 1123     {
+// 1124       // "EZDst:1234 EP:34"
+// 1125       osal_memcpy(szLine, "EZDst:", 6);
+// 1126       zclHA_uint16toa( pData->sFinish.nwkaddr, &szLine[6]);
+// 1127       osal_memcpy(&szLine[10], " EP:", 4);
+// 1128       _ltoa( pData->sFinish.ep, (void *)(&szLine[14]), 16 );  // _ltoa NULL terminates
+// 1129       pStr = szLine;
+// 1130     }
+// 1131     else if ( err == EZMODE_ERR_BAD_PARAMETER )
+// 1132     {
+// 1133       pStr = "EZMode: BadParm";
+// 1134     }
+// 1135     else if ( err == EZMODE_ERR_CANCELLED )
+// 1136     {
+// 1137       pStr = "EZMode: Cancel";
+// 1138     }
+// 1139     else
+// 1140     {
+// 1141       pStr = "EZMode: TimeOut";
+// 1142     }
+// 1143     if ( pStr )
+// 1144     {
+// 1145       if ( giSwScreenMode == SW_MAINMODE )
+// 1146         HalLcdWriteString ( pStr, HAL_LCD_LINE_2 );
+// 1147     }
+// 1148 #endif  // LCD_SUPPORTED
+// 1149     // show main UI screen 3 seconds after binding
+// 1150     osal_start_timerEx( zclSceneSelector_TaskID, SCENESELECTOR_MAIN_SCREEN_EVT, 3000 );
+// 1151   }
+// 1152 
+// 1153 }
+// 1154 
+// 1155 #endif // ZCL_EZMODE
+// 1156 
+// 1157 #if defined (OTA_CLIENT) && (OTA_CLIENT == TRUE)
+// 1158 /*********************************************************************
+// 1159  * @fn      zclSceneSelector_ProcessOTAMsgs
+// 1160  *
+// 1161  * @brief   Called to process callbacks from the ZCL OTA.
+// 1162  *
+// 1163  * @param   none
+// 1164  *
+// 1165  * @return  none
+// 1166  */
+// 1167 static void zclSceneSelector_ProcessOTAMsgs( zclOTA_CallbackMsg_t* pMsg )
+// 1168 {
+// 1169   uint8 RxOnIdle;
+// 1170 
+// 1171   switch(pMsg->ota_event)
+// 1172   {
+// 1173   case ZCL_OTA_START_CALLBACK:
+// 1174     if (pMsg->hdr.status == ZSuccess)
+// 1175     {
+// 1176       // Speed up the poll rate
+// 1177       RxOnIdle = TRUE;
+// 1178       ZMacSetReq( ZMacRxOnIdle, &RxOnIdle );
+// 1179       NLME_SetPollRate( 2000 );
+// 1180     }
+// 1181     break;
+// 1182 
+// 1183   case ZCL_OTA_DL_COMPLETE_CALLBACK:
+// 1184     if (pMsg->hdr.status == ZSuccess)
+// 1185     {
+// 1186       // Reset the CRC Shadow and reboot.  The bootloader will see the
+// 1187       // CRC shadow has been cleared and switch to the new image
+// 1188       HalOTAInvRC();
+// 1189       SystemReset();
+// 1190     }
+// 1191     else
+// 1192     {
+// 1193       // slow the poll rate back down.
+// 1194       RxOnIdle = FALSE;
+// 1195       ZMacSetReq( ZMacRxOnIdle, &RxOnIdle );
+// 1196       NLME_SetPollRate(DEVICE_POLL_RATE);
+// 1197     }
+// 1198     break;
+// 1199 
+// 1200   default:
+// 1201     break;
+// 1202   }
+// 1203 }
+// 1204 #endif // defined (OTA_CLIENT) && (OTA_CLIENT == TRUE)
+// 1205 
+// 1206 /****************************************************************************
+// 1207 ****************************************************************************/
+// 1208 
+// 
+// 588 bytes in segment BANKED_CODE
+//  54 bytes in segment BANK_RELAYS
+//  66 bytes in segment XDATA_I
+//  66 bytes in segment XDATA_ID
+//   4 bytes in segment XDATA_ROM_C
+//  17 bytes in segment XDATA_Z
+// 
+// 708 bytes of CODE  memory
+//   0 bytes of CONST memory (+ 4 bytes shared)
+//  83 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: 2
