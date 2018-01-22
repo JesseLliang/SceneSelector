@@ -1,114 +1,114 @@
-"C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\Add\AddSceneSelector\add_sceneselector.c"
+"E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\Add\AddSceneSelector\add_sceneselector.c"
 -std=c99
 -ferror-limit=100
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\AddSceneSelector
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\AddSceneSelector
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\AddCommon
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add\AddCommon
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Add
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\Source
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\Source
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Source
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\Source
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\ZMain\TI2530DB
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\ZMain\TI2530DB
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\hal\include
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\hal\include
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\include
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\include
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\high_level
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\high_level
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mt
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\mt
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\osal\include
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\osal\include
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\services\saddr
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\services\saddr
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\services\sdata
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\services\sdata
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\af
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\af
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\nwk
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\nwk
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sapi
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sapi
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sec
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sec
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sys
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\sys
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\zcl
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\zcl
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\zdo
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\stack\zdo
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\zmac
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\zmac
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\zmac\f8w
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\..\..\Components\zmac\f8w
 -I
 D:\IAR for 8051-9.10\8051\inc
 -I
 D:\IAR for 8051-9.10\8051\inc\clib
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\Add\AddSceneSelector
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\Add\AddSceneSelector
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\Add\AddCommon
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\Add\AddCommon
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\Add
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\Add
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\Source
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\Source
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\Source
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\Source
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\ZMain\TI2530DB
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\ZMain\TI2530DB
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\hal\include
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\hal\include
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\hal\target\CC2530EB
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\hal\target\CC2530EB
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\mac\include
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\mac\include
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\mac\high_level
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\mac\high_level
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\mac\low_level\srf04
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\mac\low_level\srf04
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\mac\low_level\srf04\single_chip
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\mac\low_level\srf04\single_chip
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\mt
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\mt
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\osal\include
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\osal\include
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\services\saddr
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\services\saddr
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\services\sdata
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\services\sdata
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\stack\af
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\stack\af
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\stack\nwk
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\stack\nwk
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\stack\sapi
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\stack\sapi
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\stack\sec
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\stack\sec
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\stack\sys
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\stack\sys
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\stack\zcl
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\stack\zcl
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\stack\zdo
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\stack\zdo
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\zmac
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\zmac
 -I
-C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\zmac\f8w
+E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Components\zmac\f8w
 -DSCENE_SELECTOR_TOUCHKEY=1
 -DxSCENE_SELECTOR=1
 -DISR_KEYINTERRUPT=1
@@ -434,8 +434,8 @@ C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Components\zmac\f8
 -D__PLAIN_INT_BITFIELD_IS_SIGNED__=1
 -D__HAS_LOCATED_DECLARATION__=1
 -D__IAR_COMPILERBASE__=593670
--D__DATE__="Jan 19 2018"
--D__TIME__="11:01:06"
+-D__DATE__="Jan 20 2018"
+-D__TIME__="09:41:16"
 -D__STDC__=1
 -D__STDC_VERSION__=199901L
 -D__STDC_HOSTED__=1

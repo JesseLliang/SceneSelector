@@ -2,303 +2,268 @@
 #                                                                              #
 #      IAR Universal Linker V6.1.3.56                                          #
 #                                                                              #
-#           Link time     =  19/Jan/2018  11:01:01                             #
+#           Link time     =  22/Jan/2018  09:11:16                             #
 #           Target CPU    =  x51                                               #
-#           List file     =  "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\List\SceneSelector #
-#                            .map"                                             #
-#           Output file 1 =  "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Exe\SceneSelector. #
-#                            hex"                                              #
+#           List file     =  "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\List\SceneSelector.map"                  #
+#           Output file 1 =  "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Exe\SceneSelector.hex"                   #
 #                            Format: intel-extended                            #
 #           Command line  =  -C                                                #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\..\..\..\Libraries\TI2530DB\bi #
-#                            n\EndDevice-Pro.lib"                              #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\..\ #
+#                            ..\..\Libraries\TI2530DB\bin\EndDevice-Pro.lib"   #
 #                            -C                                                #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\..\..\..\Libraries\TI2530DB\bi #
-#                            n\Security.lib"                                   #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\..\ #
+#                            ..\..\Libraries\TI2530DB\bin\Security.lib"        #
 #                            -C                                                #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\..\..\..\Libraries\TIMAC\bin\T #
-#                            IMAC-CC2530.lib"                                  #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\..\ #
+#                            ..\..\Libraries\TIMAC\bin\TIMAC-CC2530.lib"       #
 #                            -D_NR_OF_BANKS=0x07 -D_CODEBANK_END=0xFFFF        #
 #                            -D_CODEBANK_START=0x8000 -D?CBANK_MASK=0xFF       #
 #                            -D?CBANK=0x9F                                     #
 #                            "-ID:\IAR for 8051-9.10\8051\CONFIG\"             #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\add_common.r51 #
-#                            "                                                 #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\add_sceneselec #
-#                            tor.r51"                                          #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\AF.r51"        #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\BindingTable.r #
-#                            51"                                               #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\chipcon_cstart #
-#                            up.r51"                                           #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\DebugTrace.r51 #
-#                            "                                                 #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\hal_adc.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\hal_assert.r51 #
-#                            "                                                 #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\hal_dma.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\hal_drivers.r5 #
-#                            1"                                                #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\hal_flash.r51" #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\hal_key.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\hal_lcd.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\hal_led.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\hal_sleep.r51" #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\hal_startup.r5 #
-#                            1"                                                #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\hal_timer.r51" #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\hal_uart.r51"  #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_autopend.r #
-#                            51"                                               #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_backoff_ti #
-#                            mer.r51"                                          #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_cfg.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_csp_tx.r51 #
-#                            "                                                 #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_low_level. #
-#                            r51"                                              #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_mcu.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_mem.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_pib.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_radio.r51" #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_radio_defs #
-#                            .r51"                                             #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_rffrontend #
-#                            .r51"                                             #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_rx.r51"    #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_rx_onoff.r #
-#                            51"                                               #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_sleep.r51" #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\mac_tx.r51"    #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\MT.r51"        #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\MT_AF.r51"     #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\MT_APP.r51"    #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\MT_DEBUG.r51"  #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\MT_NWK.r51"    #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\MT_SAPI.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\MT_SYS.r51"    #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\MT_TASK.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\MT_UART.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\MT_UTIL.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\MT_VERSION.r51 #
-#                            "                                                 #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\MT_ZDO.r51"    #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\nwk_globals.r5 #
-#                            1"                                                #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\OnBoard.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\OSAL.r51"      #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Clock.r51 #
-#                            "                                                 #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Math.r51" #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Memory.r5 #
-#                            1"                                                #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Nv.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\OSAL_PwrMgr.r5 #
-#                            1"                                                #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\OSAL_SceneSele #
-#                            ctor.r51"                                         #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Timers.r5 #
-#                            1"                                                #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\saddr.r51"     #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\stub_aps.r51"  #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\zcl.r51"       #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\zcl_diagnostic #
-#                            .r51"                                             #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\zcl_ezmode.r51 #
-#                            "                                                 #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\zcl_general.r5 #
-#                            1"                                                #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\zcl_ha.r51"    #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\zcl_sceneselec #
-#                            tor.r51"                                          #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\zcl_sceneselec #
-#                            tor_data.r51"                                     #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\ZDApp.r51"     #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\ZDConfig.r51"  #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\ZDiags.r51"    #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\ZDNwkMgr.r51"  #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\ZDObject.r51"  #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\ZDProfile.r51" #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\ZDSecMgr.r51"  #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\ZGlobals.r51"  #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\zmac.r51"      #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\zmac_cb.r51"   #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Obj\ZMain.r51"     #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\add_common.r51"                      #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\add_sceneselector.r51"               #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\AF.r51"                              #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\BindingTable.r51"                    #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\chipcon_cstartup.r51"                #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\DebugTrace.r51"                      #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\hal_adc.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\hal_assert.r51"                      #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\hal_dma.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\hal_drivers.r51"                     #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\hal_flash.r51"                       #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\hal_key.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\hal_lcd.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\hal_led.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\hal_sleep.r51"                       #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\hal_startup.r51"                     #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\hal_timer.r51"                       #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\hal_uart.r51"                        #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_autopend.r51"                    #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_backoff_timer.r51"               #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_cfg.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_csp_tx.r51"                      #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_low_level.r51"                   #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_mcu.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_mem.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_pib.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_radio.r51"                       #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_radio_defs.r51"                  #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_rffrontend.r51"                  #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_rx.r51"                          #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_rx_onoff.r51"                    #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_sleep.r51"                       #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\mac_tx.r51"                          #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\MT.r51"                              #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\MT_AF.r51"                           #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\MT_APP.r51"                          #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\MT_DEBUG.r51"                        #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\MT_NWK.r51"                          #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\MT_SAPI.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\MT_SYS.r51"                          #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\MT_TASK.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\MT_UART.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\MT_UTIL.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\MT_VERSION.r51"                      #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\MT_ZDO.r51"                          #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\nwk_globals.r51"                     #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\OnBoard.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\OSAL.r51"                            #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\OSAL_Clock.r51"                      #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\OSAL_Math.r51"                       #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\OSAL_Memory.r51"                     #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\OSAL_Nv.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\OSAL_PwrMgr.r51"                     #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\OSAL_SceneSelector.r51"              #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\OSAL_Timers.r51"                     #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\saddr.r51"                           #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\stub_aps.r51"                        #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\zcl.r51"                             #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\zcl_diagnostic.r51"                  #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\zcl_ezmode.r51"                      #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\zcl_general.r51"                     #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\zcl_ha.r51"                          #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\zcl_sceneselector.r51"               #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\zcl_sceneselector_data.r51"          #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\ZDApp.r51"                           #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\ZDConfig.r51"                        #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\ZDiags.r51"                          #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\ZDNwkMgr.r51"                        #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\ZDObject.r51"                        #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\ZDProfile.r51"                       #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\ZDSecMgr.r51"                        #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\ZGlobals.r51"                        #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\zmac.r51"                            #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\zmac_cb.r51"                         #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Obj\ZMain.r51"                           #
 #                            -o                                                #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\Exe\SceneSelector. #
-#                            hex"                                              #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\Exe\SceneSelector.hex"                   #
 #                            -Fintel-extended -l                               #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\EndDeviceEB\List\SceneSelector #
-#                            .map"                                             #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\End #
+#                            DeviceEB\List\SceneSelector.map"                  #
 #                            -xmsn "-ID:\IAR for 8051-9.10\8051\LIB\" -f       #
-#                            "C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home #
-#                             1.2.2a.44539\Projects\zstack\HomeAutomation\Scen #
-#                            eSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8w253 #
-#                            0.xcl"                                            #
+#                            "E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects #
+#                            \zstack\HomeAutomation\SceneSelector\CC2530DB\..\ #
+#                            ..\..\Tools\CC2530DB\f8w2530.xcl"                 #
 #                            (-D_XDATA_START=0x0001 -D_XDATA_END=0x1EFF        #
 #                            -D_IDATA_END=0xFF -D_CODE_START=0x0000            #
 #                            -D_CODE_END=0x7FFF -D_FIRST_BANK_ADDR=0x10000     #
@@ -529,7 +494,7 @@ Absolute parts
            _NR_OF_BANKS            00000007 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\Libraries\TI2530DB\bin\EndDevice-Pro.lib
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\Libraries\TI2530DB\bin\EndDevice-Pro.lib
   LIBRARY MODULE, NAME : AddrMgr
 
   SEGMENTS IN THE MODULE
@@ -11220,7 +11185,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\Libraries\TI2530DB\bin\Security.lib
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\Libraries\TI2530DB\bin\Security.lib
   LIBRARY MODULE, NAME : hal_aes
 
   SEGMENTS IN THE MODULE
@@ -11558,7 +11523,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\Libraries\TIMAC\bin\TIMAC-CC2530.lib
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\Libraries\TIMAC\bin\TIMAC-CC2530.lib
   LIBRARY MODULE, NAME : mac_beacon
 
   SEGMENTS IN THE MODULE
@@ -15080,7 +15045,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\add_common.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\add_common.r51
   PROGRAM MODULE, NAME : add_common
 
   SEGMENTS IN THE MODULE
@@ -15959,7 +15924,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\add_sceneselector.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\add_sceneselector.r51
   PROGRAM MODULE, NAME : add_sceneselector
 
   SEGMENTS IN THE MODULE
@@ -16875,7 +16840,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\AF.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\AF.r51
   PROGRAM MODULE, NAME : AF
 
   SEGMENTS IN THE MODULE
@@ -17487,7 +17452,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\BindingTable.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\BindingTable.r51
   PROGRAM MODULE, NAME : BindingTable
 
   SEGMENTS IN THE MODULE
@@ -18276,7 +18241,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\chipcon_cstartup.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\chipcon_cstartup.r51
   LIBRARY MODULE, NAME : CSTARTUP
 
   SEGMENTS IN THE MODULE
@@ -22061,10 +22026,10 @@ XSP
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\DebugTrace.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\DebugTrace.r51
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_adc.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_adc.r51
   PROGRAM MODULE, NAME : hal_adc
 
   SEGMENTS IN THE MODULE
@@ -22174,7 +22139,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_assert.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_assert.r51
   PROGRAM MODULE, NAME : hal_assert
 
   SEGMENTS IN THE MODULE
@@ -22285,7 +22250,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_dma.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_dma.r51
   PROGRAM MODULE, NAME : hal_dma
 
   SEGMENTS IN THE MODULE
@@ -22350,7 +22315,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_drivers.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_drivers.r51
   PROGRAM MODULE, NAME : hal_drivers
 
   SEGMENTS IN THE MODULE
@@ -22439,7 +22404,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_flash.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_flash.r51
   PROGRAM MODULE, NAME : hal_flash
 
   SEGMENTS IN THE MODULE
@@ -22539,7 +22504,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_key.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_key.r51
   PROGRAM MODULE, NAME : hal_key
 
   SEGMENTS IN THE MODULE
@@ -22849,7 +22814,7 @@ INTVEC
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_lcd.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_lcd.r51
   PROGRAM MODULE, NAME : hal_lcd
 
   SEGMENTS IN THE MODULE
@@ -23073,7 +23038,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_led.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_led.r51
   PROGRAM MODULE, NAME : hal_led
 
   SEGMENTS IN THE MODULE
@@ -23270,7 +23235,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_sleep.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_sleep.r51
   PROGRAM MODULE, NAME : hal_sleep
 
   SEGMENTS IN THE MODULE
@@ -23555,7 +23520,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_startup.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_startup.r51
   PROGRAM MODULE, NAME : hal_startup
 
   SEGMENTS IN THE MODULE
@@ -23569,13 +23534,13 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_timer.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_timer.r51
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_uart.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\hal_uart.r51
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_autopend.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_autopend.r51
   PROGRAM MODULE, NAME : mac_autopend
 
   SEGMENTS IN THE MODULE
@@ -23800,7 +23765,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_backoff_timer.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_backoff_timer.r51
   PROGRAM MODULE, NAME : mac_backoff_timer
 
   SEGMENTS IN THE MODULE
@@ -24108,7 +24073,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_cfg.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_cfg.r51
   PROGRAM MODULE, NAME : mac_cfg
 
   SEGMENTS IN THE MODULE
@@ -24129,7 +24094,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_csp_tx.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_csp_tx.r51
   PROGRAM MODULE, NAME : mac_csp_tx
 
   SEGMENTS IN THE MODULE
@@ -24504,7 +24469,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_low_level.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_low_level.r51
   PROGRAM MODULE, NAME : mac_low_level
 
   SEGMENTS IN THE MODULE
@@ -24572,7 +24537,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_mcu.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_mcu.r51
   PROGRAM MODULE, NAME : mac_mcu
 
   SEGMENTS IN THE MODULE
@@ -25094,7 +25059,7 @@ INTVEC
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_mem.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_mem.r51
   PROGRAM MODULE, NAME : mac_mem
 
   SEGMENTS IN THE MODULE
@@ -25199,7 +25164,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_pib.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_pib.r51
   PROGRAM MODULE, NAME : mac_pib
 
   SEGMENTS IN THE MODULE
@@ -25338,7 +25303,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_radio.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_radio.r51
   PROGRAM MODULE, NAME : mac_radio
 
   SEGMENTS IN THE MODULE
@@ -25721,7 +25686,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_radio_defs.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_radio_defs.r51
   PROGRAM MODULE, NAME : mac_radio_defs
 
   SEGMENTS IN THE MODULE
@@ -25792,7 +25757,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_rffrontend.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_rffrontend.r51
   PROGRAM MODULE, NAME : mac_rffrontend
 
   SEGMENTS IN THE MODULE
@@ -25800,7 +25765,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_rx.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_rx.r51
   PROGRAM MODULE, NAME : mac_rx
 
   SEGMENTS IN THE MODULE
@@ -26570,7 +26535,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_rx_onoff.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_rx_onoff.r51
   PROGRAM MODULE, NAME : mac_rx_onoff
 
   SEGMENTS IN THE MODULE
@@ -26817,7 +26782,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_sleep.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_sleep.r51
   PROGRAM MODULE, NAME : mac_sleep
 
   SEGMENTS IN THE MODULE
@@ -26872,7 +26837,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_tx.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\mac_tx.r51
   PROGRAM MODULE, NAME : mac_tx
 
   SEGMENTS IN THE MODULE
@@ -27251,7 +27216,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT.r51
   PROGRAM MODULE, NAME : MT
 
   SEGMENTS IN THE MODULE
@@ -27387,7 +27352,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_AF.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_AF.r51
   PROGRAM MODULE, NAME : MT_AF
 
   SEGMENTS IN THE MODULE
@@ -27496,7 +27461,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_APP.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_APP.r51
   PROGRAM MODULE, NAME : MT_APP
 
   SEGMENTS IN THE MODULE
@@ -27538,7 +27503,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_DEBUG.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_DEBUG.r51
   PROGRAM MODULE, NAME : MT_DEBUG
 
   SEGMENTS IN THE MODULE
@@ -27587,13 +27552,13 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_NWK.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_NWK.r51
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_SAPI.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_SAPI.r51
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_SYS.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_SYS.r51
   PROGRAM MODULE, NAME : MT_SYS
 
   SEGMENTS IN THE MODULE
@@ -27847,7 +27812,7 @@ SFR_AN
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_TASK.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_TASK.r51
   PROGRAM MODULE, NAME : MT_TASK
 
   SEGMENTS IN THE MODULE
@@ -27941,7 +27906,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_UART.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_UART.r51
   PROGRAM MODULE, NAME : MT_UART
 
   SEGMENTS IN THE MODULE
@@ -28018,10 +27983,10 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_UTIL.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_UTIL.r51
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_VERSION.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_VERSION.r51
   PROGRAM MODULE, NAME : MT_VERSION
 
   SEGMENTS IN THE MODULE
@@ -28040,7 +28005,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_ZDO.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\MT_ZDO.r51
   PROGRAM MODULE, NAME : MT_ZDO
 
   SEGMENTS IN THE MODULE
@@ -28537,7 +28502,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\nwk_globals.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\nwk_globals.r51
   PROGRAM MODULE, NAME : nwk_globals
 
   SEGMENTS IN THE MODULE
@@ -28935,7 +28900,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OnBoard.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OnBoard.r51
   PROGRAM MODULE, NAME : OnBoard
 
   SEGMENTS IN THE MODULE
@@ -29117,7 +29082,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL.r51
   PROGRAM MODULE, NAME : OSAL
 
   SEGMENTS IN THE MODULE
@@ -30067,7 +30032,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Clock.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Clock.r51
   PROGRAM MODULE, NAME : OSAL_Clock
 
   SEGMENTS IN THE MODULE
@@ -30331,7 +30296,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Math.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Math.r51
   LIBRARY MODULE, NAME : OSAL_Math
 
   SEGMENTS IN THE MODULE
@@ -30362,7 +30327,7 @@ DATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Memory.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Memory.r51
   PROGRAM MODULE, NAME : OSAL_Memory
 
   SEGMENTS IN THE MODULE
@@ -30593,7 +30558,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Nv.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Nv.r51
   PROGRAM MODULE, NAME : OSAL_Nv
 
   SEGMENTS IN THE MODULE
@@ -31538,7 +31503,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_PwrMgr.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_PwrMgr.r51
   PROGRAM MODULE, NAME : OSAL_PwrMgr
 
   SEGMENTS IN THE MODULE
@@ -31635,7 +31600,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_SceneSelector.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_SceneSelector.r51
   PROGRAM MODULE, NAME : OSAL_SceneSelector
 
   SEGMENTS IN THE MODULE
@@ -31694,7 +31659,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Timers.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\OSAL_Timers.r51
   PROGRAM MODULE, NAME : OSAL_Timers
 
   SEGMENTS IN THE MODULE
@@ -32031,7 +31996,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\saddr.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\saddr.r51
   PROGRAM MODULE, NAME : saddr
 
   SEGMENTS IN THE MODULE
@@ -32198,10 +32163,10 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\stub_aps.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\stub_aps.r51
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl.r51
   PROGRAM MODULE, NAME : zcl
 
   SEGMENTS IN THE MODULE
@@ -34696,13 +34661,13 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl_diagnostic.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl_diagnostic.r51
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl_ezmode.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl_ezmode.r51
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl_general.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl_general.r51
   PROGRAM MODULE, NAME : zcl_general
 
   SEGMENTS IN THE MODULE
@@ -36005,7 +35970,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl_ha.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl_ha.r51
   PROGRAM MODULE, NAME : zcl_ha
 
   SEGMENTS IN THE MODULE
@@ -36036,7 +36001,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl_sceneselector.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl_sceneselector.r51
   PROGRAM MODULE, NAME : zcl_sceneselector
 
   SEGMENTS IN THE MODULE
@@ -36297,7 +36262,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl_sceneselector_data.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zcl_sceneselector_data.r51
   PROGRAM MODULE, NAME : zcl_sceneselector_data
 
   SEGMENTS IN THE MODULE
@@ -36512,7 +36477,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDApp.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDApp.r51
   PROGRAM MODULE, NAME : ZDApp
 
   SEGMENTS IN THE MODULE
@@ -38200,7 +38165,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDConfig.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDConfig.r51
   PROGRAM MODULE, NAME : ZDConfig
 
   SEGMENTS IN THE MODULE
@@ -38298,7 +38263,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDiags.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDiags.r51
   PROGRAM MODULE, NAME : ZDiags
 
   SEGMENTS IN THE MODULE
@@ -38447,7 +38412,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDNwkMgr.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDNwkMgr.r51
   PROGRAM MODULE, NAME : ZDNwkMgr
 
   SEGMENTS IN THE MODULE
@@ -38470,7 +38435,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDObject.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDObject.r51
   PROGRAM MODULE, NAME : ZDObject
 
   SEGMENTS IN THE MODULE
@@ -39497,7 +39462,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDProfile.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDProfile.r51
   PROGRAM MODULE, NAME : ZDProfile
 
   SEGMENTS IN THE MODULE
@@ -40724,7 +40689,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDSecMgr.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZDSecMgr.r51
   PROGRAM MODULE, NAME : ZDSecMgr
 
   SEGMENTS IN THE MODULE
@@ -41853,7 +41818,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZGlobals.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZGlobals.r51
   PROGRAM MODULE, NAME : ZGlobals
 
   SEGMENTS IN THE MODULE
@@ -42603,7 +42568,7 @@ XDATA_ID
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zmac.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zmac.r51
   PROGRAM MODULE, NAME : zmac
 
   SEGMENTS IN THE MODULE
@@ -42933,7 +42898,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zmac_cb.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\zmac_cb.r51
   PROGRAM MODULE, NAME : zmac_cb
 
   SEGMENTS IN THE MODULE
@@ -43116,7 +43081,7 @@ XDATA_Z
 
     *************************************************************************
 
-  FILE NAME : C:\Users\JC_liang\Desktop\LIFUD\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZMain.r51
+  FILE NAME : E:\GitHub\面板Z-Stack Home 1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\EndDeviceEB\Obj\ZMain.r51
   PROGRAM MODULE, NAME : ZMain
 
   SEGMENTS IN THE MODULE

@@ -305,7 +305,7 @@ uint16 addSceneSelector_eventLoop(uint8 task_id, uint16 events)
 		//add by jc按键按下，唤醒唤醒1秒，发送2次data request
 		addCommon_wakeup();
 		acDelayJoinNetwork = 1;
-		osal_start_timerEx(*acPointer_TaskID, AC_EVENT_POLLING, 1000);
+		osal_start_timerEx(*acPointer_TaskID, AC_EVENT_POLLING, 1000); //
 		//end of add by jc
 		addSceneSelector_handleOneTime();
 		return ( events ^ AC_EVENT_HANDLE_ONE_TIME);
