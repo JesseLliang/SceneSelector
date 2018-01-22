@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V9.10.1.2146 for 8051                22/Jan/2018  09:10:45
+# IAR C/C++ Compiler V9.10.1.2146 for 8051                22/Jan/2018  15:11:17
 # Copyright 2004-2014 IAR Systems AB.
 # Standalone license - IAR Embedded Workbench for 8051
 #
@@ -34,7 +34,7 @@
 #        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 #        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 #        -DPOLL_RATE=120000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
-#        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=120000)
+#        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=180000)
 #        -f "E:\GitHub\面板Z-Stack Home
 #        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
 #        "E:\GitHub\面板Z-Stack Home
@@ -1819,9 +1819,9 @@ Warning[Pe177]: function "NLME_SetRejoinPollRate" was declared but never
    \                     ??CrossCallReturnLabel_9:
    \   00002F   12....       LCALL   ??osal_pwrmgr_task_state?relay; Banked call to: osal_pwrmgr_task_state
     698          	
-    699          	NLME_SetPollRate(0);
+    699          	NLME_SetPollRate(600000); 		//10分钟poll一次父节点
    \   000032                ; Setup parameters for call to function NLME_SetPollRate
-   \   000032   90....       MOV     DPTR,#__Constant_0
+   \   000032   90....       MOV     DPTR,#__Constant_927c0
    \   000035   12....       LCALL   ?XLOAD_R2345
    \   000038   12....       LCALL   ??NLME_SetPollRate?relay; Banked call to: NLME_SetPollRate
     700          	//zgPollRate = 0;
@@ -2093,8 +2093,8 @@ Warning[Pe177]: function "NLME_SetRejoinPollRate" was declared but never
    \   000000   58020000     DD 600
 
    \                                 In  segment XDATA_ROM_C, align 1
-   \                     __Constant_0:
-   \   000000   00000000     DD 0
+   \                     __Constant_927c0:
+   \   000000   C0270900     DD 600000
 
    \                                 In  segment XDATA_ROM_C, align 1
    \                     __Constant_1f4:
@@ -2216,12 +2216,12 @@ Warning[Pe177]: function "NLME_SetRejoinPollRate" was declared but never
        1  _A_IRCON2
        1  _A_P0
        1  _A_P1
-       4  __Constant_0
        4  __Constant_1388
        4  __Constant_1f4
        4  __Constant_258
        4  __Constant_5dc
        4  __Constant_64
+       4  __Constant_927c0
        1  acDelayJoinNetwork
        1  acDelayPowerOn
        1  acDeviceKeyTimingCounter

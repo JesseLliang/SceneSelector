@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V9.10.1.2146 for 8051               22/Jan/2018  09:10:45
+// IAR C/C++ Compiler V9.10.1.2146 for 8051               22/Jan/2018  15:11:17
 // Copyright 2004-2014 IAR Systems AB.
 // Standalone license - IAR Embedded Workbench for 8051
 //
@@ -34,7 +34,7 @@
 //        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 //        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 //        -DPOLL_RATE=120000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
-//        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=120000)
+//        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=180000)
 //        -f "E:\GitHub\面板Z-Stack Home
 //        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
 //        "E:\GitHub\面板Z-Stack Home
@@ -204,12 +204,12 @@
         PUBWEAK _A_IRCON2
         PUBWEAK _A_P0
         PUBWEAK _A_P1
-        PUBWEAK __Constant_0
         PUBWEAK __Constant_1388
         PUBWEAK __Constant_1f4
         PUBWEAK __Constant_258
         PUBWEAK __Constant_5dc
         PUBWEAK __Constant_64
+        PUBWEAK __Constant_927c0
         PUBLIC acDelayJoinNetwork
         PUBLIC acDelayPowerOn
         PUBLIC acDeviceKeyTimingCounter
@@ -3665,9 +3665,9 @@ addCommon_sleep:
 ??CrossCallReturnLabel_9:
         LCALL   ??osal_pwrmgr_task_state?relay; Banked call to: osal_pwrmgr_task_state
 //  698 	
-//  699 	NLME_SetPollRate(0);
+//  699 	NLME_SetPollRate(600000); 		//10分钟poll一次父节点
         ; Setup parameters for call to function NLME_SetPollRate
-        MOV     DPTR,#__Constant_0
+        MOV     DPTR,#__Constant_927c0
         LCALL   ?XLOAD_R2345
         LCALL   ??NLME_SetPollRate?relay; Banked call to: NLME_SetPollRate
 //  700 	//zgPollRate = 0;
@@ -4083,8 +4083,8 @@ __Constant_258:
 
         RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
         DATA32
-__Constant_0:
-        DD 0
+__Constant_927c0:
+        DD 600000
 
         RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
         DATA32

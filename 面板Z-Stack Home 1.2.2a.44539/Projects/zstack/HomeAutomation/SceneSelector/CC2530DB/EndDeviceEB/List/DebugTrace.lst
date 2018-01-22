@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V9.10.1.2146 for 8051                22/Jan/2018  09:10:48
+# IAR C/C++ Compiler V9.10.1.2146 for 8051                22/Jan/2018  15:11:19
 # Copyright 2004-2014 IAR Systems AB.
 # Standalone license - IAR Embedded Workbench for 8051
 #
@@ -33,7 +33,7 @@
 #        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
 #        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
 #        -DPOLL_RATE=120000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
-#        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=120000)
+#        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=180000)
 #        -f "E:\GitHub\√Ê∞ÂZ-Stack Home
 #        1.2.2a.44539\Projects\zstack\HomeAutomation\SceneSelector\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
 #        "E:\GitHub\√Ê∞ÂZ-Stack Home 1.2.2a.44539\Components\mt\DebugTrace.c"

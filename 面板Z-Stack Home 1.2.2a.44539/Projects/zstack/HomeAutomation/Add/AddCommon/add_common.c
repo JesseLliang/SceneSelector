@@ -696,7 +696,7 @@ void addCommon_sleep(void)
 	osal_pwrmgr_device(PWRMGR_BATTERY);
 	osal_pwrmgr_task_state(*acPointer_TaskID, PWRMGR_CONSERVE);
 	
-	NLME_SetPollRate(0);
+	NLME_SetPollRate(600000); 		//10分钟poll一次父节点
 	//zgPollRate = 0;
 	NLME_SetQueuedPollRate(0);
 	//zgQueuedPollRate = 0;
